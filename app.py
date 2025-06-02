@@ -328,7 +328,8 @@ def safe_render_response(text):
     text = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', text)
     text = re.sub(r'\*(.*?)\*', r'<em>\1</em>', text)
 
-    return text
+    # Ensure text is black
+    return f'<div style="color: black;">{text}</div>'
 
 
 # ----------- Streamlit UI -----------
