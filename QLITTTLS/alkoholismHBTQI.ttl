@@ -1,0 +1,25 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<bk48ga51> a skos:Concept ;
+    dcterms:identifier "bk48ga51" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Alkoholberoende hos hbtqi-personer",
+        "Alkoholmissbruk hos hbtqi-personer",
+        "Alkoholmissbrukande hbtqi-personer",
+        "Hbtqi-personer med alkoholberoende",
+        "Hbtqi-personer med alkoholmissbruk",
+        "Hbtqi-personer som lever i alkoholberoende",
+        "Hbtqi-personer som lever i alkoholmissbruk",
+        "Hbtqi-personer som missbrukar alkohol",
+        "Hbtqi-personer som är beroende av alkohol" ;
+    skos:broader <lg15gn10> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0001540> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Alkoholism (hbtqi)" ;
+    skos:scopeNote "Används för skildringar där hbtqi-personer missbrukar eller är beroende av alkohol. Med missbruk menas här sådant bruk som skadar hälsa och relationer." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

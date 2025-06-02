@@ -1,0 +1,17 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ts68gn43> a skos:Concept ;
+    dcterms:identifier "ts68gn43" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:hiddenLabel "Hemlighets-symbolik (hbtqi)" ;
+    skos:broader <bv22nv79> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Hemlighetssymbolik (hbtqi)" ;
+    skos:related <ev61wd95> ;
+    skos:scopeNote "Används för skildringar där hemligheter och hemlighållande används som symbolik för att signalera samkönade sexuella praktiker, känslor, identiteter och/eller överskridanden av binära könsnormer." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

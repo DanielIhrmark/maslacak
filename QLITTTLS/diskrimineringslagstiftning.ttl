@@ -1,0 +1,28 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<xw72hx88> a skos:Concept ;
+    dcterms:identifier "xw72hx88" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Antidiskrimineringslagar",
+        "Antidiskrimineringslagstiftning",
+        "Diskrimineringslagar",
+        "Diskrimineringslagen" ;
+    skos:broader <pi26jy10> ;
+    skos:closeMatch <http://id.loc.gov/authorities/subjects/sh93005719>,
+        <https://homosaurus.org/v3/homoit0000053> ;
+    skos:hiddenLabel "Anti-diskrimineringslagar",
+        "Anti-diskrimineringslagstiftning",
+        "Diskriminerings-lagstiftning",
+        "Diskriminerings-lagen" ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Diskrimineringslagstiftning" ;
+    skos:related <kh49kc43>,
+        <pq70kh99>,
+        <rh68hi28> ;
+    skos:scopeNote "Används för skildringar där lagstiftning med syfte att motverka diskriminering har betydelse för verket. Sådan lagstiftning syftar till att främja lika rättigheter och möjligheter oavsett kön, könsöverskridande identitet eller uttryck, etnisk tillhörighet, religion eller annan trosuppfattning, funktionsnedsättning, sexuell läggning eller ålder." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

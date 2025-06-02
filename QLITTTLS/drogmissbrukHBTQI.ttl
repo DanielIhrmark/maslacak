@@ -1,0 +1,31 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ac93hi68> a skos:Concept ;
+    dcterms:identifier "ac93hi68" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Drogberoende hos hbtqi-personer",
+        "Drogmissbruk hos hbtqi-personer",
+        "Drogmissbrukande hbtqi-personer",
+        "Hbtqi-personer med drogmissbruk",
+        "Hbtqi-personer med drogberoende",
+        "Hbtqi-personer som lever i drogmissbruk",
+        "Hbtqi-personer som lever i drogberoende",
+        "Hbtqi-personer som missbrukar droger",
+        "Hbtqi-personer som missbrukar knark",
+        "Hbtqi-personer som är beroende av droger",
+        "Hbtqi-personer som är beroende av knark",
+        "Narkomani hos hbtqi-personer",
+        "Narkotikaberoende hos hbtqi-personer",
+        "Narkotikamissbruk hos hbtqi-personer" ;
+    skos:broader <lg15gn10> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0002226> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Drogmissbruk (hbtqi)" ;
+    skos:related <si22wr35> ;
+    skos:scopeNote "Används för skildringar där hbtqi-personer missbrukar eller är beroende av droger. Med missbruk menas här sådant bruk som skadar hälsa och relationer." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

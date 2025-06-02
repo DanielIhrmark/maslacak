@@ -1,0 +1,17 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<xv67mh68> a skos:Concept ;
+    dcterms:identifier "xv67mh68" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <aq16rl33> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000494> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Gay for pay" ;
+    skos:related <gz99cy88> ;
+    skos:scopeNote "Används för skildringar av heterosexuella personer som genom främst pornografi och prostitution betalas för att ha samkönat sex." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

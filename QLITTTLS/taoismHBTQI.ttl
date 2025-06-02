@@ -1,0 +1,21 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<lj78ol14> a skos:Concept ;
+    dcterms:identifier "lj78ol14" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Daoism (hbtqi)",
+        "Daoister (hbtqi)",
+        "Hbtqi-daoister",
+        "Hbtqi-taoister",
+        "Taoister (hbtqi)" ;
+    skos:broader <mn17sn86> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000955> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Taoism (hbtqi)" ;
+    skos:scopeNote "Används för skildringar av hbtqi-personer som är anhängare av den kinesiska religionen och filosofin taoism. Används även för skildringar av hbtqi-personers förhållningssätt till taoism eller andra taoisters förhållningssätt till hbtqi." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

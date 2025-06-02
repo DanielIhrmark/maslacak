@@ -1,0 +1,23 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<cr45ml86> a skos:Concept ;
+    dcterms:identifier "cr45ml86" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:hiddenLabel "Polis-trakasserier" ;
+    skos:broader <cy27yx08> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001121> ;
+    skos:closeMatch <http://id.loc.gov/authorities/subjects/sh95010616> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <oq36kw68>,
+        <rc46qr59> ;
+    skos:prefLabel "Polistrakasserier" ;
+    skos:related <cw47ny51>,
+        <pq70kh99>,
+        <rx72ig85> ;
+    skos:scopeNote "Används för skildringar av medvetet vållande av obehag, förföljelser eller hot från polisens sida." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

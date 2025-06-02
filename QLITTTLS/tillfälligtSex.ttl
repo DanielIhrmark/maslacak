@@ -1,0 +1,23 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<mc07qj43> a skos:Concept ;
+    dcterms:identifier "mc07qj43" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <of65zl26>,
+        <td26cb41> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000242> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Tillfälligt sex" ;
+    skos:related <by54rv25>,
+        <cb66jw88>,
+        <el45ws21>,
+        <hv71in35>,
+        <jy58jm84>,
+        <af48gg30> ;
+    skos:scopeNote "Används för skildringar av tillfälliga sexuella kontakter." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

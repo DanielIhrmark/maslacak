@@ -1,0 +1,22 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<wo70nt95> a skos:Concept ;
+    dcterms:identifier "wo70nt95" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:hiddenLabel "Läder-familjer" ;
+    skos:broader <eo15qd89>,
+        <hi30mc55>,
+        <nc18mo76> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000707> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <ax94ed37>,
+        <uk90xn87> ;
+    skos:prefLabel "Läderfamiljer" ;
+    skos:related <gx13uu85> ;
+    skos:scopeNote "Används för skildringar av en nära krets personer som stöttar varandra och förenas i läderkulturen." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

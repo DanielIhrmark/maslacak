@@ -1,0 +1,50 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ml83ih14> a skos:Concept ;
+    dcterms:identifier "ml83ih14" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Homosexuella kvinnor",
+        "Kvinnlig homosexualitet",
+        "Kvinnliga homosexuella",
+        "Lesbianer",
+        "Lesbiska kvinnor" ;
+    skos:broader <la83kc00>,
+        <nf03ub67> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85076160>,
+        <https://homosaurus.org/v3/homoit0000556>,
+        <https://id.kb.se/term/sao/Lesbiska> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <hg41ea96>,
+        <hh85bk61>,
+        <hq85ud85>,
+        <nc14hs94>,
+        <pm55yu20>,
+        <pn00dm58>,
+        <qk34rm23>,
+        <qy59io46>,
+        <tx04hr81>,
+        <yj75on39> ;
+    skos:prefLabel "Lesbiska" ;
+    skos:related <dq66qs98>,
+        <dy39os96>,
+        <gs35mz40>,
+        <gz04zi19>,
+        <nu38hi25>,
+        <or20zr13>,
+        <px69nf52>,
+        <qh24te87>,
+        <se35jv42>,
+        <tn72ht69>,
+        <tz63rg85>,
+        <ug83ok10>,
+        <xs75bn70>,
+        <ox94in52>,
+        <qf09cx68>,
+        <sb41qh19> ;
+    skos:scopeNote "Används för skildringar av personer som beskrivs som flickor eller kvinnor och som blir kära i och/eller attraherade av andra flickor/kvinnor. Kan även användas för skildringar av lesbiska identiteter utan koppling till tvåkönsmodellen." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

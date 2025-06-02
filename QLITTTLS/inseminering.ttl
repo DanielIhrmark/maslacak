@@ -1,0 +1,21 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ji09iu69> a skos:Concept ;
+    dcterms:identifier "ji09iu69" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Insemination" ;
+    skos:broader <ni09mn87> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85008176>,
+        <https://homosaurus.org/v3/homoit0000069>,
+        <https://id.kb.se/term/sao/Insemination> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <wv84rg97> ;
+    skos:prefLabel "Inseminering" ;
+    skos:related <of81kq28> ;
+    skos:scopeNote "Används för skildringar av att med nålfri injektionsspruta, kateter eller liknande placera spermier i livmodern för att bli gravid." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

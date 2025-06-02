@@ -1,0 +1,17 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<bv22nv79> a skos:Concept ;
+    dcterms:identifier "bv22nv79" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <bt16zp60>,
+        <lc03jf41>,
+        <lj67gb57>,
+        <mz17yd70> ;
+    skos:prefLabel "Symbolik (hbtqi)" ;
+    skos:scopeNote "Används för skildringar där samkönade sexuella praktiker, känslor, identiteter och/eller överskridanden av binära könsnormer genom kropp, klädsel, identitet signaleras i omskrivningar, liknelser eller symbolik." .
+

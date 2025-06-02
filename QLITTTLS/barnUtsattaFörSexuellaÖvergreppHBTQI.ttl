@@ -1,0 +1,18 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<fs01rm86> a skos:Concept ;
+    dcterms:identifier "fs01rm86" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <gl76ac31>,
+        <rl94ul47> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0001307> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Barn utsatta för sexuella övergrepp (hbtqi)" ;
+    skos:related <od10cb95> ;
+    skos:scopeNote "Används för skildringar av hbtqi-barn som utsatts för sexuella övergrepp." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

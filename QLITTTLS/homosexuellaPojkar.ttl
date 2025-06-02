@@ -1,0 +1,20 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<xu50br91> a skos:Concept ;
+    dcterms:identifier "xu50br91" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <gc82ev34>,
+        <np32qn49>,
+        <pk92nl65> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000479> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Homosexuella pojkar" ;
+    skos:related <fh64du23>,
+        <ze99bm54> ;
+    skos:scopeNote "Används för skildringar av pojkar som beskrivs som homosexuella." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

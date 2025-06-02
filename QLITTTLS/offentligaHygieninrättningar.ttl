@@ -1,0 +1,20 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<kh49kc43> a skos:Concept ;
+    dcterms:identifier "kh49kc43" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85108620> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001141> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <ih61bm68>,
+        <xp00ce87>,
+        <ya24ku84> ;
+    skos:prefLabel "Offentliga hygieninrättningar" ;
+    skos:related <as34mb58>,
+        <xw72hx88> ;
+    skos:scopeNote "Används för skildringar av hygieninrättningar som är tillgängliga för allmänheten, för kunder, skolelever, anställda i ett företag eller annan liknande grupp." .
+

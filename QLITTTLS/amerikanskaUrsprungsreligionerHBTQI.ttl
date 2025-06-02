@@ -1,0 +1,17 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<sb19ql51> a skos:Concept ;
+    dcterms:identifier "sb19ql51" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "First Nations-religioner (hbtqi)" ;
+    skos:broader <fs91lv00> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Amerikanska ursprungsreligioner (hbtqi)" ;
+    skos:related <et08az97> ;
+    skos:scopeNote "Används för skildringar av hbtqi-personer som är anhängare av religioner med ursprung i det förkoloniala Amerika. Används även för skildringar av hbtqi-personers förhållningssätt till amerikanska ursprungsreligioner eller hur andra anhängare av dessa religioner förhåller sig till hbtqi." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

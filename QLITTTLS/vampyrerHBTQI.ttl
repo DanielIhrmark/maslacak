@@ -1,0 +1,16 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<sb41qh19> a skos:Concept ;
+    dcterms:identifier "sb41qh19" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <qj48lh67> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Vampyrer (hbtqi)" ;
+    skos:related <ml83ih14> ;
+    skos:scopeNote "Används för skildringar, historiska eller historiserande, som använder begreppet vampyrer för att referera till personer som antas vara lesbiska, eller på annat sätt förkroppsliga samkönat eller gränsöverskridande begär. För skildringar av sexuella praktiker som involverar drickande av blod, använd ämnesordet \"Vampyrism\"." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

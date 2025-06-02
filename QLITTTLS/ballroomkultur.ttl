@@ -1,0 +1,24 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<hc77dd42> a skos:Concept ;
+    dcterms:identifier "hc77dd42" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Ballroom culture",
+        "Ballroom-community" ;
+    skos:broader <px93xp25> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000092> ;
+    skos:hiddenLabel "Ballroom-kultur" ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <wg03fj93>,
+        <yi56ii68> ;
+    skos:prefLabel "Ballroomkultur" ;
+    skos:related <iy93lr17>,
+        <jf44kn92>,
+        <wp99sm33> ;
+    skos:scopeNote "Används för skildringar av subkulturen ballroom som uppstod i New York på 1970-talet och som kretsar kring tävlingar i t.ex. dans (främst voguing) och drag." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

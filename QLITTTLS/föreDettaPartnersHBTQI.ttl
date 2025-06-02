@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ut81fb61> a skos:Concept ;
+    dcterms:identifier "ut81fb61" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Ex-partners (hbtqi)" ;
+    skos:broader <bi99oj90> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000863> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Före detta partners (hbtqi)" ;
+    skos:related <gx93ym52>,
+        <av87kj76> ;
+    skos:scopeNote "Används för skildringar av före detta partners som är eller varit tillsammans med hbtqi-personer." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

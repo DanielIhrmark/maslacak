@@ -1,0 +1,21 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<tf12ob81> a skos:Concept ;
+    dcterms:identifier "tf12ob81" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Dandies" ;
+    skos:broader <iy93lr17>,
+        <qj48lh67> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000326>,
+        <https://id.kb.se/term/sao/Dandyer> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Dandyer" ;
+    skos:related <aq42lk11>,
+        <ks34oj41> ;
+    skos:scopeNote "Används för skildringar av män med raffinerad klädsel, som ibland betraktas som \"feminin\", och uppträdande som kännetecknas av ett världsvant och elegant sätt." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

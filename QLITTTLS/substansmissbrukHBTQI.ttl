@@ -1,0 +1,26 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<lg15gn10> a skos:Concept ;
+    dcterms:identifier "lg15gn10" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Hbtqi-personer med substansmissbruk",
+        "Hbtqi-personer med substansberoende",
+        "Hbtqi-personer som lever i substansmissbruk",
+        "Hbtqi-personer som lever i substansberoende",
+        "Hbtqi-personer som missbrukar substanser",
+        "Hbtqi-personer som är beroende av substanser",
+        "Substansmissbruk hos hbtqi-personer",
+        "Substansmissbrukande hbtqi-personer",
+        "Substansberoende hos hbtqi-personer" ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0002226> ;
+    skos:hiddenLabel "Substans-missbruk (hbtqi)" ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <ac93hi68>,
+        <bk48ga51> ;
+    skos:prefLabel "Substansmissbruk (hbtqi)" ;
+    skos:scopeNote "Används för skildringar där hbtqi-personer missbrukar eller är beroende av substanser som narkotika, läkemedel eller alkohol. Med missbruk menas här sådant bruk som skadar hälsa och relationer." .
+

@@ -1,0 +1,23 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<pz95ay20> a skos:Concept ;
+    dcterms:identifier "pz95ay20" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Regnbågsbarn" ;
+    skos:broader <um90bw50> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000260> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <hf19tr66>,
+        <jb88tw15>,
+        <sf24zw50>,
+        <xg52hd15>,
+        <xx95hc99> ;
+    skos:prefLabel "Barn till hbtqi-personer" ;
+    skos:related <wl28xr24> ;
+    skos:scopeNote "Används för skildringar av barn till personer som beskrivs som homosexuella, bisexuella, transpersoner, queera och/eller intersexpersoner." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

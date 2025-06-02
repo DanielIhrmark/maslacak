@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<il67cv51> a skos:Concept ;
+    dcterms:identifier "il67cv51" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Bära barn (hbtqi)",
+        "Bärande föräldrar (hbtqi)",
+        "Gravida (hbtqi)",
+        "Havandeskap (hbtqi)" ;
+    skos:broader <ni09mn87> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Graviditet (hbtqi)" ;
+    skos:scopeNote "Används för skildringar av att, som hbtqi-person eller i ett sammanhang med andra hbtqi-personer, vara gravid." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

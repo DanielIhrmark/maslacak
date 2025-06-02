@@ -1,0 +1,26 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<jm31du91> a skos:Concept ;
+    dcterms:identifier "jm31du91" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Bimän",
+        "Manliga bisexuella" ;
+    skos:broader <nl86cd25>,
+        <zf23ch07> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh93002510>,
+        <https://homosaurus.org/v3/homoit0000160>,
+        <https://id.kb.se/term/sao/Bisexuella%20m%C3%A4n> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <rg99ag35>,
+        <ec50im78>,
+        <sd59ts94> ;
+    skos:prefLabel "Bisexuella män" ;
+    skos:related <vg32jf51>,
+        <yi47zi31> ;
+    skos:scopeNote "Används för skildringar av personer som beskrivs som män och som har förmågan att känna sexuell och/eller romantisk attraktion till människor oavsett kön." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

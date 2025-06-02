@@ -1,0 +1,23 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<na14gr08> a skos:Concept ;
+    dcterms:identifier "na14gr08" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Sugar babies",
+        "Sugar daddies",
+        "Sugar dating",
+        "Sugar mamas",
+        "Sugar-dejting",
+        "Sugar-dejtning",
+        "Sugardating",
+        "Sugardejtning" ;
+    skos:broader <gx15nx98> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Sugardejting" ;
+    skos:scopeNote "Används för skildringar av relationer som präglas av att en part ger monetär, materiell eller annan ersättning åt en annan i utbyte för intimitet eller sex." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

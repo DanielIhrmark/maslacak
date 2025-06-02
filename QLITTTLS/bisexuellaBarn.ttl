@@ -1,0 +1,20 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<pn74ek02> a skos:Concept ;
+    dcterms:identifier "pn74ek02" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <nl86cd25>,
+        <rl94ul47> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000140> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <os42ys07>,
+        <rg99ag35> ;
+    skos:prefLabel "Bisexuella barn" ;
+    skos:related <gp40jp83> ;
+    skos:scopeNote "Används för skildringar av barn som beskrivs som bisexuella." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

@@ -1,0 +1,21 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<wv53po26> a skos:Concept ;
+    dcterms:identifier "wv53po26" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001520>,
+        <https://id.kb.se/term/barn/Ungdomar>,
+        <https://id.kb.se/term/sao/Ungdomar> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <fx55na17>,
+        <nm13zo20>,
+        <xx41vk00> ;
+    skos:prefLabel "Ungdomar" ;
+    skos:related <bv39zf39>,
+        <gz65sa45> ;
+    skos:scopeNote "Används för skildringar av personer som beskrivs som ungdomar, i gränslandet mellan barn och vuxen - i regel mellan 15 och 25 år." .
+

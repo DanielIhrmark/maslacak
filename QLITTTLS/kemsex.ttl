@@ -1,0 +1,25 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<yt55tr32> a skos:Concept ;
+    dcterms:identifier "yt55tr32" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Chemsex",
+        "Chem-sex",
+        "Kem-sex",
+        "Party and play",
+        "PnP",
+        "Sexualiserat droganvändande" ;
+    skos:broader <of65zl26>,
+        <sq10os38>,
+        <si22wr35> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0002289> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Kemsex" ;
+    skos:related <cn23yx07> ;
+    skos:scopeNote "Används för skildringar av sex där droger används för att intensifiera sinnesupplevelsen och/eller öka den sexuella förmågan." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

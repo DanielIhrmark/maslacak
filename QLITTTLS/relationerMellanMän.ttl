@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<bz75oh35> a skos:Concept ;
+    dcterms:identifier "bz75oh35" ;
+    dcterms:issued "2022-10-04T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-10-04T10:12:00"^^xsd:dateTime ;
+    skos:broader <lm49rl65> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Relationer mellan män" ;
+    skos:related <cn34nl16>,
+        <io33bc56>,
+        <ip90hk23>,
+        <qq09uc15> ;
+    skos:scopeNote "Används för skildringar av nära relationer mellan män, där deras sexuella läggning inte framgår. Kan omfatta aspekter som släktskap, vänskap, sex eller kärlek." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

@@ -1,0 +1,17 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<yc84up13> a skos:Concept ;
+    dcterms:identifier "yc84up13" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Spiritualitet (hbtqi)" ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000948> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Andlighet (hbtqi)" ;
+    skos:related <fs91lv00>,
+        <si96fc99> ;
+    skos:scopeNote "Används för skildringar av hbtqi-personers erfarenheter av eller sökande efter översinnliga upplevelser." .
+

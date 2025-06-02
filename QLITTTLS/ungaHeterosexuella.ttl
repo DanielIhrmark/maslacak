@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<nm13zo20> a skos:Concept ;
+    dcterms:identifier "nm13zo20" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Heterosexuella ungdomar" ;
+    skos:broader <ga70uy71>,
+        <wv53po26> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000630> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Unga heterosexuella" ;
+    skos:related <xx41vk00> ;
+    skos:scopeNote "Används för skildringar av ungdomar som beskrivs som heterosexuella och där identiteten som heterosexuell är i fokus." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

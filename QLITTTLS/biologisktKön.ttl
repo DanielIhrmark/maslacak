@@ -1,0 +1,26 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<hh96dh44> a skos:Concept ;
+    dcterms:identifier "hh96dh44" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Endokrint kön",
+        "Genetiskt kön",
+        "Kroppsligt kön" ;
+    skos:broader <ss55ax39> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001269> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <cc01go96>,
+        <ie81fz88>,
+        <mp47ze52>,
+        <op26io85>,
+        <so20eo06>,
+        <sy50mg13>,
+        <vr86mj99> ;
+    skos:prefLabel "Biologiskt kön" ;
+    skos:scopeNote "Används för skildringar där reflektioner över biologiskt kön - det kön som bestäms utifrån inre och yttre könsorgan, könskromosomer och hormonnivåer - har betydelse för verket." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

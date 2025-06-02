@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ks15vr11> a skos:Concept ;
+    dcterms:identifier "ks15vr11" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <cb66jw88>,
+        <iy93lr17>,
+        <qj48lh67> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001094> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Pederaster" ;
+    skos:related <oq76dn75> ;
+    skos:scopeNote "Används för skildringar, historiska eller historiserande, som använder begreppet pederaster - ett äldre ord som oftast syftar på vuxna män som har, eller önskar ha, erotiska förhållanden med tonårspojkar. Historiskt har begreppet även använts som synonym för både homosexuella män och pedofiler." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

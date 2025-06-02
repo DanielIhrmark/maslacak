@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<yq04cj00> a skos:Concept ;
+    dcterms:identifier "yq04cj00" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <ap82ka21> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000038> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Allierade" ;
+    skos:related <ae46oh82>,
+        <ga70uy71>,
+        <wj35lq02> ;
+    skos:scopeNote "Används för skildringar av personer som inte själva är hbtqi-personer men stödjer och aktivt deltar i hbtqi-rörelsen." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

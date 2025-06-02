@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ku32od34> a skos:Concept ;
+    dcterms:identifier "ku32od34" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <bz86ef62>,
+        <gc82ev34>,
+        <iy93lr17> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001063> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Uttrar (identitet)" ;
+    skos:related <xe06fq38> ;
+    skos:scopeNote "Används för skildringar av personer som beskrivs som tillhörande subkulturen uttrar. Subkulturen kännetecknas av smala och håriga bögar." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

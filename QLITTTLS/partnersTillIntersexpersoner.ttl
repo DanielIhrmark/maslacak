@@ -1,0 +1,17 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<qf48vc57> a skos:Concept ;
+    dcterms:identifier "qf48vc57" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <bi99oj90> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0002743> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Partners till intersexpersoner" ;
+    skos:related <ob41my06> ;
+    skos:scopeNote "Används för skildringar av personer som är partners till intersexpersoner, oavsett partnerns egna identitet." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

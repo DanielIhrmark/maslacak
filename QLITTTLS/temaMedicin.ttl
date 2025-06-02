@@ -1,0 +1,22 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<mt38ga61> a skos:Collection ;
+    dcterms:identifier "mt38ga61" ;
+    dcterms:issued "2022-12-19T13:03:41"^^xsd:dateTime ;
+    dcterms:modified "2022-12-19T13:03:41"^^xsd:dateTime ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:member <bn27dq61>,
+        <en38lc34>,
+        <lg15gn10>,
+        <lx03gj31>,
+        <pt39jk21>,
+        <qj90xo54>,
+        <qt34ot13>,
+        <rm77zj74>,
+        <wn56qx41>,
+        <xn31ff26>,
+        <yl97tn08> ;
+    skos:prefLabel "Tema: Medicin (hbtqi)" .

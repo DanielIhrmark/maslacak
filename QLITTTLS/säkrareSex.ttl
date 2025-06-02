@@ -1,0 +1,23 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<um93rl06> a skos:Concept ;
+    dcterms:identifier "um93rl06" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Säkert sex" ;
+    skos:broader <of65zl26>,
+        <sq10os38> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001251> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Säkrare sex" ;
+    skos:related <en38lc34>,
+        <kd49dt22>,
+        <kn59jd20>,
+        <wt82mm95>,
+        <zn22hl53> ;
+    skos:scopeNote "Används för skildringar av olika metoder för minska risken för sexuellt överförbara infektioner, exempelvis genom att använda skydd eller ha sex på sätt som minskar risken för smitta." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

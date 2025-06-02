@@ -1,0 +1,25 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<rh94xr73> a skos:Concept ;
+    dcterms:identifier "rh94xr73" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Mord på bisexuella",
+        "Mord på bögar",
+        "Mord på homosexuella",
+        "Mord på intersexpersoner",
+        "Mord på lesbiska",
+        "Mord på queera",
+        "Mord på transpersoner" ;
+    skos:broader <bg78ib80> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000641> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Mord på hbtqi-personer" ;
+    skos:related <yf82lc16>,
+        <yu17am57> ;
+    skos:scopeNote "Används för skildringar av mord på hbtqi-personer." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

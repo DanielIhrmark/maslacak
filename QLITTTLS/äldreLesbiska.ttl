@@ -1,0 +1,21 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<hq85ud85> a skos:Concept ;
+    dcterms:identifier "hq85ud85" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Gamla lesbiska",
+        "Gamla homosexuella kvinnor",
+        "Äldre homosexuella kvinnor" ;
+    skos:broader <ac41zr34>,
+        <ml83ih14> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh86004768>,
+        <https://homosaurus.org/v3/homoit0001056> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Äldre lesbiska" ;
+    skos:scopeNote "Används för skildringar av äldre personer som beskrivs som lesbiska." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

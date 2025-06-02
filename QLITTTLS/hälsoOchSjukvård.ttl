@@ -1,0 +1,22 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<qj90xo54> a skos:Concept ;
+    dcterms:identifier "qj90xo54" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Medicinsk vård" ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85082871>,
+        <https://homosaurus.org/v3/homoit0001004>,
+        <https://id.kb.se/term/sao/H%C3%A4lso-%20och%20sjukv%C3%A5rd> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <iq17ln92>,
+        <ru33ue70>,
+        <tp87vt58> ;
+    skos:prefLabel "Hälso- och sjukvård" ;
+    skos:related <pt39jk21>,
+        <qb68kn73> ;
+    skos:scopeNote "Används för skildringar av hälsa och sjukvård på ett generellt plan." .
+

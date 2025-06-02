@@ -1,0 +1,16 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<mz17yd70> a skos:Concept ;
+    dcterms:identifier "mz17yd70" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:hiddenLabel "Spegel-symbolik (hbtqi)" ;
+    skos:broader <bv22nv79> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Spegelsymbolik (hbtqi)" ;
+    skos:scopeNote "Används för skildringar där speglar och speglande används som symbolik för att signalera samkönade sexuella praktiker, känslor, identiteter och/eller överskridanden av binära könsnormer." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

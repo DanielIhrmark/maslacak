@@ -1,0 +1,21 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<km65mk87> a skos:Concept ;
+    dcterms:identifier "km65mk87" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Queercommunityt" ;
+    skos:broader <pn94ds23> ;
+    skos:closeMatch <https://id.kb.se/term/sao/Queer> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001170> ;
+    skos:hiddenLabel "Queer-communityt" ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Queera gemenskaper" ;
+    skos:related <dl13tg08>,
+        <zq79av11> ;
+    skos:scopeNote "Används för skildringar av sociala gemenskaper där huvudsakligen queera personer interagerar." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

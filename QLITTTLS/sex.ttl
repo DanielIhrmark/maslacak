@@ -1,0 +1,59 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<sq10os38> a skos:Concept ;
+    dcterms:identifier "sq10os38" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:closeMatch <https://id.kb.se/term/sao/Sexualliv> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001267>,
+        <https://id.kb.se/term/barn/Sex> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <bv70bv30>,
+        <by54rv25>,
+        <co37xi02>,
+        <co90rk32>,
+        <de64ef39>,
+        <ea97yu27>,
+        <eh73kd00>,
+        <es43bw29>,
+        <fa06ki05>,
+        <ft03mv01>,
+        <in96gy48>,
+        <jq54pz13>,
+        <ju63em60>,
+        <kd86jk33>,
+        <nc08jl70>,
+        <ne86gx34>,
+        <oc13ma05>,
+        <oj77yj15>,
+        <pp33on45>,
+        <rc36vu96>,
+        <tb22yb92>,
+        <th99gl87>,
+        <tq80uf58>,
+        <um93rl06>,
+        <vk67bh74>,
+        <vn09ak57>,
+        <vw24ij47>,
+        <wk00ux87>,
+        <wt70sq05>,
+        <wu63pp88>,
+        <xl67uc46>,
+        <yt55tr32> ;
+    skos:prefLabel "Sex" ;
+    skos:related <hi88il01>,
+        <jk79xh22>,
+        <jy58jm84>,
+        <mo71rb07>,
+        <pk82yt24>,
+        <qb31sd30>,
+        <tk37pb02>,
+        <tq80uf58>,
+        <wu82rr35>,
+        <ys78qn95>,
+        <yz49jc80> ;
+    skos:scopeNote "Används för skildringar av fysisk och/eller känslomässig interaktion med en annan person eller ett annat föremål, med den specifika avsikten att uppnå sexuell upphetsning eller klimax." .
+

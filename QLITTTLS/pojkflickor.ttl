@@ -1,0 +1,21 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<qw72dw59> a skos:Concept ;
+    dcterms:identifier "qw72dw59" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <nf67vq64>,
+        <xw31re99> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh2011002322>,
+        <https://homosaurus.org/v3/homoit0001374>,
+        <https://id.kb.se/term/sao/Pojkflickor> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Pojkflickor" ;
+    skos:related <tx04hr81>,
+        <gy32il97> ;
+    skos:scopeNote "Används för skildringar av flickor som uppfattas som maskulina eller vars beteende och uttryck inte överensstämmer med traditionella feminina roller. Kan uppfattas som eller användas nedsättande." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

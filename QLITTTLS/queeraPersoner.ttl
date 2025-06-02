@@ -1,0 +1,32 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<yd09fz28> a skos:Concept ;
+    dcterms:identifier "yd09fz28" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Queers" ;
+    skos:broader <ot53zk29> ;
+    skos:closeMatch <https://id.kb.se/term/barn/Queer>,
+        <https://id.kb.se/term/sao/Queer> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001195> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <fk47ml54>,
+        <oc00zr41>,
+        <ow68ja39>,
+        <tp88nx27>,
+        <uj09vu44>,
+        <vv82yi14>,
+        <zl52bq90> ;
+    skos:prefLabel "Queera personer" ;
+    skos:related <cc42ia45>,
+        <fk47ml54>,
+        <gf03gn85>,
+        <hv28qb07>,
+        <yf68rk86>,
+        <ze45rh48> ;
+    skos:scopeNote "Används för skildringar av personer som beskrivs som queera." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

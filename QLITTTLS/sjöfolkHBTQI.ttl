@@ -1,0 +1,21 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<bk76xl71> a skos:Concept ;
+    dcterms:identifier "bk76xl71" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Flottister (hbtqi)",
+        "Matroser (hbtqi)",
+        "Kaptener (hbtqi)",
+        "Pirater (hbtqi)",
+        "Sjömän (hbtqi)" ;
+    skos:broader <ot53zk29> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0001258> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Sjöfolk (hbtqi)" ;
+    skos:scopeNote "Används för skildringar av hbtqi-personer som yrkesmässigt arbetar ombord på fartyg till sjöss, eller skildringar av sjöfolk där hbtqi-tematik på annat sätt är framträdande." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

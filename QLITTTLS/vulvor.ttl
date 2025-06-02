@@ -1,0 +1,18 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<cg96ab32> a skos:Concept ;
+    dcterms:identifier "cg96ab32" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <cc01go96>,
+        <nw90qo62> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85144473>,
+        <https://homosaurus.org/v3/homoit0001497> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Vulvor" ;
+    skos:scopeNote "Används för skildringar av de yttre delarna av fittan så som venusberg, blygdläppar och klitoris." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

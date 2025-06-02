@@ -1,0 +1,20 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<pk82yt24> a skos:Concept ;
+    dcterms:identifier "pk82yt24" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Situationsbetingad homosexualitet" ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001315> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Situationsbetingat sexuellt beteende" ;
+    skos:related <cb66jw88>,
+        <jy58jm84>,
+        <of65zl26>,
+        <sq10os38>,
+        <lv37kg53> ;
+    skos:scopeNote "Används för skildringar av situationer då personers sexuella beteende skiljer sig från hur det vanligen yttrar sig, beroende på yttre omständigheter. Vanligen gäller det heterosexuella personer som befinner sig i enkönade miljöer, som fängelser, armén, skolor med mera, och där utövar samkönad sexuell praktik." .
+

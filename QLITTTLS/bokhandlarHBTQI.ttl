@@ -1,0 +1,16 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<yo22bh33> a skos:Concept ;
+    dcterms:identifier "yo22bh33" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Bokaffärer (hbtqi)" ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000216> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <rd67bz91> ;
+    skos:prefLabel "Bokhandlar (hbtqi)" ;
+    skos:scopeNote "Används för skildringar av bokhandlar där kopplingen till hbtqi har en framträdande betydelse." .
+

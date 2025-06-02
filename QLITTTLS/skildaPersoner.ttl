@@ -1,0 +1,22 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<av87kj76> a skos:Concept ;
+    dcterms:identifier "av87kj76" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Frånskilda personer" ;
+    skos:broader <uh63yy69> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85038648>,
+        <https://homosaurus.org/v3/homoit0000359>,
+        <https://id.kb.se/term/sao/Fr%C3%A5nskilda%20personer> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Skilda personer" ;
+    skos:related <rs51yj40>,
+        <uz47hv66>,
+        <ut81fb61> ;
+    skos:scopeNote "Används för skildringar av personer som genomgått en skilsmässa." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

@@ -1,0 +1,22 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<jh97xq13> a skos:Concept ;
+    dcterms:identifier "jh97xq13" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Biologisk essentialism",
+        "Biologism" ;
+    skos:broader <xp78uu97> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000115> ;
+    skos:closeMatch <https://id.loc.gov/authorities/subjects/sh85044919.html> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Essentialism" ;
+    skos:related <bt87ge35>,
+        <iy93lr17>,
+        <lc31la95> ;
+    skos:scopeNote "Används för skildringar där idéer om att kategorier som kön, sexuell läggning och etnicitet är naturligt givna - och att olika grupper bär på inneboende, oföränderliga egenskaper - har en framträdande betydelse för verket." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

@@ -1,0 +1,20 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<mw98ml69> a skos:Concept ;
+    dcterms:identifier "mw98ml69" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85046572>,
+        <https://id.kb.se/term/barn/Utpressning>,
+        <https://id.kb.se/term/sao/Utpressning> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Utpressning (hbtqi)" ;
+    skos:related <gd64om76>,
+        <ln82yo33>,
+        <mw94xh06>,
+        <ru44rj72> ;
+    skos:scopeNote "Används för skildringar av att med hot (t.ex. om att avslöja någons sexuella läggning eller transitionshistoria) tvinga någon till något, t.ex. att betala pengar till utpressaren." .
+

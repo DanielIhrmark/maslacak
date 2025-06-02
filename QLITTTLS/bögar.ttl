@@ -1,0 +1,42 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<gc82ev34> a skos:Concept ;
+    dcterms:identifier "gc82ev34" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Gays",
+        "Homosexuella män",
+        "Manlig homosexualitet",
+        "Manliga homosexuella" ;
+    skos:broader <nf03ub67>,
+        <zf23ch07> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000506>,
+        <https://id.kb.se/term/sao/Homosexuella%20m%C3%A4n> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <ei11ju25>,
+        <ik01ja84>,
+        <ku32od34>,
+        <kz63vs02>,
+        <me57jv39>,
+        <oi78cp72>,
+        <xe06fq38>,
+        <xu50br91>,
+        <yl06dh66>,
+        <zs36te85> ;
+    skos:prefLabel "Bögar" ;
+    skos:related <dy39os96>,
+        <ed80ly99>,
+        <fh64du23>,
+        <gg32ga60>,
+        <hv28qb07>,
+        <vg32jf51>,
+        <wq11aj19>,
+        <yi47zi31>,
+        <zc56xf18>,
+        <sn21af03> ;
+    skos:scopeNote "Används för skildringar av personer som beskrivs som pojkar eller män och som blir kära i och/eller attraherade av andra pojkar/män. Kan även användas för skildringar av bögidentiteter utan koppling till tvåkönsmodellen." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

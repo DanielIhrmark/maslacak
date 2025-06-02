@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<vo54sb98> a skos:Concept ;
+    dcterms:identifier "vo54sb98" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:hiddenLabel "Beteende-terapi";
+    skos:broader <ru33ue70> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85012900>,
+        <https://homosaurus.org/v3/homoit0000106>,
+        <https://id.kb.se/term/sao/Beteendeterapi> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Beteendeterapi" ;
+    skos:scopeNote "Används för skildringar av psykologisk behandling som har stort fokus på att problem orsakas av erfarenheter och där behandlingen ofta innebär att genom exponering - att närma sig det som väcker ångest eller annan negativ affekt - få möjlighet att öva nya förhållningssätt." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

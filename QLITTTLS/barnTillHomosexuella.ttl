@@ -1,0 +1,20 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<jb88tw15> a skos:Concept ;
+    dcterms:identifier "jb88tw15" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <pz95ay20> ;
+    skos:exactMatch <https://id.kb.se/term/sao/Barn%20till%20homosexuella> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <cw52kj25>,
+        <sn54je49> ;
+    skos:prefLabel "Barn till homosexuella" ;
+    skos:related <fg62ba53>,
+        <ps79pk16> ;
+    skos:scopeNote "Används för skildringar av barn till personer som beskrivs som homosexuella." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

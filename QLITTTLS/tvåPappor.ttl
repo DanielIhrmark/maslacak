@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<el38sj28> a skos:Concept ;
+    dcterms:identifier "el38sj28" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Två farsor",
+        "Två fäder" ;
+    skos:broader <ds06gp49> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Två pappor" ;
+    skos:related <kz63vs02>,
+        <nv42jb62> ;
+    skos:scopeNote "Används för skildringar av två pappor med gemensamma barn, oavsett pappornas läggning eller sexuella identitet. För bisexuella respektive homosexuella pappor, använd även ämnesordet \"Bisexuella föräldrar\" eller \"Bögföräldrar\"." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

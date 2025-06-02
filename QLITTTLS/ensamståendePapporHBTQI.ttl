@@ -1,0 +1,17 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<je73wy14> a skos:Concept ;
+    dcterms:identifier "je73wy14" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <ds06gp49>,
+        <jz19cb14> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000941> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Ensamstående pappor (hbtqi)" ;
+    skos:scopeNote "Används för skildringar av pappor som är hbtqi-personer och som lever ensamma med barn och har ensam eller delad vårdnad där barnen bor hos pappan på minst halvtid." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

@@ -1,0 +1,24 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<gh93af20> a skos:Concept ;
+    dcterms:identifier "gh93af20" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <aq42lk11>,
+        <he13pb69> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000047>,
+        <https://id.kb.se/term/sao/Androgyni> ;
+    skos:closeMatch <https://id.loc.gov/authorities/subjects/sh85004920.html> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Androgynitet" ;
+    skos:related <cm18bw55>,
+        <qs33fu26>,
+        <sf56xe20>,
+        <vk43qf93>,
+        <xw31re99> ;
+    skos:scopeNote "Används för skildringar av det att i sitt könsuttryck eller sin könsidentitet kombinera maskulina och feminina drag." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

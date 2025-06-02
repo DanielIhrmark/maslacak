@@ -1,0 +1,21 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<id89zs88> a skos:Concept ;
+    dcterms:identifier "id89zs88" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Idrottskvinnor (hbtqi)",
+        "Idrottsmän (hbtqi)",
+        "Idrottspersoner (hbtqi)" ;
+    skos:broader <ot53zk29> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0001929> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Idrottare (hbtqi)" ;
+    skos:related <sk93nk73>,
+        <mz51ub78> ;
+    skos:scopeNote "Används för skildringar av hbtqi-personer som är idrottare eller som återkommande är aktiva inom sport eller idrott." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

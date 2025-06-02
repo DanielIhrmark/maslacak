@@ -1,0 +1,27 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<wj35lq02> a skos:Concept ;
+    dcterms:identifier "wj35lq02" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:hiddenLabel "Cis-personer" ;
+    skos:broader <op23ar73> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh2016000684>,
+        <https://homosaurus.org/v3/homoit0000271>,
+        <https://id.kb.se/term/sao/Cispersoner> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <fo06sb61>,
+        <tc60ce15> ;
+    skos:prefLabel "Cispersoner" ;
+    skos:related <la83kc00>,
+        <op23ar73>,
+        <qs74zg73>,
+        <wj27lv47>,
+        <yq04cj00>,
+        <zf23ch07> ;
+    skos:scopeNote "Används för skildringar av personer vars kroppar, juridiska kön och könsidentiteter överensstämmer med det kön de tilldelades vid födseln. Motsats till transperson. Ämnesordet används för skildringar där identiteten som cisperson är i fokus." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

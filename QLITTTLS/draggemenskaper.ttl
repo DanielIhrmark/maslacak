@@ -1,0 +1,25 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<jf44kn92> a skos:Concept ;
+    dcterms:identifier "jf44kn92" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:hiddenLabel "Drag-gemenskaper" ;
+    skos:broader <he13pb69>,
+        <pn94ds23> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000370> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <vu62yz77> ;
+    skos:prefLabel "Draggemenskaper" ;
+    skos:related <hc77dd42>,
+        <iy93lr17>,
+        <la19ou04>,
+        <nx46rw80>,
+        <rh61yd98>,
+        <wp99sm33> ;
+    skos:scopeNote "Används för skildringar av sociala gemenskaper där huvudsakligen dragartister och dragintresserade interagerar." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

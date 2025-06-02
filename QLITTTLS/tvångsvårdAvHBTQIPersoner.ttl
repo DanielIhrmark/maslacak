@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<rf98kk08> a skos:Concept ;
+    dcterms:identifier "rf98kk08" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <le14is10> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000349> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Tvångsvård av hbtqi-personer" ;
+    skos:related <ji43uf25>,
+        <jy77yj84>,
+        <ym29ed45> ;
+    skos:scopeNote "Används för skildringar av vård av hbtqi-personer som sker mot den vårdades vilja eller oberoende av dennes samtycke." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

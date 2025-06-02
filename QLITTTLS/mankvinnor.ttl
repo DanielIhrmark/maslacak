@@ -1,0 +1,24 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<xs75bn70> a skos:Concept ;
+    dcterms:identifier "xs75bn70" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Maninna",
+        "Maninnor",
+        "Mankvinna",
+        "Manskvinna",
+        "Manskvinnor" ;
+    skos:broader <qj48lh67> ;
+    skos:hiddenLabel "Man-kvinnor" ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Mankvinnor" ;
+    skos:related <ch36fv43>,
+        <ml83ih14>,
+        <ob41my06> ;
+    skos:scopeNote "Används för skildringar, historiska eller historiserande, som använder begreppet mankvinnor - ett äldre ord som från det sena 1800-talet använts för att beskriva personer som på olika sätt inte ansetts uppfylla en förväntad heterosexuell kvinnoidentitet, till exempel genom normbrytande maskulin klädsel eller kroppslighet, eller genom att de antogs vara lesbiska." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

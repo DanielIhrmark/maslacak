@@ -1,0 +1,28 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ml53hr68> a skos:Collection ;
+    dcterms:identifier "ml53hr68" ;
+    dcterms:issued "2022-12-19T13:03:41"^^xsd:dateTime ;
+    dcterms:modified "2022-12-19T13:03:41"^^xsd:dateTime ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:member <by72wh90>,
+        <dl13tg08>,
+        <dt87hy25>,
+        <ga70uy71>,
+        <gz65sa45>,
+        <he13pb69>,
+        <iy93lr17>,
+        <oh06mw89>,
+        <ot53zk29>,
+        <pf53mb18>,
+        <pj39xm88>,
+        <pk82yt24>,
+        <qj48lh67>,
+        <ss55ax39>,
+        <wv53po26>,
+        <zq29sy82>,
+        <zv66nv87> ;
+    skos:prefLabel "Tema: Identiteter och praktiker (hbtqi)" .

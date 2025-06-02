@@ -1,0 +1,26 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<tk37pb02> a skos:Concept ;
+    dcterms:identifier "tk37pb02" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <cb66jw88>,
+        <gx13uu85>,
+        <jm54md83> ;
+    skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85116425>,
+        <https://id.kb.se/term/sao/Sadism> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001250> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Sadism" ;
+    skos:related <ek27kt77>,
+        <hi30mc55>,
+        <iq08ee58>,
+        <na03ov93>,
+        <oj77yj15>,
+        <sq10os38> ;
+    skos:scopeNote "Används för skildringar av att njuta och bli upphetsad av att orsaka andra smärta, lidande och/eller förnedring." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

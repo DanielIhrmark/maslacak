@@ -1,0 +1,22 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<dl13tg08> a skos:Concept ;
+    dcterms:identifier "dl13tg08" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000807> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <zq79av11> ;
+    skos:prefLabel "Hbtqi+" ;
+    skos:related <bw74og01>,
+        <bw78bx64>,
+        <gg32ga60>,
+        <ii22pz18>,
+        <km65mk87>,
+        <or20zr13>,
+        <rt10ly19> ;
+    skos:scopeNote "Används för skildringar med perspektiv eller teman som berör homosexualitet, bisexualitet, trans, queer, intersex och/eller andra brott mot hetero- och cisnormer." .
+

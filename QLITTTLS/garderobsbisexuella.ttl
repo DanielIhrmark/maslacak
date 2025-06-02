@@ -1,0 +1,20 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<mk46kv76> a skos:Concept ;
+    dcterms:identifier "mk46kv76" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:hiddenLabel "Garderobs-bisexuella" ;
+    skos:broader <nl86cd25> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000285> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Garderobsbisexuella" ;
+    skos:related <ev61wd95>,
+        <gd64om76>,
+        <kp91xn92> ;
+    skos:scopeNote "Används för skildringar av bisexuella personer som hemlighåller eller inte offentliggör sin sexuella läggning." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

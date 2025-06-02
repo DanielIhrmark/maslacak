@@ -1,0 +1,16 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<qb27dx51> a skos:Concept ;
+    dcterms:identifier "qb27dx51" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <qj48lh67> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000645> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Homofiler" ;
+    skos:scopeNote "Används för skildringar, historiska eller historiserande, som använder begreppet homofiler - ett äldre ord som lanserades under 1950-talet för att komma bort från fokus på sex i ord som \"homosexuella\", men snart kom att anammas som en del av en homofob vokabulär och som - i den under 1970-talet radikaliserade gayrörelsen - betraktades som beskrivande en utdaterad, diskret och respektabilitetssträvande politisk tendens bland homosexuella." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

@@ -1,0 +1,25 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<rd56yz51> a skos:Concept ;
+    dcterms:identifier "rd56yz51" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "F2X",
+        "F2Xs",
+        "Female-2-X",
+        "Female-to-X",
+        "FtXs",
+        "Kvinna-till-annat" ;
+    skos:broader <wj27lv47> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000457> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "FtX" ;
+    skos:related <kh58tg68>,
+        <uw18hz12>,
+        <ni79ss40> ;
+    skos:scopeNote "Används för skildringar av personer som beskrivs som FtX, vilket inkluderar transmän/ftm/transmaskulina och ickebinära som tilldelats kvinnligt kön vid födseln." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

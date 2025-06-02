@@ -1,0 +1,20 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<gz58ku31> a skos:Concept ;
+    dcterms:identifier "gz58ku31" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Bisexuellas fäder",
+        "Bisexuellas pappor",
+        "Fäder till bisexuella" ;
+    skos:broader <ad66zi96>,
+        <gp40jp83> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000424> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Pappor till bisexuella" ;
+    skos:scopeNote "Används för skildringar av pappor till bisexuella, oavsett pappans egen identitet." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

@@ -1,0 +1,20 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<aa40zb14> a skos:Concept ;
+    dcterms:identifier "aa40zb14" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <ho87ol42> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000711> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Juridiskt namn" ;
+    skos:related <ff45ka28>,
+        <gi07re10>,
+        <nk19mk45>,
+        <up70lp68> ;
+    skos:scopeNote "Används för skildringar där myndigheters registrering av namn har betydelse för verket." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

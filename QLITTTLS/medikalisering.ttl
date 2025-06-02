@@ -1,0 +1,24 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<iq17ln92> a skos:Concept ;
+    dcterms:identifier "iq17ln92" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Patologisering" ;
+    skos:broader <qj90xo54> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001006> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <dk34ho21>,
+        <ig53gy82>,
+        <nc67ku99>,
+        <sy50mg13> ;
+    skos:prefLabel "Medikalisering" ;
+    skos:related <lc31la95>,
+        <qh04go55>,
+        <nd56bj55> ;
+    skos:scopeNote "Används för skildringar av processer där mänskliga tillstånd och problem definieras och behandlas som medicinska tillstånd och blir föremål för medicinska studier, diagnoser, förebyggande åtgärder och/eller behandlingar." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

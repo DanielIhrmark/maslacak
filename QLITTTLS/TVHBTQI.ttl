@@ -1,0 +1,15 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<kb67on35> a skos:Concept ;
+    dcterms:identifier "kb67on35" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Television (hbtqi)" ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0001359> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "TV (hbtqi)" ;
+    skos:scopeNote "Används för skildringar av TV-produktioner som riktar sig till och/eller handlar om hbtqi-personer." .
+

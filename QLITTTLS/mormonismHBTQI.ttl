@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<bf47oe08> a skos:Concept ;
+    dcterms:identifier "bf47oe08" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Hbtqi-mormoner",
+        "Mormoner (hbtqi)" ;
+    skos:broader <mz21dd20> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000904>,
+    <http://id.loc.gov/authorities/subjects/sh91004211> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Mormonism (hbtqi)" ;
+    skos:scopeNote "Används för skildringar av hbtqi-personer som är mormoner. Används även för skildringar av hbtqi-personers förhållningssätt till mormonism eller andra mormoners förhållningssätt till hbtqi." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

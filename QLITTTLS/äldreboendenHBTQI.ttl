@@ -1,0 +1,17 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<js21ua35> a skos:Concept ;
+    dcterms:identifier "js21ua35" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Ålderdomshem (hbtqi)" ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000931> ;
+    skos:hiddenLabel "Äldre-boenden (hbtqi)" ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Äldreboenden (hbtqi)" ;
+    skos:related <eg84dq15> ;
+    skos:scopeNote "Används för skildringar av hbtqi-personer som vistas på äldreboenden samt för äldreboenden med hbtqi-personer som målgrupp." .
+

@@ -1,0 +1,64 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<wj27lv47> a skos:Concept ;
+    dcterms:identifier "wj27lv47" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "TGD-personer",
+        "Trans",
+        "Trans*" ;
+    skos:broader <he13pb69>,
+        <op23ar73>,
+        <ot53zk29> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh2007003708>,
+        <https://homosaurus.org/v3/homoit0001378>,
+        <https://id.kb.se/term/barn/Transpersoner>,
+        <https://id.kb.se/term/sao/Transpersoner> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <ao42ia99>,
+        <ch36fv43>,
+        <db41rg76>,
+        <eh13ix50>,
+        <gz45ku14>,
+        <ie81fz88>,
+        <ik01oq26>,
+        <jo36mt43>,
+        <jt69hs39>,
+        <kh58tg68>,
+        <mb15si12>,
+        <nm50fc73>,
+        <nv29rf04>,
+        <pm74au97>,
+        <pz27fq97>,
+        <rd56yz51>,
+        <tc55xe62>,
+        <uj94qg47>,
+        <ur25wp26>,
+        <uw18hz12>,
+        <vk43qf93>,
+        <vw95lh38> ;
+    skos:prefLabel "Transpersoner" ;
+    skos:related <bi56bw40>,
+        <bk45ul19>,
+        <bw74og01>,
+        <dk34ho21>,
+        <ig53gy82>,
+        <jp81au66>,
+        <kq81ui59>,
+        <kx09ve81>,
+        <la83kc00>,
+        <op23ar73>,
+        <qn64mm90>,
+        <rb83rq15>,
+        <sh97pd06>,
+        <ua71em06>,
+        <vr41yw40>,
+        <wj35lq02>,
+        <zf23ch07>,
+        <or82kx62> ;
+    skos:scopeNote "Används för skildringar av personer som genom sitt könsuttryck eller könsidentitet skiljer sig från det kön de tilldelats vid födseln." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

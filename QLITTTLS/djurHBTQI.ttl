@@ -1,0 +1,14 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<gm75ni75> a skos:Concept ;
+    dcterms:identifier "gm75ni75" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Djur (hbtqi)" ;
+    skos:related <bt16zp60> ;
+    skos:scopeNote "Används för skildringar av djur, förmänskligade eller ej, som framställs som att de genom genom begär, praktik, identitet och/eller kropp bryter mot hetero- och/eller cisnormer." .
+

@@ -1,0 +1,21 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<um33qf35> a skos:Concept ;
+    dcterms:identifier "um33qf35" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Intersexpersoners föräldrar" ;
+    skos:broader <mb29ll46> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0002742> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <bp52jf13>,
+        <je63sm61> ;
+    skos:prefLabel "Föräldrar till intersexpersoner" ;
+    skos:related <ob41my06>,
+        <rw98mz62> ;
+    skos:scopeNote "Används för skildringar av föräldrar till intersexpersoner, oavsett biologiskt släktskap." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

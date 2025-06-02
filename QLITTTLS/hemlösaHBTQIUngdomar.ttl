@@ -1,0 +1,17 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<iq97le56> a skos:Concept ;
+    dcterms:identifier "iq97le56" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <xx41vk00>,
+        <ym67gh06> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000880> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Hemlösa hbtqi-ungdomar" ;
+    skos:scopeNote "Används för skildringar av hbtqi-ungdomar som lever i hemlöshet. Hemlöshet innebär att personen saknar en fast bostad i en kultur där fast bostad är norm." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

@@ -1,0 +1,18 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<jm38qk98> a skos:Concept ;
+    dcterms:identifier "jm38qk98" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Hierarkisk polyamori" ;
+    skos:broader <aw95bz40> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001629> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Hierarkisk icke-monogami" ;
+    skos:related <cu71ap39> ;
+    skos:scopeNote "Används för skildringar av överenskommen icke-monogami där de inblandade kan ha flera partners som prioriteras olika vad gäller t.ex. umgängestid, känslomässig intensitet och/eller ekonomisk delaktighet." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

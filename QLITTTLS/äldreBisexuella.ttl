@@ -1,0 +1,20 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ye70mb49> a skos:Concept ;
+    dcterms:identifier "ye70mb49" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Gamla bisexuella" ;
+    skos:broader <eg84dq15>,
+        <nl86cd25> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001054> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <cq47se04>,
+        <sd59ts94> ;
+    skos:prefLabel "Äldre bisexuella" ;
+    skos:scopeNote "Används för skildringar av äldre personer som beskrivs som bisexuella." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

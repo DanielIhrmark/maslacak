@@ -1,0 +1,16 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<nw79ul63> a skos:Concept ;
+    dcterms:identifier "nw79ul63" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <jk79xh22> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000977> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Glidmedel" ;
+    skos:scopeNote "Används för skildringar där glidmedel har betydelse för verket." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

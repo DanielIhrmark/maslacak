@@ -1,0 +1,22 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ku57iu26> a skos:Concept ;
+    dcterms:identifier "ku57iu26" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Porrbutiker",
+    "Sexshoppar" ;
+    skos:broader <qs69pq40> ;
+    skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85120657> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000012> ;
+    skos:hiddenLabel "Sex-butiker",
+        "Porr-butiker" ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Sexbutiker" ;
+    skos:related <jk79xh22> ;
+    skos:scopeNote "Används för skildringar av butiker där sexhjälpmedel och/eller pornografi kan köpas." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

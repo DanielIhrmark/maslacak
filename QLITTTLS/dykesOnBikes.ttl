@@ -1,0 +1,17 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ri80nw20> a skos:Concept ;
+    dcterms:identifier "ri80nw20" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <fr82xo46> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000385> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Dykes on bikes" ;
+    skos:related <km82jf95> ;
+    skos:scopeNote "Används för skildringar av den lesbiska motorcykelklubben." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

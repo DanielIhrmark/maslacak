@@ -1,0 +1,18 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ya81tb87> a skos:Concept ;
+    dcterms:identifier "ya81tb87" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:hiddenLabel "Hetero-socialitet" ;
+    skos:broader <lm49rl65> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000628> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Heterosocialitet" ;
+    skos:related <xv86md55> ;
+    skos:scopeNote "Används för skildringar av hur personer som inte liknar varandra skapar och upprätthåller relationer till varandra. Vanligtvis åsyftas män och kvinnor som umgås med varandra utan att ha sexuella relationer." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

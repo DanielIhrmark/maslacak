@@ -1,0 +1,22 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<fg62ba53> a skos:Concept ;
+    dcterms:identifier "fg62ba53" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <cb60ry21>,
+        <nf03ub67> ;
+    skos:exactMatch <https://id.kb.se/term/barn/Homosexuella%20f%C3%B6r%C3%A4ldrar>,
+        <https://id.kb.se/term/sao/Homosexuella%20f%C3%B6r%C3%A4ldrar> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <kz63vs02>,
+        <nc14hs94> ;
+    skos:prefLabel "Homosexuella föräldrar" ;
+    skos:related <jb88tw15>,
+        <ps79pk16> ;
+    skos:scopeNote "Används för skildringar av homosexuella som, ensamma eller tillsammans med andra, är föräldrar." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

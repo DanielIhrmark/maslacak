@@ -1,0 +1,27 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<es43bw29> a skos:Concept ;
+    dcterms:identifier "es43bw29" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Masturbation",
+        "Masturbering",
+        "Självbefläckelse" ;
+    skos:broader <of65zl26>,
+        <sq10os38> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85082015>,
+        <https://homosaurus.org/v3/homoit0001000>,
+        <https://id.kb.se/term/barn/Onani>,
+        <https://id.kb.se/term/sao/Onani> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <fx15uy00>,
+        <th99gl87>,
+        <uq46vq54> ;
+    skos:prefLabel "Onani" ;
+    skos:related <in96gy48> ;
+    skos:scopeNote "Används för skildringar av självstimulering av det egna könsorganet för sexuell upphetsning och tillfredsställelse." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

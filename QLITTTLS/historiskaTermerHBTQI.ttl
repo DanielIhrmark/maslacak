@@ -1,0 +1,45 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<qj48lh67> a skos:Concept ;
+    dcterms:identifier "qj48lh67" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Föråldrade begrepp (hbtqi)",
+        "Föråldrade ord (hbtqi)",
+        "Föråldrade termer (hbtqi)",
+        "Historiska begrepp (hbtqi)" ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000878> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <bq69wo36>,
+        <cm51lf45>,
+        <ik01oq26>,
+        <iy88so72>,
+        <ks15vr11>,
+        <ky03lz27>,
+        <mo71rb07>,
+        <nc67ku99>,
+        <nu38hi25>,
+        <oq76dn75>,
+        <qb27dx51>,
+        <sh97pd06>,
+        <tf12ob81>,
+        <ti58lf73>,
+        <tq80uf58>,
+        <wq11aj19>,
+        <xq00uv57>,
+        <xs83yq66>,
+        <xs75bn70>,
+        <sn21af03>,
+        <ox94in52>,
+        <om71eq87>,
+        <gb58ld43>,
+        <qf09cx68>,
+        <vu78ao12>,
+        <cu72fw23> ;
+    skos:prefLabel "Historiska termer (hbtqi)" ;
+    skos:related <pb81ks09> ;
+    skos:scopeNote "Används för skildringar, historiska eller historiserande, där föråldrade begrepp brukas för att beskriva samkönade sexuella praktiker, känslor och/eller identiteter eller överskridanden av binära könsnormer genom kropp, klädsel och/eller identitet." .
+

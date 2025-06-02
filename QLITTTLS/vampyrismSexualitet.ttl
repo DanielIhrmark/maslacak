@@ -1,0 +1,20 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<de29wy54> a skos:Concept ;
+    dcterms:identifier "de29wy54" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Vampyrsex" ;
+    skos:broader <jm54md83>,
+        <of65zl26> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000211> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Vampyrism (sexualitet)" ;
+    skos:related <cb66jw88>,
+        <he40yz93> ;
+    skos:scopeNote "Används för skildringar av sex som av utövarna definieras som vampyrism eller med vampyrliknande inslag, främst genom att en utövare konsumerar andras blod." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

@@ -1,0 +1,23 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ud60wo50> a skos:Concept ;
+    dcterms:identifier "ud60wo50" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Farmaka",
+        "Mediciner" ;
+    skos:broader <ru33ue70> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85039719>,
+        <https://homosaurus.org/v3/homoit0001007>,
+        <https://id.kb.se/term/barn/L%C3%A4kemedel>,
+        <https://id.kb.se/term/sao/L%C3%A4kemedel> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <mq18hn87> ;
+    skos:prefLabel "Läkemedel" ;
+    skos:related <kq81ui59> ;
+    skos:scopeNote "Används för skildringar där varor med syfte att förebygga, lindra eller bota sjukdom eller skador har betydelse för verket." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

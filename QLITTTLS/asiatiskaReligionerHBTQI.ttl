@@ -1,0 +1,20 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<mn17sn86> a skos:Concept ;
+    dcterms:identifier "mn17sn86" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <fs91lv00> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <bk97vq01>,
+        <dy42iq34>,
+        <lj78ol14>,
+        <mc95lg55>,
+        <uf02zz01> ;
+    skos:prefLabel "Asiatiska religioner (hbtqi)" ;
+    skos:scopeNote "Används för skildringar av hbtqi-personer som är anhängare av religioner med ursprung i Asien (förutom islam och kristendom - se \"Islam (hbtqi)\" respektive \"Kristendom (hbtqi)\" för dessa). Används även för skildringar av hbtqi-personers förhållningssätt till asiatiska religioner eller hur andra anhängare av dessa religioner förhåller sig till hbtqi." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

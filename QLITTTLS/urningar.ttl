@@ -1,0 +1,18 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ti58lf73> a skos:Concept ;
+    dcterms:identifier "ti58lf73" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Uranier" ;
+    skos:broader <qj48lh67> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001484> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Urningar" ;
+    skos:related <bq69wo36> ;
+    skos:scopeNote "Används för skildringar, historiska eller historiserande, som använder begreppet urningar - ett under det sena 1800-talet och tidiga 1900-talet använt ord, främst för homosexuella män, men inkluderande ett spektrum av hbtqi-identiteter och -praktiker." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

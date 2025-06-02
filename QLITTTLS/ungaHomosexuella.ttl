@@ -1,0 +1,22 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<yp38jg66> a skos:Concept ;
+    dcterms:identifier "yp38jg66" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Homosexuella tonåringar",
+        "Homosexuella ungdomar",
+        "Unga lesbiska och bögar" ;
+    skos:broader <nf03ub67>,
+        <xx41vk00> ;
+    skos:exactMatch <https://id.kb.se/term/sao/Homosexuella%20ungdomar> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <hh85bk61>,
+        <zs36te85> ;
+    skos:prefLabel "Unga homosexuella" ;
+    skos:scopeNote "Används för skildringar av ungdomar som beskrivs som homosexuella." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

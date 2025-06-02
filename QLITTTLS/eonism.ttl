@@ -1,0 +1,22 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<sh97pd06> a skos:Concept ;
+    dcterms:identifier "sh97pd06" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <he13pb69>,
+        <qj48lh67> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000395> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Eonism" ;
+    skos:related <ds64zm22>,
+        <hb81xa89>,
+        <ig53gy82>,
+        <nc67ku99>,
+        <wj27lv47> ;
+    skos:scopeNote "Används för skildringar, historiska eller historiserande, som använder begreppet eonism - ett äldre ord för att beskriva feminina könsuttryck hos personer som tilldelats könet man vid födseln." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

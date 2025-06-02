@@ -1,0 +1,17 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<or84uc19> a skos:Concept ;
+    dcterms:identifier "or84uc19" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Gamla intersexpersoner" ;
+    skos:broader <eg84dq15>,
+        <ob41my06> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Äldre intersexpersoner" ;
+    skos:scopeNote "Används för skildringar av äldre personer som beskrivs som intersex." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

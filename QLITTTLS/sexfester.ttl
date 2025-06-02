@@ -1,0 +1,23 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ts00ew43> a skos:Concept ;
+    dcterms:identifier "ts00ew43" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Sexpartyn" ;
+    skos:broader <hi88il01> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001272> ;
+    skos:hiddenLabel "Sex-fester",
+        "Sex-partyn" ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Sexfester" ;
+    skos:related <hv71in35>,
+        <jy58jm84>,
+        <sj00sx82>,
+        <xp40ps97> ;
+    skos:scopeNote "Används för skildringar av fester där människor har möjlighet att och förväntas utföra sexuella aktiviteter." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

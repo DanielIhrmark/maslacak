@@ -1,0 +1,21 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<bq82fj53> a skos:Concept ;
+    dcterms:identifier "bq82fj53" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001560> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <gs35mz40>,
+        <wq11aj19> ;
+    skos:prefLabel "Skällsord" ;
+    skos:related <cw47ny51>,
+        <cy27yx08>,
+        <fa51om46>,
+        <hv28qb07>,
+        <pq70kh99> ;
+    skos:scopeNote "Används för skildringar där kränkande och/eller diskriminerande uttryck, insinuationer eller öknamn används med avsikt att kränka en person, oftast med koppling till personens identitet. För att ett uttryck ska räknas som skällsord måste det vara nedsättande mot en viss person eller grupp, det måste användas för att underordna dem inom någon struktur av maktrelationer, och personen eller gruppen måste definieras av en föreställt inneboende egenskap (såsom etnicitet, sexuell läggning, könsidentitet etc.). Denna kategori innehåller termer som någon gång i historien ansetts vara skällsord. Därför kan vissa av dessa termer inte längre nödvändigtvis anses nedsättande, de kan vara vanliga i vardagligt språkbruk eller återtagna av gruppen de avses smäda." .
+

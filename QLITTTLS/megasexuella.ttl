@@ -1,0 +1,21 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<xo37sy14> a skos:Concept ;
+    dcterms:identifier "xo37sy14" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <iy93lr17> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001633> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Megasexuella" ;
+    skos:related <nl71fq44>,
+        <pi96ct54>,
+        <qd17qs25>,
+        <td26cb41>,
+        <zq29sy82> ;
+    skos:scopeNote "Används för skildringar av personer som inte upplever en stark känslomässig koppling till andra personer om de inte först bildar en stark sexuell koppling till dem." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

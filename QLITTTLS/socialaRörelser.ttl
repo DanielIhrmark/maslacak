@@ -1,0 +1,21 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<sw59hr91> a skos:Concept ;
+    dcterms:identifier "sw59hr91" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85123979>,
+        <https://homosaurus.org/v3/homoit0001322>,
+        <https://id.kb.se/term/sao/Sociala%20r%C3%B6relser> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <pq80mi93>,
+        <ul59qe23>,
+        <ww01qq85>,
+        <xy93px60>,
+        <yp17xt81> ;
+    skos:prefLabel "Sociala rörelser" ;
+    skos:scopeNote "Används för skildringar av sammanslutningar och sammanhang där personer strävar efter att förändra vad som uppfattas som missförhållanden i samhället eller världen." .
+

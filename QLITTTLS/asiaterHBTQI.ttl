@@ -1,0 +1,17 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<df78pd63> a skos:Concept ;
+    dcterms:identifier "df78pd63" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <nj44aa03>,
+        <ug69ck69> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000074> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Asiater (hbtqi)" ;
+    skos:scopeNote "Används för skildringar av hbtqi-personer med eget eller historiskt ursprung i Asien." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

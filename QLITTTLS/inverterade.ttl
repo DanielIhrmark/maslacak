@@ -1,0 +1,20 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<cm51lf45> a skos:Concept ;
+    dcterms:identifier "cm51lf45" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Sexualinverterade",
+        "Sexuellt inverterade" ;
+    skos:broader <qj48lh67> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000677> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Inverterade" ;
+    skos:related <bq69wo36>,
+        <nc67ku99> ;
+    skos:scopeNote "Används för skildringar, historiska eller historiserande, som använder begreppet inverterade - ett äldre ord som syftar på en föreställd omkastning av förväntade könsrelaterade egenskaper, begär eller kroppsliga karakteristika hos en person. Historiskt har begreppet främst använts för att beskriva personer med samkönad begärsriktning, men förekommer även som beskrivning på andra inom hbtqi-spektrat." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

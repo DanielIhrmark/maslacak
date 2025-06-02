@@ -1,0 +1,24 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<wm33rr79> a skos:Concept ;
+    dcterms:identifier "wm33rr79" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <ef49js51>,
+        <iy93lr17> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0001318> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Undergivna (hbtqi)" ;
+    skos:related <ek27kt77>,
+        <gb03ie03>,
+        <gn70nk07>,
+        <hi30mc55>,
+        <iq08ee58>,
+        <nh99bq54>,
+        <oj77yj15> ;
+    skos:scopeNote "Används för skildringar av undergivna inom BDSM. Används för skildringar av undergivna där kopplingen till HBTQI har en framträdande betydelse." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

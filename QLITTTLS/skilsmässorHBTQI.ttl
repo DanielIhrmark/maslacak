@@ -1,0 +1,18 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<uz47hv66> a skos:Concept ;
+    dcterms:identifier "uz47hv66" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <gx93ym52>,
+        <vh55tv72> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000854> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Skilsmässor (hbtqi)" ;
+    skos:related <av87kj76> ;
+    skos:scopeNote "Används för skildringar av skilsmässor där någon eller alla parter är hbtqi-personer." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

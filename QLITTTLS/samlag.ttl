@@ -1,0 +1,23 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<fa06ki05> a skos:Concept ;
+    dcterms:identifier "fa06ki05" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Knulla" ;
+    skos:broader <co90rk32>,
+        <jq54pz13>,
+        <of65zl26>,
+        <sq10os38> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000662>,
+        <https://id.kb.se/term/sao/Samlag> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <jl42ip17>,
+        <uj05xb50> ;
+    skos:prefLabel "Samlag" ;
+    skos:scopeNote "Används för skildringar där två eller flera personer har könsumgänge." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

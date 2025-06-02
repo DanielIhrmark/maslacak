@@ -1,0 +1,29 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<fs91lv00> a skos:Concept ;
+    dcterms:identifier "fs91lv00" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Gudstro (hbtqi)",
+        "Tro (hbtqi)",
+        "Troende (hbtqi)",
+        "Trosriktningar (hbtqi)" ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000928> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <bo41fi33>,
+        <hq87uz64>,
+        <kn70dj43>,
+        <mn17sn86>,
+        <mz21dd20>,
+        <rj61bd65>,
+        <sb19ql51>,
+        <ui03us88> ;
+    skos:prefLabel "Religion (hbtqi)" ;
+    skos:related <do74lo00>,
+        <io88iy76>,
+        <yc84up13> ;
+    skos:scopeNote "Används för skildringar av religion där kopplingen till hbtqi har en framträdande betydelse, antingen genom att de troende beskrivs som hbtqi-personer, genom beskrivningar av hbtqi-personers förhållningssätt till religion eller genom andra troendes förhållningssätt till hbtqi." .
+

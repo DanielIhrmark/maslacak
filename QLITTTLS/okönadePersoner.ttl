@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<pf53mb18> a skos:Concept ;
+    dcterms:identifier "pf53mb18" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <fx55na17>,
+        <qk35dh05>,
+        <sf83mb17>,
+        <uy59sk22> ;
+    skos:prefLabel "Okönade personer" ;
+    skos:related <uw18hz12>,
+        <vw95lh38> ;
+    skos:scopeNote "Används för skildringar av personer vars könstillhörighet inte framgår, och där detta har betydelse för verket. Det kan handla om personer som beskrivs med könsneutrala pronomen eller där inga könande tillskrivningar görs. För skildringar av personer som beskrivs som ickebinära eller agender, använd ämnesorden \"Ickebinära personer\" eller \"Agenderpersoner\"." .
+

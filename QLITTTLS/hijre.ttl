@@ -1,0 +1,25 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<rj97ul15> a skos:Concept ;
+    dcterms:identifier "rj97ul15" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Hijra",
+        "Hijras",
+        "Jagappa",
+        "Khawaja sira",
+        "Khwaja sira",
+        "Kinnar",
+        "Kinner" ;
+    skos:broader <he13pb69>,
+        <op23ar73> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000632> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Hijre" ;
+    skos:related <ye64kb30> ;
+    skos:scopeNote "Används för skildringar av personer som beskrivs som hijre. Begreppet används i södra Asien för att beskriva ett tredje kön, och kan innefatta intersexpersoner, eunucker och transpersoner (vanligtvis med \"kvinnligt\" könsuttryck)." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

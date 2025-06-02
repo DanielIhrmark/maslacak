@@ -1,0 +1,31 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<gl76ac31> a skos:Concept ;
+    dcterms:identifier "gl76ac31" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Hbtqi-personer drabbade av sexbrott",
+        "Hbtqi-personer drabbade av sexuella övergrepp",
+        "Hbtqi-personer drabbade av sexuellt våld",
+        "Hbtqi-personer utsatta för sexbrott",
+        "Hbtqi-personer utsatta för sexuella övergrepp",
+        "Hbtqi-personer utsatta för sexuellt våld",
+        "Offer för sexbrott (hbtqi)",
+        "Offer för sexuellt våld (hbtqi)" ;
+    skos:broader <ln82yo33> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000959> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <fs01rm86>,
+        <od10cb95>,
+        <zt39fx55> ;
+    skos:prefLabel "Offer för sexuella övergrepp (hbtqi)" ;
+    skos:related <ap09ru04>,
+        <bg78ib80>,
+        <cy11ub78>,
+        <wu82rr35> ;
+    skos:scopeNote "Används för skildringar av hbtqi-personer som utsätts eller har utsatts för sexuella övergrepp." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

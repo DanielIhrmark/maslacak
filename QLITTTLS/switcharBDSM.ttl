@@ -1,0 +1,21 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<gn70nk07> a skos:Concept ;
+    dcterms:identifier "gn70nk07" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <ef49js51>,
+        <iy93lr17> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001353> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Switchar (BDSM)" ;
+    skos:related <gb03ie03>,
+        <hi30mc55>,
+        <oj77yj15>,
+        <wm33rr79> ;
+    skos:scopeNote "Används för skildringar av personer som i BDSM-lekar eller sex varierar mellan givande och mottagande eller dominanta och undergivna roller." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

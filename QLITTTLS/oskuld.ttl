@@ -1,0 +1,22 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<fv02uf39> a skos:Concept ;
+    dcterms:identifier "fv02uf39" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Mödom",
+        "Svendom" ;
+    skos:broader <ft03mv01> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85143788>,
+        <https://homosaurus.org/v3/homoit0001493>,
+        <https://id.kb.se/term/sao/Oskuld> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Oskuld" ;
+    skos:related <bw78bx64>,
+        <cb66jw88> ;
+    skos:scopeNote "Används för skildringar där det att någon inte har haft sex har betydelse för verket." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

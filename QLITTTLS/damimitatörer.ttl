@@ -1,0 +1,24 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<vg78hx15> a skos:Concept ;
+    dcterms:identifier "vg78hx15" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Damkomiker" ;
+    skos:broader <he13pb69>,
+        <vn20br71> ;
+    skos:closeMatch <https://id.kb.se/term/sao/M%C3%A4n%20i%20kvinnokl%C3%A4der%20i%20filmen>,
+        <https://id.kb.se/term/sao/M%C3%A4n%20i%20kvinnokl%C3%A4der%20p%C3%A5%20scenen> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85064634>,
+        <https://homosaurus.org/v3/homoit0000431> ;
+    skos:hiddenLabel "Dam-imitatörer" ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Damimitatörer" ;
+    skos:related <la19ou04>,
+        <qx50vg31> ;
+    skos:scopeNote "Används för skildringar av personer som imiterar kvinnor på scen. Begreppet kan ses som en historisk variant av dragqueen, men kännetecknas mer av en strävan efter ett \"realistiskt\" iscensättande av femininitet, jämfört med mer överdrivna eller destabiliserande perspektiv i viss drag." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

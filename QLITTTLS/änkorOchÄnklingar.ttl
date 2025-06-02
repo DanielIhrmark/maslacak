@@ -1,0 +1,20 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ji85yh28> a skos:Concept ;
+    dcterms:identifier "ji85yh28" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Efterlevande partners",
+        "Änkefolk",
+        "Änklingar",
+        "Änkor" ;
+    skos:broader <uh63yy69> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001504> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Änkor och änklingar" ;
+    skos:scopeNote "Används för skildringar av den överlevande partnern i ett äktenskap eller partnerskap där den andra partnern avlidit." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

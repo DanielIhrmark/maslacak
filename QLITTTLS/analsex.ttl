@@ -1,0 +1,27 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<de64ef39> a skos:Concept ;
+    dcterms:identifier "de64ef39" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Rövsex" ;
+    skos:broader <of65zl26>,
+        <sq10os38> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85004760>,
+        <https://homosaurus.org/v3/homoit0000043>,
+        <https://id.kb.se/term/sao/Analsex> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <dn58qp12>,
+        <ex44dm42>,
+        <fw11pz06>,
+        <jl42ip17>,
+        <ms78ss65> ;
+    skos:prefLabel "Analsex" ;
+    skos:related <ab59jh24>,
+        <yl85hr37> ;
+    skos:scopeNote "Används för skildringar av sexuella aktiviteter där anus stimuleras." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

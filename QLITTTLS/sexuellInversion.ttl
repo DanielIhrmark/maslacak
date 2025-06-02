@@ -1,0 +1,21 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<nc67ku99> a skos:Concept ;
+    dcterms:identifier "nc67ku99" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <iq17ln92>,
+        <qj48lh67> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001296> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Sexuell inversion" ;
+    skos:related <bq69wo36>,
+        <cb66jw88>,
+        <cm51lf45>,
+        <sh97pd06> ;
+    skos:scopeNote "Används för skildringar, historiska eller historiserande, som använder begreppet sexuell inversion- en historisk term för homosexualitet använd bland sexologer för att referera till en medfödd omkastning av könskarakteristiska drag eller roller." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

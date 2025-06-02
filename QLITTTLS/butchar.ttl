@@ -1,0 +1,23 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<tx04hr81> a skos:Concept ;
+    dcterms:identifier "tx04hr81" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Kvinnlig maskulinitet" ;
+    skos:broader <iy93lr17>,
+        <ml83ih14> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000231> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Butchar" ;
+    skos:related <cm18bw55>,
+        <lh71ui09>,
+        <qk34rm23>,
+        <qw72dw59>,
+        <xw31re99> ;
+    skos:scopeNote "Används för skildringar av personer som beskrivs som butchar - huvudsakligen lesbiska eller bisexuella kvinnor med könsuttryck och attribut som kodats som maskulina." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

@@ -1,0 +1,25 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<kh58tg68> a skos:Concept ;
+    dcterms:identifier "kh58tg68" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "M2X",
+        "M2Xs",
+        "Male-2-X",
+        "Male-to-X",
+        "Man-till-annat",
+        "MtXs" ;
+    skos:broader <wj27lv47> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001027> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "MtX" ;
+    skos:related <rd56yz51>,
+        <uw18hz12>,
+        <kj50rg43> ;
+    skos:scopeNote "Används för skildringar av personer som beskrivs som MtX, vilket inkluderar transkvinnor/mtf/transfeminina och ickebinära som tilldelats manligt kön vid födseln." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

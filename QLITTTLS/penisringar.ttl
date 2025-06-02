@@ -1,0 +1,18 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<wl92mo41> a skos:Concept ;
+    dcterms:identifier "wl92mo41" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Kukringar" ;
+    skos:broader <jk79xh22> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000292> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Penisringar" ;
+    skos:related <up80qv89> ;
+    skos:scopeNote "Används för skildringar av ringar som sätts runt penis och förstärker erektionen samt möjliggör ytterligare stimulering." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

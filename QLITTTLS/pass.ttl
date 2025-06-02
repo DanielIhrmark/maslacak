@@ -1,0 +1,23 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<gi07re10> a skos:Concept ;
+    dcterms:identifier "gi07re10" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <nk19mk45> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85098541>,
+        <https://homosaurus.org/v3/homoit0001092>,
+        <https://id.kb.se/term/sao/Pass%20%28legitimationshandling%29> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Pass" ;
+    skos:related <aa40zb14>,
+        <be84pp13>,
+        <ff45ka28>,
+        <rr69vp38>,
+        <ua71em06> ;
+    skos:scopeNote "Används för skildringar där identitetshandlingar utfärdade av en statlig myndighet, ofta använda för resor över nationsgränser, har betydelse för verket" ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

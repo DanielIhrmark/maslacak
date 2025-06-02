@@ -1,0 +1,20 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ij02nz52> a skos:Concept ;
+    dcterms:identifier "ij02nz52" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000836> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <ie50ey03>,
+        <km82jf95>,
+        <sj00sx82>,
+        <sk93nk73> ;
+    skos:prefLabel "Hbtqi-föreningar" ;
+    skos:related <km22hn65>,
+        <tx64rj03> ;
+    skos:scopeNote "Används för skildringar av föreningar för hbtqi-personer och/eller för hbtqi-frågor." .
+

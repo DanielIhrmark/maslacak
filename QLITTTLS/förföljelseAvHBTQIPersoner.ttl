@@ -1,0 +1,29 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<cw47ny51> a skos:Concept ;
+    dcterms:identifier "cw47ny51" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0001108> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <ew86op35>,
+        <ga50bh91>,
+        <jp81au66>,
+        <oq36kw68>,
+        <pb90wc68>,
+        <up78ob03>,
+        <ze45rh48> ;
+    skos:prefLabel "Förföljelse av hbtqi-personer" ;
+    skos:related <ba31au62>,
+        <bg78ib80>,
+        <bq82fj53>,
+        <ch10wc66>,
+        <cr45ml86>,
+        <jw79oy99>,
+        <pi77tc72>,
+        <pq70kh99> ;
+    skos:scopeNote "Används för skildringar av förföljelse av hbtqi-personer på grund av deras sexuella läggning, könsidentitet och/eller könsuttryck." .
+

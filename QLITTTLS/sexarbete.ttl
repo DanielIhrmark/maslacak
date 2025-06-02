@@ -1,0 +1,16 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<oa79zq45> a skos:Concept ;
+    dcterms:identifier "oa79zq45" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001276> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <gx15nx98> ;
+    skos:prefLabel "Sexarbete" ;
+    skos:related <qs69pq40> ;
+    skos:scopeNote "Används för skildringar av utbyte av sexuella tjänster, upphetsande sceniska framträdanden (striptease, webbkameramodellande) eller produkter mot materiell ersättning. Det inkluderar aktiviteter med direkt fysisk kontakt mellan köpare och säljare samt indirekt sexuell stimulering." .
+

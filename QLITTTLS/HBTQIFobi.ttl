@@ -1,0 +1,22 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<cb57oh89> a skos:Concept ;
+    dcterms:identifier "cb57oh89" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000920> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <iq68sd16>,
+        <kq50iu67>,
+        <kx09ve81>,
+        <qy65je42>,
+        <yf68rk86> ;
+    skos:prefLabel "Hbtqi-fobi" ;
+    skos:related <jg76es99>,
+        <ni43ar58>,
+        <pd62ad09> ;
+    skos:scopeNote "Används för skildringar av rädsla, avsky eller hat gentemot hbtqi-personer eller de som antas vara hbtqi-personer." .
+

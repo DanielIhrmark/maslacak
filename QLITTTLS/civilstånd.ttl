@@ -1,0 +1,25 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<uh63yy69> a skos:Concept ;
+    dcterms:identifier "uh63yy69" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <vh55tv72> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85081304>,
+        <https://homosaurus.org/v3/homoit0000989>,
+        <https://id.kb.se/term/sao/Civilst%C3%A5nd> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <av87kj76>,
+        <eb77zj91>,
+        <ji85yh28>,
+        <rs51yj40> ;
+    skos:prefLabel "Civilstånd" ;
+    skos:related <az92so55>,
+        <gx93ym52>,
+        <no07qg24> ;
+    skos:scopeNote "Används för skildringar där olika civilstånd har betydelse för verket." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

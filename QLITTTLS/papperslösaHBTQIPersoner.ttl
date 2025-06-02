@@ -1,0 +1,22 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ch10wc66> a skos:Concept ;
+    dcterms:identifier "ch10wc66" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <un62lw62> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0001482> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Papperslösa hbtqi-personer" ;
+    skos:related <be84pp13>,
+        <cw47ny51>,
+        <no07qg24>,
+        <pi26jy10>,
+        <pi77tc72>,
+        <ug69ck69> ;
+    skos:scopeNote "Används för skildringar av papperslösa hbtqi-personer. Med papperslös menas att personen vistas, arbetar eller studerar i ett land utan giltiga tillstånd." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

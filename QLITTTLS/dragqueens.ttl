@@ -1,0 +1,30 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<la19ou04> a skos:Concept ;
+    dcterms:identifier "la19ou04" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Drag queens",
+        "Drag-drottningar",
+        "Drag-queens",
+        "Dragdrottningar",
+        "Drugor" ;
+    skos:broader <nx46rw80> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85064634>,
+        <https://homosaurus.org/v3/homoit0000375>,
+        <https://id.kb.se/term/sao/Dragqueens> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <kp64ff95>,
+        <sh16ni93> ;
+    skos:prefLabel "Dragqueens" ;
+    skos:related <hb81xa89>,
+        <jf44kn92>,
+        <rh61yd98>,
+        <vg78hx15>,
+        <vu62yz77> ;
+    skos:scopeNote "Används för skildringar av personer som ikläder sig kvinnligt kodade attribut, ofta i överdriven tappning, i underhållningssyfte och/eller som uttryck för en subkultur präglad av experimentella eller parodierande könsuttryck." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

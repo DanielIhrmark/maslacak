@@ -1,0 +1,21 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<vn20br71> a skos:Concept ;
+    dcterms:identifier "vn20br71" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <pu79ko70> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0001363> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <ax27ow53>,
+        <cx10tp93>,
+        <fc56gu03>,
+        <vg78hx15>,
+        <xr59sg26> ;
+    skos:prefLabel "Teater (hbtqi)" ;
+    skos:scopeNote "Används för skildringar av teater som utövas av, skrivits av eller på annat sätt kan kopplas till hbtqi-personer. Används ej för genren teater." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

@@ -1,0 +1,29 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<xw99iq72> a skos:Collection ;
+    dcterms:identifier "xw99iq72" ;
+    dcterms:issued "2022-12-19T13:03:41"^^xsd:dateTime ;
+    dcterms:modified "2022-12-19T13:03:41"^^xsd:dateTime ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:member <ah90te46>,
+        <cb66jw88>,
+        <hi88il01>,
+        <jk79xh22>,
+        <jy58jm84>,
+        <kn59jd20>,
+        <kn67ju07>,
+        <ng97ok68>,
+        <nw90qo62>,
+        <oa64fl82>,
+        <of65zl26>,
+        <qd17qs25>,
+        <rq31sv19>,
+        <sq10os38>,
+        <wu82rr35>,
+        <xe85mp67>,
+        <ys78qn95>,
+        <zw31ka64> ;
+    skos:prefLabel "Tema: Sex, intimitet och kroppslighet (hbtqi)" .

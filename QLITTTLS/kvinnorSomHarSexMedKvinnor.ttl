@@ -1,0 +1,21 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<dq66qs98> a skos:Concept ;
+    dcterms:identifier "dq66qs98" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "KSK",
+        "Samkönsälskande kvinnor" ;
+    skos:broader <la83kc00>,
+        <ot53zk29> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001510> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Kvinnor som har sex med kvinnor" ;
+    skos:related <ml83ih14>,
+        <nj45ko84> ;
+    skos:scopeNote "Används för skildringar av kvinnor som har sex med andra kvinnor, oavsett hur dessa definierar sin sexuella läggning." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

@@ -1,0 +1,20 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<rw98mz62> a skos:Concept ;
+    dcterms:identifier "rw98mz62" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:hiddenLabel "Intersex-barn" ;
+    skos:broader <ob41my06>,
+        <rl94ul47> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh2007005476>,
+        <https://homosaurus.org/v3/homoit0000668> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Intersexbarn" ;
+    skos:related <um33qf35> ;
+    skos:scopeNote "Används för skildringar av barn som beskrivs som intersexpersoner." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

@@ -1,0 +1,21 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<iy72dm08> a skos:Concept ;
+    dcterms:identifier "iy72dm08" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Ickebinäras föräldrar" ;
+    skos:broader <bi56bw40> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0002225> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <vr81mp20>,
+        <uc39di61> ;
+    skos:prefLabel "Föräldrar till ickebinära personer" ;
+    skos:related <kc33mv72>,
+        <uw18hz12> ;
+    skos:scopeNote "Används för skildringar av föräldrar till ickebinära personer, oavsett biologiskt släktskap." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

@@ -1,0 +1,20 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ba46pk33> a skos:Concept ;
+    dcterms:identifier "ba46pk33" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000973> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <gg03fm98>,
+        <gx93ym52>,
+        <os76md08>,
+        <vh55tv72>,
+        <zw83ms79> ;
+    skos:prefLabel "Samlevnadsformer" ;
+    skos:related <ar69hs67> ;
+    skos:scopeNote "Används för skildringar av strukturen och sammansättningen av hushåll, inklusive antalet hushållsmedlemmar och deras relationer till varandra." .
+

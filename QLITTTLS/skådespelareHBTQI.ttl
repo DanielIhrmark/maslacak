@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<mg63da79> a skos:Concept ;
+    dcterms:identifier "mg63da79" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Skådespelerskor (hbtqi)" ;
+    skos:broader <of32ux74> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000008> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <gz99cy88> ;
+    skos:prefLabel "Skådespelare (hbtqi)" ;
+    skos:related <pu79ko70> ;
+    skos:scopeNote "Används för skildringar av hbtqi-personer som verkar som skådespelare." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

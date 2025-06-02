@@ -1,0 +1,39 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<oj77yj15> a skos:Concept ;
+    dcterms:identifier "oj77yj15" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <of65zl26>,
+        <sq10os38> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000102> ;
+    skos:exactMatch <https://id.kb.se/term/barn/BDSM>,
+        <https://id.kb.se/term/sao/BDSM> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <am48aq94>,
+        <gx13uu85>,
+        <na03ov93>,
+        <qb31sd30> ;
+    skos:prefLabel "BDSM" ;
+    skos:related <am48aq94>,
+        <bf78mj81>,
+        <ek27kt77>,
+        <gb03ie03>,
+        <gn70nk07>,
+        <hi30mc55>,
+        <iq08ee58>,
+        <iy93lr17>,
+        <jm54md83>,
+        <nh99bq54>,
+        <tk37pb02>,
+        <ve81km34>,
+        <vr46nj48>,
+        <wm33rr79>,
+        <wq23bh00>,
+        <wu82rr35> ;
+    skos:scopeNote "Används för skildringar av sexuella preferenser och former av personliga relationer som involverar samtyckesbaserat fasthållande och/eller intensiva sensoriska upplevelser, t.ex. i form av smärta och maktbaserade rollspel." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

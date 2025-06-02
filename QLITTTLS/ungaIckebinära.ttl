@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<lg40hw26> a skos:Concept ;
+    dcterms:identifier "lg40hw26" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Ickebinära ungdomar" ;
+    skos:broader <uw18hz12>,
+        <gz45ku14> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0002223>,
+        <https://id.kb.se/term/sao/Ickebin%C3%A4ra%20ungdomar> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Unga ickebinära" ;
+    skos:scopeNote "Används för skildringar av ungdomar som beskrivs som ickebinära." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

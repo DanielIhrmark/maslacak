@@ -1,0 +1,14 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<hu08zy84> a skos:Concept ;
+    dcterms:identifier "hu08zy84" ;
+    dcterms:issued "2022-10-04T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-10-04T10:12:00"^^xsd:dateTime ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <mw94xh06> ;
+    skos:prefLabel "Spekulationer (hbtqi)" ;
+    skos:scopeNote "Används för skildringar av att spekulera - i positiv, negativ eller neutral anda - om någon annans sexuella läggning eller transitionserfarenhet." .
+

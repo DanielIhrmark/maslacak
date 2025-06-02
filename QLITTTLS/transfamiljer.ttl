@@ -1,0 +1,22 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<es72xt95> a skos:Concept ;
+    dcterms:identifier "es72xt95" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:hiddenLabel "Trans-familjer" ;
+    skos:broader <he13pb69>,
+        <sr56ul39> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001412> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Transfamiljer" ;
+    skos:related <jt69hs39>,
+        <xx95hc99>,
+        <ru99vt90>,
+        <cs56jh91> ;
+    skos:scopeNote "Används för skildringar av familjer bestående av vuxna transpersoner som lever med barn." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

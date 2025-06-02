@@ -1,0 +1,21 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ym29ed45> a skos:Concept ;
+    dcterms:identifier "ym29ed45" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Psykiatrisk vård för hbtqi-personer",
+        "Psykvård för hbtqi-personer" ;
+    skos:broader <tp87vt58> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0001012> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Psykiatrisk vård (hbtqi)" ;
+    skos:related <ga83rh19>,
+        <rf98kk08>,
+        <ru33ue70> ;
+    skos:scopeNote "Används för skildringar av hbtqi-personer som får sjukvård som behandlar psykiatriska besvär och sjukdomar." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

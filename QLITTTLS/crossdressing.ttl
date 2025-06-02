@@ -1,0 +1,31 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<hb81xa89> a skos:Concept ;
+    dcterms:identifier "hb81xa89" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Crossdressers" ;
+    skos:broader <aq42lk11>,
+        <he13pb69> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85137104>,
+        <https://homosaurus.org/v3/homoit0000318>,
+        <https://id.kb.se/term/barn/Crossdressing>,
+        <https://id.kb.se/term/sao/Crossdressing> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <ty33ci85>,
+        <ny05rj22> ;
+    skos:prefLabel "Crossdressing" ;
+    skos:related <ac83ik65>,
+        <ch90bb15>,
+        <ds64zm22>,
+        <fc56gu03>,
+        <la19ou04>,
+        <nx46rw80>,
+        <rh61yd98>,
+        <sh97pd06> ;
+    skos:scopeNote "Används för skildringar av personer som, tillfälligt eller långvarigt och oavsett anledning, bär kläder som associeras med ett annat kön än det de identifierar sig som. För skildringar av personer som beskrivs som transvestiter, använd ämnesordet \"Transvestiter\"." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

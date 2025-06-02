@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<km82jf95> a skos:Concept ;
+    dcterms:identifier "km82jf95" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "MC-klubbar (hbtqi)" ;
+    skos:broader <ij02nz52> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000906> ;
+    skos:hiddenLabel "Motorcykel-klubbar (hbtqi)" ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Motorcykelklubbar (hbtqi)" ;
+    skos:related <ri80nw20> ;
+    skos:scopeNote "Används för skildringar av motorcykelklubbar där kopplingen till hbtqi har en framträdande betydelse." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

@@ -1,0 +1,22 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ln82yo33> a skos:Concept ;
+    dcterms:identifier "ln82yo33" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Hbtqi-personer som brottsoffer" ;
+    skos:broader <ot53zk29> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000312> ;
+    skos:hiddenLabel "Brotts-offer (hbtqi)" ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <gl76ac31>,
+        <li23qw02>,
+        <od10cb95> ;
+    skos:prefLabel "Brottsoffer (hbtqi)" ;
+    skos:related <mw98ml69> ;
+    skos:scopeNote "Används för skildringar av hbtqi-personer som lidit fysisk, psykisk, känslomässig eller ekonomisk skada på grund av ett brott." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

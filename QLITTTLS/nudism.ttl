@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<zw31ka64> a skos:Concept ;
+    dcterms:identifier "zw31ka64" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Naturism",
+        "Solbad" ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001038>,
+        <http://id.loc.gov/authorities/subjects/sh85093173>,
+        <https://id.kb.se/term/sao/Nudism> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Nudism" ;
+    skos:related <ju65bo79> ;
+    skos:scopeNote "Används för skildringar av ett levnadssätt och en filosofi där kläder används så lite som möjligt och som framhåller gemensam nakenhet, humanistiska värderingar och fysisk och psykisk hälsa." .
+

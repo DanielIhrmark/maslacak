@@ -1,0 +1,21 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<io88iy76> a skos:Concept ;
+    dcterms:identifier "io88iy76" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Imamer (hbtqi)",
+        "Mobadān (hbtqi)",
+        "Oshō (hbtqi)",
+        "Pastorer (hbtqi)",
+        "Präster (hbtqi)",
+        "Rabbiner (hbtqi)" ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0001624> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Religiösa ledare (hbtqi)" ;
+    skos:related <fs91lv00> ;
+    skos:scopeNote "Används för skildringar av hbtqi-personer som är officiella eller inofficiella religiösa ledare (t.ex. präster, pastorer, imamer och rabbiner). Används även för skildringar av hbtqi-personers förhållningssätt till religiösa ledare eller religiösa ledares förhållningssätt till hbtqi." .
+

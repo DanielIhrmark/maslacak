@@ -1,0 +1,18 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<nu38hi25> a skos:Concept ;
+    dcterms:identifier "nu38hi25" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <qj48lh67> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001472> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Tribader" ;
+    skos:related <ml83ih14>,
+        <tq80uf58> ;
+    skos:scopeNote "Används för skildringar, historiska eller historiserande, som använder begreppet tribader - ett äldre ord för kvinnor som har, eller antas ha, sex med kvinnor." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

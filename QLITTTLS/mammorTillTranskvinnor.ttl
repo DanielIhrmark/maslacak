@@ -1,0 +1,23 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<vd23cs52> a skos:Concept ;
+    dcterms:identifier "vd23cs52" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Transkvinnors mödrar",
+        "Transkvinnors mammor",
+        "Mödrar till transkvinnor",
+        "Mammor till transkvinnor",
+        "Transflickors mödrar",
+        "Transflickors mammor",
+        "Mödrar till transflickor" ;
+    skos:broader <nl66hc26>,
+        <cw73qe15> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Mammor till transkvinnor" ;
+    skos:scopeNote "Används för skildringar av mammor till transkvinnor, oavsett mammans egen identitet." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

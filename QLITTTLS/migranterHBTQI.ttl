@@ -1,0 +1,21 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<un62lw62> a skos:Concept ;
+    dcterms:identifier "un62lw62" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Emigranter (hbtqi)",
+        "Immigranter (hbtqi)" ;
+    skos:broader <ot53zk29> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000902> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <ch10wc66>,
+        <pi77tc72> ;
+    skos:prefLabel "Migranter (hbtqi)" ;
+    skos:related <ug69ck69> ;
+    skos:scopeNote "Används för skildringar av hbtqi-personer som flyttar från en plats till en annan, oftast i olika länder, med syfte att långvarigt bosätta sig på den nya platsen." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

@@ -1,0 +1,17 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<cu72fw23> a skos:Concept ;
+    dcterms:identifier "cu72fw23" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <qj48lh67> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Gossekärlek" ;
+    skos:related <bv39zf39>,
+        <oq76dn75> ;
+    skos:scopeNote "Används för skildringar, historiska eller historiserande, som använder begreppet gossekärlek - ett äldre ord som oftast syftar på vuxna mäns erotiska och/eller romantiska dragning till och tonårspojkar. Historiskt har begreppet även använts som synonym för både manlig homosexualitet och pedofili." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

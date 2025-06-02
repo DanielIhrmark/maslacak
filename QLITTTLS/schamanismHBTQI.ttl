@@ -1,0 +1,24 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<rj61bd65> a skos:Concept ;
+    dcterms:identifier "rj61bd65" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Noaidi (hbtqi)",
+        "Noajdde (hbtqi)",
+        "Nåejti (hbtqi)",
+        "Nåjder (hbtqi)",
+        "Schamaner (hbtqi)",
+        "Shamaner (hbtqi)",
+        "Shamanism (hbtqi)" ;
+    skos:broader <fs91lv00> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000939> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Schamanism (hbtqi)" ;
+    skos:related <si96fc99> ;
+    skos:scopeNote "Används för skildringar av hbtqi-personer som är schamaner. Används även för skildringar av hbtqi-personers förhållningssätt till schamanism eller andra schamaners förhållningssätt till hbtqi. Schamanism kan förstås som en animistisk världsåskådning." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

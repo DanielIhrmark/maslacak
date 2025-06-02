@@ -1,0 +1,24 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<xf85oq48> a skos:Concept ;
+    dcterms:identifier "xf85oq48" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Queerforskning" ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001210> ;
+    skos:hiddenLabel "Queer-studier",
+        "Queer-forskning" ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Queerstudier" ;
+    skos:related <ai05xa65>,
+        <bt87ge35>,
+        <hc28de02>,
+        <mn07dg10>,
+        <pq04vl34>,
+        <wm05xd18>,
+        <xm49vc47> ;
+    skos:scopeNote "Används för skildringar av forskning om sexualitet och könsidentitet utifrån ett queerteoretiskt perspektiv." .
+

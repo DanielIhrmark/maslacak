@@ -1,0 +1,54 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<he13pb69> a skos:Concept ;
+    dcterms:identifier "he13pb69" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:hiddenLabel "Köns-överskridanden" ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <bt16zp60>,
+        <bw23bo45>,
+        <bw74og01>,
+        <ce30cv53>,
+        <cp04io51>,
+        <cx10tp93>,
+        <dk34ho21>,
+        <ds64zm22>,
+        <es72xt95>,
+        <ex02uc55>,
+        <fc56gu03>,
+        <gh93af20>,
+        <hb81xa89>,
+        <hc28de02>,
+        <ig53gy82>,
+        <ip90hk23>,
+        <jf44kn92>,
+        <kx09ve81>,
+        <kx86go78>,
+        <nx46rw80>,
+        <qn64mm90>,
+        <qs33fu26>,
+        <rb83rq15>,
+        <ri47ax86>,
+        <rj97ul15>,
+        <sh97pd06>,
+        <ua71em06>,
+        <un13ce14>,
+        <vg78hx15>,
+        <vr41yw40>,
+        <vr86mj99>,
+        <wj27lv47>,
+        <wp99sm33>,
+        <wv80np39>,
+        <xq00uv57>,
+        <zq57kl95>,
+        <ux60ib70>,
+        <or82kx62>,
+        <xr55rs91> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001816> ;
+    skos:prefLabel "Könsöverskridanden" ;
+    skos:scopeNote "Används för skildringar där könsidentiteter, könsuttryck eller föreställningar om kön beskrivs som överskridande binära könsnormer. Detta övergripande ämnesord är huvudsakligen menat som ett paraplybegrepp för att möjliggöra inkluderande sökningar, eller för skildringar där ingen smalare term är tillämpbar." .
+

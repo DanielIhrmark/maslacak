@@ -1,0 +1,20 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ly14nd30> a skos:Concept ;
+    dcterms:identifier "ly14nd30" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Forum" ;
+    skos:broader <ci78xa22> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh97004057>,
+        <https://homosaurus.org/v3/homoit0000665>,
+        <https://id.kb.se/term/sao/Elektroniska%20diskussionsgrupper> ;
+    skos:hiddenLabel "Internet-forum" ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Internetforum" ;
+    skos:scopeNote "Används för skildringar där webbaserade diskussionsforum på internet har betydelse för verket." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

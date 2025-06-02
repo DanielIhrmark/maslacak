@@ -1,0 +1,21 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<qs74zg73> a skos:Concept ;
+    dcterms:identifier "qs74zg73" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Omnisexuella" ;
+    skos:broader <ot53zk29> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001073> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Pansexuella" ;
+    skos:related <br29bz72>,
+        <ie81fz88>,
+        <nl86cd25>,
+        <wj35lq02> ;
+    skos:scopeNote "Används för skildringar av personer som beskrivs som pansexuella. Med pansexuell menas att personen känner emotionell/sexuell dragning till personer oberoende av biologiskt kön eller könsidentitet." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

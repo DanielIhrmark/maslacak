@@ -1,0 +1,20 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<kk47bz38> a skos:Concept ;
+    dcterms:identifier "kk47bz38" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <nl86cd25> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Nyutkomna bisexuella" ;
+    skos:related <gd64om76>,
+        <hg41ea96>,
+        <ik01ja84>,
+        <kp91xn92>,
+        <vv82yi14> ;
+    skos:scopeNote "Används för skildringar av personer som nyligen berättat för andra om, eller på annat sätt offentliggjort, att de är bisexuella." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

@@ -1,0 +1,29 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<rh61yd98> a skos:Concept ;
+    dcterms:identifier "rh61yd98" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Drag kings",
+        "Drag-kings",
+        "Drag-kungar",
+        "Dragkungar" ;
+    skos:broader <nx46rw80> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh2021001446>,
+        <https://homosaurus.org/v3/homoit0000373>,
+        <https://id.kb.se/term/sao/Dragkings> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <kp64ff95>,
+        <sh16ni93> ;
+    skos:prefLabel "Dragkings" ;
+    skos:related <cx10tp93>,
+        <hb81xa89>,
+        <jf44kn92>,
+        <la19ou04>,
+        <vu62yz77> ;
+    skos:scopeNote "Används för skildringar av personer som ikläder sig manligt kodade attribut, ofta i överdriven tappning, i underhållningssyfte och/eller som uttryck för en subkultur präglad av experimentella eller parodierande könsuttryck." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

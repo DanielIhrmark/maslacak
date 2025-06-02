@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<un13ce14> a skos:Concept ;
+    dcterms:identifier "un13ce14" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:hiddenLabel "Trans-kultur" ;
+    skos:broader <he13pb69>,
+        <px93xp25> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001406> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Transkultur" ;
+    skos:related <iy93lr17> ;
+    skos:scopeNote "Används för skildringar av kulturer eller uttryck präglade av transpersoners interaktion eller deltagande." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

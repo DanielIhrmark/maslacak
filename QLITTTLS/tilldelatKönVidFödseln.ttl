@@ -1,0 +1,28 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<vr86mj99> a skos:Concept ;
+    dcterms:identifier "vr86mj99" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Kön tilldelat vid födseln",
+        "Kön tillskrivet vid födseln",
+        "Tilldelat kön",
+        "Tillskrivet kön",
+        "Tillskrivet kön vid födseln" ;
+    skos:broader <he13pb69>,
+        <hh96dh44> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000078> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001268> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <ni79ss40>,
+        <kj50rg43> ;
+    skos:prefLabel "Tilldelat kön vid födseln" ;
+    skos:related <jp21cy02>,
+        <ua71em06>,
+        <vr41yw40> ;
+    skos:scopeNote "Används för skildringar av kön, antingen flicka eller pojke, som tilldelas ett barn vid födseln baserat på hur barnets kropp tolkas. Används när det tilldelade könet har betydelse för verket, huvudsakligen i de fall där det inte överensstämmer med personers senare könsidentitet." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

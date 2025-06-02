@@ -1,0 +1,18 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ps08qr95> a skos:Concept ;
+    dcterms:identifier "ps08qr95" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:hiddenLabel "Radikal-feminism" ;
+    skos:broader <kb69pe59> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001230>,
+        <https://id.kb.se/term/sao/Radikalfeminism> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Radikalfeminism" ;
+    skos:scopeNote "Används för skildringar av perspektiv inom feminismen som kräver en radikal omordning av samhället där manlig överhöghet elimineras i alla sociala och ekonomiska sammanhang." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

@@ -1,0 +1,22 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<xv86md55> a skos:Concept ;
+    dcterms:identifier "xv86md55" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:hiddenLabel "Homo-socialitet" ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000649>,
+        <https://id.kb.se/term/sao/Homosocialitet> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <vi05is98>,
+        <wm72qx84>,
+        <ye44ho27>,
+        <ys42op85> ;
+    skos:prefLabel "Homosocialitet" ;
+    skos:related <jx05kp14>,
+        <ya81tb87> ;
+    skos:scopeNote "Används för skildringar av hur personer som liknar varandra skapar och upprätthåller relationer till varandra, ibland på bekostnad av dem som betraktas som annorlunda." .
+

@@ -1,0 +1,21 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<pi96ct54> a skos:Concept ;
+    dcterms:identifier "pi96ct54" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <iy93lr17> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000344> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Demisexuella" ;
+    skos:related <hp83cj71>,
+        <qd17qs25>,
+        <td26cb41>,
+        <xo37sy14>,
+        <zq29sy82> ;
+    skos:scopeNote "Används för skildringar av demisexuella personer - demisexuella utvecklar sexuell attraktion till någon först efter att ha skapat ett starkt känslomässigt band till personen." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

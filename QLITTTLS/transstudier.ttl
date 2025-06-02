@@ -1,0 +1,25 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<hc28de02> a skos:Concept ;
+    dcterms:identifier "hc28de02" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Transforskning" ;
+    skos:broader <he13pb69>,
+        <pq04vl34> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001447> ;
+    skos:hiddenLabel "Trans-studier",
+        "Trans-forskning" ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Transstudier" ;
+    skos:related <ai05xa65>,
+        <mn07dg10>,
+        <wm05xd18>,
+        <xf85oq48>,
+        <xm49vc47> ;
+    skos:scopeNote "Används för skildringar av det vetenskapliga fält som fokuserar på studier av könsöverskridande identiteter, sammanhang, livsvillkor och erfarenheter." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

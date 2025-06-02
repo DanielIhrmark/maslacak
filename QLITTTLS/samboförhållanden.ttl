@@ -1,0 +1,28 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<gg03fm98> a skos:Concept ;
+    dcterms:identifier "gg03fm98" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Sambos",
+        "Sambosar",
+        "Sammanboende" ;
+    skos:broader <ba46pk33> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000362>,
+        <https://id.kb.se/term/sao/Samboende> ;
+    skos:hiddenLabel "Sambo-förhållanden" ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Samboförhållanden" ;
+    skos:related <ar69hs67>,
+        <bi99oj90>,
+        <iu41ao66>,
+        <lm49rl65>,
+        <nk19mk45>,
+        <os76md08>,
+        <vh55tv72> ;
+    skos:scopeNote "Används för skildringar av parförhållanden där personer lever tillsammans i gemensam bostad utan att vara gifta." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

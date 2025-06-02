@@ -1,0 +1,23 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<bu52ty56> a skos:Concept ;
+    dcterms:identifier "bu52ty56" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:hiddenLabel "Partner-preferens" ;
+    skos:broader <cb66jw88> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001081> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <zu15ju63>,
+        <aw95bz40>,
+        <bv98lh92> ;
+    skos:prefLabel "Partnerpreferens" ;
+    skos:related <bi99oj90>,
+        <iy93lr17>,
+        <td26cb41> ;
+    skos:scopeNote "Används för skildringar där preferens kring relationsform, som exempelvis flersamma eller monogama relationer, har betydelse för verket." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

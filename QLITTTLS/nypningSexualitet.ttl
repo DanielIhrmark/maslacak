@@ -1,0 +1,17 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<zf48ac43> a skos:Concept ;
+    dcterms:identifier "zf48ac43" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <in96gy48>,
+        <of65zl26> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001115> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Nypning (sexualitet)" ;
+    skos:scopeNote "Används för skildringar av att nypas i en sexuell kontext för erotisk stimulans och/eller upphetsning." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

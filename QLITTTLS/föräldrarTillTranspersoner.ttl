@@ -1,0 +1,25 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<bi56bw40> a skos:Concept ;
+    dcterms:identifier "bi56bw40" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Transpersoners föräldrar" ;
+    skos:broader <mb29ll46> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001078> ;
+    skos:closeMatch <https://id.kb.se/term/sao/F%C3%B6r%C3%A4ldrar%20till%20transbarn> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <cw73qe15>,
+        <tt22xp58>,
+        <iy72dm08>,
+        <nl66hc26>,
+        <gj71rx41> ;
+    skos:prefLabel "Föräldrar till transpersoner" ;
+    skos:related <nm50fc73>,
+        <wj27lv47> ;
+    skos:scopeNote "Används för skildringar av föräldrar till transpersoner, oavsett biologiskt släktskap." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

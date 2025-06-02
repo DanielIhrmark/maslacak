@@ -1,0 +1,17 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<uq46vq54> a skos:Concept ;
+    dcterms:identifier "uq46vq54" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <es43bw29>,
+        <in96gy48>,
+        <wt70sq05> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Klittra" ;
+    skos:scopeNote "Används för skildringar av sexuell stimulering med händerna av klitoris. Vanligtvis åsyftas onani men klittringen kan även utföras på eller av en annan person." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

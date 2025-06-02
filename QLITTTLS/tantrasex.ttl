@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<vk67bh74> a skos:Concept ;
+    dcterms:identifier "vk67bh74" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Neotantra",
+        "Tantriskt sex" ;
+    skos:broader <of65zl26>,
+        <sq10os38> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001039> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Tantrasex" ;
+    skos:scopeNote "Används för skildringar av den sexuella praktiken tantrasex som har sin grund i den hinduistiska och buddhistiska tantrafilosofin." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

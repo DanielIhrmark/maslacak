@@ -1,0 +1,39 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<sy50mg13> a skos:Concept ;
+    dcterms:identifier "sy50mg13" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "5-alfa-reduktas-brist",
+        "Adrenogenitalt syndrom",
+        "Androgenokänslighetssyndrom",
+        "Avvikande könsutveckling",
+        "DSD",
+        "Differences of sexual development",
+        "Disorders of sexual development",
+        "Diverse sex development",
+        "Intersexualism",
+        "Klinefelters syndrom",
+        "Partiellt androgenokänslighetssyndrom",
+        "Progesteronmaskulinisering",
+        "Rubbningar i könsutvecklingen",
+        "Swyers syndrom",
+        "Turners syndrom",
+        "Varianter av könsutveckling",
+        "XXY" ;
+    skos:broader <hh96dh44>,
+        <iq17ln92> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85060401>,
+        <https://homosaurus.org/v3/homoit0000669>,
+        <https://id.kb.se/term/barn/Intersexualism>,
+        <https://id.kb.se/term/sao/Intersexualism> ;
+    skos:hiddenLabel "Intersex-tillstånd" ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Intersextillstånd" ;
+    skos:related <ob41my06> ;
+    skos:scopeNote "Används för skildringar av de olika medfödda medicinska tillstånd vad gäller gener, könshormon och/eller könsorgan som gör att en person medicinskt inte entydigt kan kategoriseras som man eller kvinna. För skildringar som inte fokuserar på diagnos och behandling, använd ämnesordet \"Intersexpersoner\"." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

@@ -1,0 +1,23 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<zz60jl65> a skos:Concept ;
+    dcterms:identifier "zz60jl65" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Afro-oceanier (hbtqi)",
+        "Afroamerikaner (hbtqi)",
+        "Afroasiater (hbtqi)",
+        "Afroeuropéer (hbtqi)",
+        "Afrosvenskar (hbtqi)" ;
+    skos:broader <nj44aa03>,
+        <ug69ck69> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000208>,
+        <http://id.loc.gov/authorities/subjects/sh2013002417> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Svarta hbtqi-personer" ;
+    skos:scopeNote "Används för skildringar av homosexuella, bisexuella, transpersoner, queera och/eller intersexpersoner som beskrivs som svarta. Svart förstås här som en rasifierande kategori som markerar personer med melaninrik hud, ofta med eget eller historiskt ursprung i subsahariska Afrika eller Oceanien. Ämnesordet används för skildringar där identiteten som svart är i fokus." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

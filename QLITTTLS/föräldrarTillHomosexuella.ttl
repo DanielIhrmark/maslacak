@@ -1,0 +1,23 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<fv17pe76> a skos:Concept ;
+    dcterms:identifier "fv17pe76" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Homosexuellas föräldrar" ;
+    skos:broader <mb29ll46> ;
+    skos:exactMatch <https://id.kb.se/term/sao/F%C3%B6r%C3%A4ldrar%20till%20homosexuella> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <fh64du23>,
+        <lw04vi58>,
+        <tm80vg73>,
+        <tn72ht69> ;
+    skos:prefLabel "Föräldrar till homosexuella" ;
+    skos:related <nf03ub67>,
+        <np32qn49> ;
+    skos:scopeNote "Används för skildringar av föräldrar till homosexuella, oavsett biologiskt släktskap." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

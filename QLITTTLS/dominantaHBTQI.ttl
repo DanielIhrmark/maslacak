@@ -1,0 +1,24 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<gb03ie03> a skos:Concept ;
+    dcterms:identifier "gb03ie03" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <ef49js51>,
+        <iy93lr17> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000999> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <ek27kt77>,
+        <iq08ee58> ;
+    skos:prefLabel "Dominanta (hbtqi)" ;
+    skos:related <gn70nk07>,
+        <hi30mc55>,
+        <nh99bq54>,
+        <oj77yj15>,
+        <wm33rr79> ;
+    skos:scopeNote "Används för skildringar av dominanta inom BDSM. Används för skildringar av dominanta där kopplingen till HBTQI har en framträdande betydelse." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

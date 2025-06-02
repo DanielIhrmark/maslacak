@@ -1,0 +1,23 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ax27ow53> a skos:Concept ;
+    dcterms:identifier "ax27ow53" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Strippa",
+        "Striptease-dans" ;
+    skos:broader <of65zl26>,
+        <qs69pq40> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85129138>,
+        <https://homosaurus.org/v3/homoit0001344>,
+        <https://id.kb.se/term/sao/Striptease> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Striptease" ;
+    skos:related <cy12sh61>,
+        <ld59bo28> ;
+    skos:scopeNote "Används för skildringar av erotisk eller burlesk dans där dansaren/dansarna stegvis klär av sig." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

@@ -1,0 +1,20 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<yv48ui96> a skos:Concept ;
+    dcterms:identifier "yv48ui96" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:hiddenLabel "Aversions-terapi (hbtqi)" ;
+    skos:broader <ru33ue70> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000084>,
+        <http://id.loc.gov/authorities/subjects/sh85010520> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Aversionsterapi (hbtqi)" ;
+    skos:related <eb52qh07>,
+        <ww01qq85> ;
+    skos:scopeNote "Används för skildringar av behandling som syftar till att genom negativ stimuli, t.ex. elektriska stötar eller substanser som orsakar illamående, få en person att förknippa samkönat begär eller könsöverskridande med obehag och därmed åstadkomma en anpassning till hetero- och/eller cisnormen." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

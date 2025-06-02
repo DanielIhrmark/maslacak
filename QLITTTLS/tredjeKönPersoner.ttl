@@ -1,0 +1,18 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<tc55xe62> a skos:Concept ;
+    dcterms:identifier "tc55xe62" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "3:e kön-personer" ;
+    skos:broader <wj27lv47> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001369> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Tredje kön-personer" ;
+    skos:related <xq00uv57> ;
+    skos:scopeNote "Används för skildringar av personer som beskrivs som tredje kön-personer och inte som man eller kvinna." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

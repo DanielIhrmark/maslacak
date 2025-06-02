@@ -1,0 +1,33 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ou65rx96> a skos:Collection ;
+    dcterms:identifier "ou65rx96" ;
+    dcterms:issued "2022-12-19T13:03:41"^^xsd:dateTime ;
+    dcterms:modified "2022-12-19T13:03:41"^^xsd:dateTime ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:member <ae55cm31>,
+        <ba31au62>,
+        <bg78ib80>,
+        <bq82fj53>,
+        <br29ok75>,
+        <cb57oh89>,
+        <cq64hl00>,
+        <cw47ny51>,
+        <cy27yx08>,
+        <jg76es99>,
+        <jy77yj84>,
+        <ll98jv66>,
+        <lr64yh52>,
+        <mw98ml69>,
+        <ni43ar58>,
+        <nz93dl71>,
+        <of16sc35>,
+        <pd62ad09>,
+        <pq70kh99>,
+        <rh68hi28>,
+        <wk81dt63>,
+        <yf82lc16> ;
+    skos:prefLabel "Tema: Diskriminering, hat och våld (hbtqi)" .

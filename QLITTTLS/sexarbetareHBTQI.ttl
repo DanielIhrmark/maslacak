@@ -1,0 +1,23 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<cd03gv62> a skos:Concept ;
+    dcterms:identifier "cd03gv62" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0001277>,
+        <http://id.loc.gov/authorities/subjects/sh2017000417> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <aq16rl33>,
+        <cy12sh61>,
+        <gz99cy88>,
+        <vr87jw11>,
+        <hk83ir27> ;
+    skos:prefLabel "Sexarbetare (hbtqi)" ;
+    skos:related <kd86jk33>,
+        <qe03yc73>,
+        <qs69pq40> ;
+    skos:scopeNote "Används för skildringar av hbtqi-personer, eller personer som utför samkönat sex, som utför sexarbete så som försäljning av sexuella tjänster eller upphetsande sceniska framträdanden." .
+

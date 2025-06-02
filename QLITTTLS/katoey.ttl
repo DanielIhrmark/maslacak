@@ -1,0 +1,22 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ux60ib70> a skos:Concept ;
+    dcterms:identifier "ux60ib70" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Kathoey",
+        "Kathoy",
+        "Katoy",
+        "Ladyboy",
+        "Ladyboys" ;
+    skos:broader <he13pb69>,
+        <op23ar73> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000687> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Katoey" ;
+    skos:scopeNote "Används för skildringar av personer som beskrivs som katoey. Begreppet används framförallt i Thailand för att beskriva transpersoner (eller i vissa fall bögar) med feminina könsuttryck, som ibland betraktas som ett tredje kön." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

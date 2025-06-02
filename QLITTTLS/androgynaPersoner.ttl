@@ -1,0 +1,18 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<vk43qf93> a skos:Concept ;
+    dcterms:identifier "vk43qf93" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <wj27lv47> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000045> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Androgyna personer" ;
+    skos:related <gh93af20>,
+        <uw18hz12> ;
+    skos:scopeNote "Används för skildringar av personer som beskrivs som androgyna - med könsuttryck eller könsidentiteter som inkluderar maskulina och feminina drag." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

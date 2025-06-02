@@ -1,0 +1,20 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ap09ru04> a skos:Concept ;
+    dcterms:identifier "ap09ru04" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Våldäkt (hbtqi)" ;
+    skos:broader <ll98jv66> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000938> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Sexuella övergrepp (hbtqi)" ;
+    skos:related <cy11ub78>,
+        <gl76ac31>,
+        <wu82rr35> ;
+    skos:scopeNote "Används för skildringar av sexuella övergrepp mot eller begångna av hbtqi-personer." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

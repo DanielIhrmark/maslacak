@@ -1,0 +1,22 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<xx33tt54> a skos:Concept ;
+    dcterms:identifier "xx33tt54" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Slidor" ;
+    skos:broader <cc01go96>,
+        <nw90qo62> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001488>,
+        <http://id.loc.gov/authorities/subjects/sh85141754> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <af08vn83>,
+        <fs65mg77> ;
+    skos:prefLabel "Vaginor" ;
+    skos:related <jr14gv23> ;
+    skos:scopeNote "Används för skildringar av de inre delarna av fittan, oftast synonymt med slidan." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

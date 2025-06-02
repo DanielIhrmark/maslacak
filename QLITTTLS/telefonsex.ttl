@@ -1,0 +1,21 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<vn09ak57> a skos:Concept ;
+    dcterms:identifier "vn09ak57" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <of65zl26>,
+        <sq10os38> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh94005250>,
+        <https://homosaurus.org/v3/homoit0001110>,
+        <https://id.kb.se/term/sao/Telefonsex> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Telefonsex" ;
+    skos:related <qs69pq40>,
+        <vr87jw11> ;
+    skos:scopeNote "Används för skildringar av sexuellt explicita telefonsamtal med syfte att skapa upphetsning." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

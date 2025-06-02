@@ -1,0 +1,20 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ku85op55> a skos:Concept ;
+    dcterms:identifier "ku85op55" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Att dejta (hbtqi)",
+        "Dating (hbtqi)",
+        "Dejting (hbtqi)" ;
+    skos:broader <lm49rl65> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Dejtande (hbtqi)" ;
+    skos:related <ic26lt91>,
+        <jh13mm50> ;
+    skos:scopeNote "Används för skildringar av hbtqi-personer som börjar träffa varandra i syfte att eventuellt inleda en romantisk eller sexuell relation." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

@@ -1,0 +1,20 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<fc56gu03> a skos:Concept ;
+    dcterms:identifier "fc56gu03" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <he13pb69>,
+        <vn20br71> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85071224>,
+        <https://homosaurus.org/v3/homoit0000685>,
+        <https://id.kb.se/term/sao/Kabuki> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Kabuki" ;
+    skos:related <hb81xa89> ;
+    skos:scopeNote "Används för skildringar av den japansk teaterformen kabuki, där skådespelare utövar crossdressing. Under det tidiga 1600-talet spelade kvinnliga artister både manliga och kvinnliga roller, men senare förbjöds kvinnor varpå manliga artister kom att spela både manliga och kvinnliga roller." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

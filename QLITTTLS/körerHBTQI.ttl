@@ -1,0 +1,21 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<km22hn65> a skos:Concept ;
+    dcterms:identifier "km22hn65" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Hbtqi-körer",
+        "Regnbågskörer" ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000833> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <dd35em03>,
+        <ig51qv88> ;
+    skos:prefLabel "Körer (hbtqi)" ;
+    skos:related <ij02nz52>,
+        <pt38yf87>,
+        <pu79ko70> ;
+    skos:scopeNote "Används för skildringar av körer bestående av främst hbtqi-personer." .
+

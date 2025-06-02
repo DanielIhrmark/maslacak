@@ -1,0 +1,27 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<hi88il01> a skos:Concept ;
+    dcterms:identifier "hi88il01" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Sexplatser" ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000974> ;
+    skos:hiddenLabel "Sex-ställen",
+        "Sex-platser" ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <cj81yo60>,
+        <ih61bm68>,
+        <sj00sx82>,
+        <ts00ew43>,
+        <xp40ps97> ;
+    skos:prefLabel "Sexställen" ;
+    skos:related <as34mb58>,
+        <el45ws21>,
+        <jy58jm84>,
+        <sq10os38>,
+        <zd67eq32> ;
+    skos:scopeNote "Används för skildringar där specifika platser för vanligt förekommande sexuella möten besöks." .
+

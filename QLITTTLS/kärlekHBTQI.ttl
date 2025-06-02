@@ -1,0 +1,26 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<cb49gf75> a skos:Concept ;
+    dcterms:identifier "cb49gf75" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Kärleksrelationer (hbtqi)" ;
+    skos:broader <qd17qs25> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000894> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <ai94lo42>,
+        <lg97ic94>,
+        <wx50dk33>,
+        <px69nf52>,
+        <yi47zi31>,
+        <rs37ie35>,
+        <az93uj82> ;
+    skos:prefLabel "Kärlek (hbtqi)" ;
+    skos:related <lm49rl65>,
+        <qt74hh13> ;
+    skos:scopeNote "Används för skildringar av känslospektrum som präglas av ömhet, tillgivenhet, samhörighet och njutning och som involverar hbtqi-personer som objekt och/eller subjekt." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

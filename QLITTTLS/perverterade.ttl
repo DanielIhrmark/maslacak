@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ih79ot08> a skos:Concept ;
+    dcterms:identifier "ih79ot08" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Sexualperverterade",
+        "Sexuellt perverterade",
+        "Peve" ;
+    skos:broader <qj48lh67> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Perverterade" ;
+    skos:related <nf03ub67> ;
+    skos:scopeNote "Används för skildringar, historiska eller historiserande, som använder begreppet perverterade - ett äldre ord som syftar på en föreställd snedvridning av förväntade sexuella begär eller handlingar hos en person. Historiskt har begreppet främst använts för att beskriva personer med samkönad begärsriktning, men förekommer även som beskrivning av exempelvis fetischister eller sexualbrottslingar." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

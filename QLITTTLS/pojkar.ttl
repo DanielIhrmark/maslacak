@@ -1,0 +1,27 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<pk92nl65> a skos:Concept ;
+    dcterms:identifier "pk92nl65" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Gossar",
+        "Killar" ;
+    skos:broader <gz65sa45> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85016211>,
+        <https://homosaurus.org/v3/homoit0000220>,
+        <https://id.kb.se/term/barn/Pojkar>,
+        <https://id.kb.se/term/sao/Pojkar> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <dv87iq11>,
+        <dz11mk54>,
+        <rg99ag35>,
+        <xu50br91>,
+        <fk47fc89> ;
+    skos:prefLabel "Pojkar" ;
+    skos:related <wm72qx84> ;
+    skos:scopeNote "Används för skildringar av personer som beskrivs som pojkar - i regel personer under 15 år." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

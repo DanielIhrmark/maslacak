@@ -1,0 +1,16 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<fo21jj20> a skos:Concept ;
+    dcterms:identifier "fo21jj20" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <ug69ck69> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000243> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Vita hbtqi-personer" ;
+    skos:scopeNote "Används för skildringar av homosexuella, bisexuella, transpersoner, queera och/eller intersexpersoner som beskrivs som vita. Vit förstås här som en rasifierande kategori som markerar personer med melaninfattig hud, historiskt sett oftast med ursprung i Europa men begreppet har ändrats över tid och ska ses som flytande. Ämnesordet används för skildringar där identiteten som vit är i fokus." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

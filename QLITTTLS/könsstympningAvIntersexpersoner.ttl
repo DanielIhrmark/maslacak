@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ae55cm31> a skos:Concept ;
+    dcterms:identifier "ae55cm31" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000670> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <am70ft34>,
+        <wb24sl26> ;
+    skos:prefLabel "Könsstympning av intersexpersoner" ;
+    skos:related <az49ng44>,
+        <ob41my06>,
+        <wk81dt63> ;
+    skos:scopeNote "Används för skildringar av kirurgiska ingrepp på intersexpersoner för att ge personen ett \"entydigt kön\" och som inte sker med samtycke från personen." .
+

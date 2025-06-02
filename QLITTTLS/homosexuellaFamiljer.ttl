@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ps79pk16> a skos:Concept ;
+    dcterms:identifier "ps79pk16" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <sr56ul39> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <yj97ew44>,
+        <yp11tl51> ;
+    skos:prefLabel "Homosexuella familjer" ;
+    skos:related <fg62ba53>,
+        <jb88tw15> ;
+    skos:scopeNote "Används för skildringar av familjer bestående av vuxna homosexuella som lever med barn." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

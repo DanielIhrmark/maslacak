@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<op26io85> a skos:Concept ;
+    dcterms:identifier "op26io85" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <hh96dh44> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85055840>,
+        <https://homosaurus.org/v3/homoit0000600>,
+        <https://id.kb.se/term/sao/K%C3%B6nsk%C3%B6rtlar> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <ge40xr58> ;
+    skos:prefLabel "Könskörtlar" ;
+    skos:scopeNote "Används för skildringar där de hormonkörtlar som i regel tillverkar könsceller och könshormoner, d.v.s. testiklar och äggstockar, har betydelse för verket." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

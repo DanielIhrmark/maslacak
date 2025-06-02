@@ -1,0 +1,24 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<qk34rm23> a skos:Concept ;
+    dcterms:identifier "qk34rm23" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Läppstiftslesbiska" ;
+    skos:broader <iy93lr17>,
+        <ml83ih14> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000440> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Femmes" ;
+    skos:related <iy93lr17>,
+        <lh71ui09>,
+        <qn64mm90>,
+        <sf56xe20>,
+        <tx04hr81>,
+        <xw31re99> ;
+    skos:scopeNote "Används för skildringar av personer som beskrivs som femmes - huvudsakligen lesbiska eller bisexuella kvinnor med könsuttryck och attribut som kodats som feminina." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

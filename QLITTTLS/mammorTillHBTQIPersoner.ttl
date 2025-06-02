@@ -1,0 +1,25 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<gc11ac86> a skos:Concept ;
+    dcterms:identifier "gc11ac86" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Hbtqi-personers mammor",
+        "Hbtqi-personers mödrar",
+        "Mödrar till hbtqi-personer" ;
+    skos:broader <tz07oe16>,
+        <mb29ll46> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0002348> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <at95bg04>,
+        <bp52jf13>,
+        <cw73qe15>,
+        <db65rd76>,
+        <lw04vi58> ;
+    skos:prefLabel "Mammor till hbtqi-personer" ;
+    skos:scopeNote "Används för skildringar av mammor till hbtqi-personer, oavsett mammans egen identitet." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

@@ -1,0 +1,17 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<dn46oz03> a skos:Concept ;
+    dcterms:identifier "dn46oz03" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Blinda (hbtqi)" ;
+    skos:broader <bz79ls20> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000822> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Blinda hbtqi-personer" ;
+    skos:scopeNote "Används för skildringar av hbtqi-personer som är blinda eller saknar ledsyn (förmåga att orientera sig i främmande miljöer med hjälp av synen)." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

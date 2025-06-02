@@ -1,0 +1,17 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<tz63rg85> a skos:Concept ;
+    dcterms:identifier "tz63rg85" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <rn48mo22> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001087> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Partners till lesbiska" ;
+    skos:related <ml83ih14> ;
+    skos:scopeNote "Används för skildringar av personer som är partners till lesbiska, oavsett partnerns egen identitet." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

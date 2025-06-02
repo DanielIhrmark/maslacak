@@ -1,0 +1,16 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<lg97ic94> a skos:Concept ;
+    dcterms:identifier "lg97ic94" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <cb49gf75> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000921> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Platonisk kärlek (hbtqi)" ;
+    skos:scopeNote "Används för skildringar av djup och innerlig kärlek utan sexuella inslag där en eller flera av parterna är hbtqi-personer." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

@@ -1,0 +1,27 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<qs33fu26> a skos:Concept ;
+    dcterms:identifier "qs33fu26" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Gender bending",
+        "Gender blending",
+        "Gender fuck",
+        "Gender queer",
+        "Genderblending",
+        "Genderfuck",
+        "Genderqueer" ;
+    skos:broader <aq42lk11>,
+        <he13pb69> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000562> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Genderbending" ;
+    skos:related <gh93af20>,
+        <ss55ax39>,
+        <xw31re99> ;
+    skos:scopeNote "Används för skildringar av överskridande eller \"böjning\" av förväntade könsroller, att ta aspekter av två binära könsnormer och blanda i sitt uttryck och/eller att experimentera med nya, för könsnormen okonventionella uttryck." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

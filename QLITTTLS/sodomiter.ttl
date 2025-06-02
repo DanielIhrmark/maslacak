@@ -1,0 +1,20 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ky03lz27> a skos:Concept ;
+    dcterms:identifier "ky03lz27" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Buggers",
+        "Sodomister" ;
+    skos:broader <qj48lh67> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000227> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Sodomiter" ;
+    skos:related <mo71rb07>,
+        <pi08hg78> ;
+    skos:scopeNote "Används för skildringar, historiska eller historiserande, som använder begreppet sodomiter - ett äldre ord som oftast syftar på män som har, eller antas ha, sex med män. Begreppet har även använts för personer som utför oönskat sex i bredare bemärkelse, t.ex. sex med djur eller heterosexuellt oral- eller analsex - ämnesordet ska inte användas då det uppenbart handlar om dessa fall." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

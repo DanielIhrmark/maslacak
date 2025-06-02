@@ -1,0 +1,18 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<gb80wq04> a skos:Concept ;
+    dcterms:identifier "gb80wq04" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <bz86ef62>,
+        <iy93lr17> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000267> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Chubs (identitet)" ;
+    skos:related <xe06fq38> ;
+    skos:scopeNote "Används för skildringar av personer som beskrivs som tillhörande chubssubkulturen. Subkulturen kännetecknas av tjocka bögar." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

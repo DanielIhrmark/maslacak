@@ -1,0 +1,18 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<vp26lm98> a skos:Concept ;
+    dcterms:identifier "vp26lm98" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <aq42lk11> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000114> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Binding (bröstkorg)" ;
+    skos:related <ch36fv43>,
+        <um68yd69> ;
+    skos:scopeNote "Används för skildringar av att med hjälp av lindor, en binder eller annan form av kompression platta till bröstvävnad." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

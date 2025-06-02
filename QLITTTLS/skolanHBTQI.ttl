@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<lv37kg53> a skos:Concept ;
+    dcterms:identifier "lv37kg53" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Gymnasier (hbtqi)",
+        "Läroverk (hbtqi)",
+        "Skolor (hbtqi)",
+        "Undervisning (hbtqi)" ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000933> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Skolan (hbtqi)" ;
+    skos:related <pk82yt24> ;
+    skos:scopeNote "Används för skildringar av skolor där hbtqi-personer förekommer - som elever, studenter, lärare eller i andra egenskaper - eller där hbtqi-tematik på annat sätt är framträdande. Ämnesordet används för alla nivåer av utbildningsinstitutioner från grundskola till universitet." .
+

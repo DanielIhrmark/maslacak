@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<th99gl87> a skos:Concept ;
+    dcterms:identifier "th99gl87" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Ömsesidig onani" ;
+    skos:broader <es43bw29>,
+        <of65zl26>,
+        <sq10os38> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001033> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Gemensam onani" ;
+    skos:scopeNote "Används för skildringar av sexuell aktivitet som innebär att personer gemensamt onanerar." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

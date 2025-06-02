@@ -1,0 +1,24 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<tq80uf58> a skos:Concept ;
+    dcterms:identifier "tq80uf58" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Gnidsex",
+        "Saxa",
+        "Tribadism" ;
+    skos:broader <of65zl26>,
+        <qj48lh67>,
+        <sq10os38> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh97004942>,
+        <https://homosaurus.org/v3/homoit0000456> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Frottage" ;
+    skos:related <nu38hi25>,
+        <sq10os38> ;
+    skos:scopeNote "Används för skildringar av sexuell aktivitet som innebär att gnida kön mot annan persons kön eller mot annan kroppsdel." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

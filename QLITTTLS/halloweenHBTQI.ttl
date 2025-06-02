@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<rw60ku25> a skos:Concept ;
+    dcterms:identifier "rw60ku25" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <jh68dn44> ;
+    skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85058475>,
+        <https://homosaurus.org/v3/homoit0000607>,
+        <https://id.kb.se/term/barn/Halloween>,
+        <https://id.kb.se/term/sao/Halloween> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Halloween (hbtqi)" ;
+    skos:scopeNote "Används för skildringar av högtiden Halloween där kopplingen till hbtqi har en framträdande betydelse, t.ex. som tillfälle för alternativa könsuttryck." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

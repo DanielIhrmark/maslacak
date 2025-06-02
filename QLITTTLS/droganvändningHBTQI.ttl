@@ -1,0 +1,21 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<si22wr35> a skos:Concept ;
+    dcterms:identifier "si22wr35" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Droganvändning hos hbtqi-personer",
+        "Hbtqi-personer som använder droger",
+        "Hbtqi-personer som knarkar" ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000379>,
+        <https://homosaurus.org/v3/homoit0000380> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <yt55tr32> ;
+    skos:prefLabel "Droganvändning (hbtqi)" ;
+    skos:related <ac93hi68>,
+        <cn23yx07> ;
+    skos:scopeNote "Används för skildringar där hbtqi-personer använder droger men ej lever i missbruk eller beroende." .
+

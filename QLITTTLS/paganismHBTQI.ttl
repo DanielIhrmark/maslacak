@@ -1,0 +1,21 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ui03us88> a skos:Concept ;
+    dcterms:identifier "ui03us88" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Hedendom (hbtqi)",
+        "Hedningar (hbtqi)",
+        "Paganister (hbtqi)" ;
+    skos:broader <fs91lv00> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0001069> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Paganism (hbtqi)" ;
+    skos:related <hs61kj19>,
+        <xw74zj20> ;
+    skos:scopeNote "Används för skildringar av hbtqi-personer som är paganister. Används även för skildringar av hbtqi-personers förhållningssätt till paganism eller andra paganisters förhållningssätt till hbtqi. Paganism definieras här som en modern form av naturreligioner i en västerländsk kontext." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

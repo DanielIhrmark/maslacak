@@ -1,0 +1,22 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<wt70sq05> a skos:Concept ;
+    dcterms:identifier "wt70sq05" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:hiddenLabel "Klitoris-sex";
+    skos:broader <of65zl26>,
+        <sq10os38> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000280> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <nc08jl70>,
+        <uq46vq54> ;
+    skos:prefLabel "Klitorissex" ;
+    skos:related <ju63em60>,
+        <lq31ck45> ;
+    skos:scopeNote "Används för skildringar där klitoris stimuleras sexuellt." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

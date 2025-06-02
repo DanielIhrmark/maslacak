@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<dd35em03> a skos:Concept ;
+    dcterms:identifier "dd35em03" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <fr82xo46>,
+        <km22hn65> ;
+    skos:closeMatch <http://id.loc.gov/authorities/subjects/sh2010003068> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000730> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Lesbiska körer" ;
+    skos:related <ig51qv88> ;
+    skos:scopeNote "Används för skildringar av körer bestående av främst lesbiska." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

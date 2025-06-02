@@ -1,0 +1,21 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<jz19cb14> a skos:Concept ;
+    dcterms:identifier "jz19cb14" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <cb60ry21>,
+        <ot53zk29>,
+        <rs51yj40>,
+        <um15fy01> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000944> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <je73wy14>,
+        <tl61ll06> ;
+    skos:prefLabel "Ensamstående föräldrar (hbtqi)" ;
+    skos:scopeNote "Används för skildringar av föräldrar som är hbtqi-personer och som lever ensamma med barn och har ensam eller delad vårdnad där barnen bor hos föräldern på minst halvtid." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

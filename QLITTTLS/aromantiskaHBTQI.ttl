@@ -1,0 +1,17 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<mg06sf16> a skos:Concept ;
+    dcterms:identifier "mg06sf16" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Aros" ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh2022003402>,
+        <https://homosaurus.org/v3/homoit0000067>,
+        <https://id.kb.se/term/barn/Aromantisk> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Aromantiska (hbtqi)" ;
+    skos:scopeNote "Används för skildringar av hbtqi-personer som beskrivs som aromantiska, det vill säga inte är intresserade av romantiska relationer till andra." .
+

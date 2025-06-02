@@ -1,0 +1,22 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<rc46qr59> a skos:Concept ;
+    dcterms:identifier "rc46qr59" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Stingoperationer" ;
+    skos:broader <cr45ml86> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001120>,
+        <https://id.kb.se/term/sao/Brottsprovokation> ;
+    skos:hiddenLabel "Brotts-provokation",
+        "Sting-operationer" ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Brottsprovokation" ;
+    skos:related <jw79oy99>,
+        <os99go07> ;
+    skos:scopeNote "Används för skildringar av åtgärder, vanligtvis från polis och/eller åklagare, med syfte att påverka någon att begå ett brott för att sedan lagföra personen för brottet." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

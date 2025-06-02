@@ -1,0 +1,18 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<xk72tb87> a skos:Concept ;
+    dcterms:identifier "xk72tb87" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <we86xm62> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0002336> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Adopterade (hbtqi)" ;
+    skos:related <wl28xr24>,
+        <jv45ng56> ;
+    skos:scopeNote "Används för skildringar av hbtqi-personer som är adopterade." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

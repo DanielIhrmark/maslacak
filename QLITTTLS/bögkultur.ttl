@@ -1,0 +1,25 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<bz86ef62> a skos:Concept ;
+    dcterms:identifier "bz86ef62" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:hiddenLabel "Bög-kultur";
+    skos:broader <px93xp25> ;
+    skos:closeMatch <http://id.loc.gov/authorities/subjects/sh2004003369>,
+        <https://id.kb.se/term/sao/Gaykultur> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000487> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <gb80wq04>,
+        <ku32od34>,
+        <si96fc99>,
+        <xe06fq38> ;
+    skos:prefLabel "Bögkultur" ;
+    skos:related <iy93lr17>,
+        <mi32on60> ;
+    skos:scopeNote "Används för skildringar av kulturer eller uttryck präglade av bögars interaktion eller deltagande." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

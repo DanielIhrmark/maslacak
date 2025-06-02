@@ -1,0 +1,17 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<bw67sm50> a skos:Concept ;
+    dcterms:identifier "bw67sm50" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Ickevåld (hbtqi)" ;
+    skos:broader <ap82ka21> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000910> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Icke-våld (hbtqi)" ;
+    skos:scopeNote "Används för skildringar av den politiska metoden ickevåld, politisk aktivism och motstånd utan att bruka våld, där kopplingen till hbtqi har en framträdande betydelse." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

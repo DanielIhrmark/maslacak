@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<zs36te85> a skos:Concept ;
+    dcterms:identifier "zs36te85" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Tonårsbögar" ;
+    skos:broader <gc82ev34>,
+        <yp38jg66> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh88007920>,
+        <https://homosaurus.org/v3/homoit0000544> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Unga bögar" ;
+    skos:scopeNote "Används för skildringar av ungdomar som beskrivs som bögar." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

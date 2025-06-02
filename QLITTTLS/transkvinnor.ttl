@@ -1,0 +1,36 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<pm74au97> a skos:Concept ;
+    dcterms:identifier "pm74au97" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "M2F",
+        "M2Fs",
+        "Male-2-female",
+        "Male-to-female",
+        "Males transitioning to female",
+        "Man-till-kvinna",
+        "MtF",
+        "MtF transsexuella",
+        "MtFs",
+        "Trans-kvinnor",
+        "Transsexuella kvinnor" ;
+    skos:broader <la83kc00>,
+        <wj27lv47> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001642>,
+        <https://id.kb.se/term/sao/Transkvinnor> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <ow02gb82>,
+        <ma78to45>,
+        <zg42hu70>,
+        <ru99vt90> ;
+    skos:prefLabel "Transkvinnor" ;
+    skos:related <sn21af03>,
+        <kj50rg43>,
+        <nl66hc26> ;
+    skos:scopeNote "Används för skildringar av kvinnor som vid födseln tilldelats det juridiska könet man." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

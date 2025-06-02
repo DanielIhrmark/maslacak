@@ -1,0 +1,20 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ps21xc19> a skos:Concept ;
+    dcterms:identifier "ps21xc19" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <jh68dn44> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh99003279>,
+        <https://homosaurus.org/v3/homoit0001515> ;
+    skos:hiddenLabel "Kvinno-musikfestivaler",
+        "Kvinnomusik-festivaler" ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Kvinnomusikfestivaler" ;
+    skos:related <yh24gf58> ;
+    skos:scopeNote "Används för skildringar av musikfestivaler för kvinnor, oftast med kvinnliga utövare och med koppling till kvinnorörelsen." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

@@ -1,0 +1,23 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<bq69wo36> a skos:Concept ;
+    dcterms:identifier "bq69wo36" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Uraniadism",
+        "Uranianism",
+        "Uranismus",
+        "Urningism" ;
+    skos:broader <qj48lh67> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001564> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Uranism" ;
+    skos:related <cm51lf45>,
+        <nc67ku99>,
+        <ti58lf73> ;
+    skos:scopeNote "Används för skildringar, historiska eller historiserande, som använder begreppet uranism - ett under det sena 1800-talet och tidiga 1900-talet använt ord, främst för manlig homosexualitet, men inkluderande ett spektrum av hbtqi-identiteter och -praktiker." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

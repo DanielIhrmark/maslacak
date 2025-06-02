@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<rk79wi90> a skos:Concept ;
+    dcterms:identifier "rk79wi90" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Två morsor",
+        "Två mödrar" ;
+    skos:broader <tz07oe16> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Två mammor" ;
+    skos:related <nc14hs94>,
+        <nv42jb62> ;
+    skos:scopeNote "Används för skildringar av två mammor med gemensamma barn, oavsett mammornas läggning eller sexuella identitet. För bisexuella respektive lesbiska mammor, använd även ämnesordet \"Bisexuella föräldrar\" eller \"Lesbiska föräldrar\"." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

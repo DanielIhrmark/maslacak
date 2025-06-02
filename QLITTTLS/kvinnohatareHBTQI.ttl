@@ -1,0 +1,16 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<cq92tw18> a skos:Concept ;
+    dcterms:identifier "cq92tw18" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Misogynister (hbtqi)" ;
+    skos:broader <qj48lh67> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Kvinnohatare (hbtqi)" ;
+    skos:scopeNote "Används för skildringar, historiska eller historiserande, som använder begreppet kvinnohatare - ett äldre ord som under det sena 1800-talet och tidiga 1900-talet ibland användes om män som antogs vara homosexuella. Ämnesordet används inte för allmän misogyni." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

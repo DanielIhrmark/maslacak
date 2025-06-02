@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ac07ta86> a skos:Concept ;
+    dcterms:identifier "ac07ta86" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <ga70uy71>,
+        <gz65sa45> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0002285> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <dv87iq11>,
+        <tr28ip00> ;
+    skos:prefLabel "Heterosexuella barn" ;
+    skos:scopeNote "Används för skildringar av heterosexuella barn. Ämnesordet används för skildringar där identiteten som heterosexuell är i fokus." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

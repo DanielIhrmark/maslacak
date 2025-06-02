@@ -1,0 +1,21 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<xe85mp67> a skos:Concept ;
+    dcterms:identifier "xe85mp67" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Fysisk intimitet",
+        "Fysisk närhet",
+        "Kroppslig intimitet" ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001112> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <ea97yu27> ;
+    skos:prefLabel "Kroppslig närhet" ;
+    skos:related <gx90ki07>,
+        <ng97ok68>,
+        <oa64fl82> ;
+    skos:scopeNote "Används för skildringar där kroppslig närhet som uttrycker vänskap, kärlek och/eller attraktion har betydelse för verket." .
+

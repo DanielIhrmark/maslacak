@@ -1,0 +1,18 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ma78to45> a skos:Concept ;
+    dcterms:identifier "ma78to45" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Kvinnliga transtonåringar",
+        "Kvinnliga transungdomar" ;
+    skos:broader <gz45ku14>,
+        <pm74au97> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Unga transkvinnor" ;
+    skos:scopeNote "Används för skildringar av ungdomar som beskrivs som transkvinnor." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

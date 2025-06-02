@@ -1,0 +1,18 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<yt28kq21> a skos:Concept ;
+    dcterms:identifier "yt28kq21" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <zq79av11> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0001149> ;
+    skos:exactMatch <https://id.kb.se/term/barn/Queer>,
+        <https://id.kb.se/term/sao/Queer> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Queer" ;
+    skos:scopeNote "Används för skildringar med perspektiv eller teman som förstås som queera." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

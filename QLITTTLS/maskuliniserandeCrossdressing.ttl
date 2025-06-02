@@ -1,0 +1,17 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ny05rj22> a skos:Concept ;
+    dcterms:identifier "ny05rj22" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <hb81xa89> ;
+    skos:closeMatch <https://id.kb.se/term/sao/Kvinnor%20i%20manskl%C3%A4der> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Maskuliniserande crossdressing" ;
+    skos:related <nv29rf04> ;
+    skos:scopeNote "Används för skildringar av crossdressing med maskulint kodade kläder." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

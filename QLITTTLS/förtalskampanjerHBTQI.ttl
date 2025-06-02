@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ga50bh91> a skos:Concept ;
+    dcterms:identifier "ga50bh91" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Smutskastningskampanjer (hbtqi)" ;
+    skos:broader <cw47ny51> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000850> ;
+    skos:hiddenLabel "Förtals-kampanjer (hbtqi)" ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Förtalskampanjer (hbtqi)" ;
+    skos:related <mw94xh06> ;
+    skos:scopeNote "Används för skildringar av förtalskampanjer gentemot hbtqi-personer, riktat mot deras identitet och/eller livsstil." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

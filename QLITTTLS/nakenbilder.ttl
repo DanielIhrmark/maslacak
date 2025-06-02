@@ -1,0 +1,20 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<rq31sv19> a skos:Concept ;
+    dcterms:identifier "rq31sv19" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Nakenfotografier",
+        "Nakenfoton" ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0001051>,
+    <http://id.loc.gov/authorities/subjects/sh85093169> ;
+    skos:hiddenLabel "Naken-bilder",
+        "Naken-fotografier",
+        "Naken-foton" ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Nakenbilder" ;
+    skos:scopeNote "Används för skildringar där fotografier och andra bilder av nakna människokroppar har betydelse för verket." .
+

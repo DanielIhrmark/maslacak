@@ -1,0 +1,26 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<sj39nw12> a skos:Concept ;
+    dcterms:identifier "sj39nw12" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <cb60ry21> ;
+    skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85014394>,
+        <https://homosaurus.org/v3/homoit0000116>,
+        <https://homosaurus.org/v3/homoit0000121>,
+        <https://homosaurus.org/v3/homoit0000583>,
+        <https://homosaurus.org/v3/homoit0000819>,
+        <https://homosaurus.org/v3/homoit0000821> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Biologiska föräldrar (hbtqi)" ;
+    skos:related <jv45ng56>,
+        <uc52sc28>,
+        <wl28xr24>,
+        <mb29ll46>,
+        <ot53zk29> ;
+    skos:scopeNote "Används för skildringar av hbtqi-personer som är föräldrar med ett biologiskt släktskap med barnet men som inte nödvändigtvis är dess juridiska eller sociala föräldrar. Används även för skildringar av biologiska (men inte nödvändigtvis juridiska eller sociala) föräldrar till hbtqi-personer." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

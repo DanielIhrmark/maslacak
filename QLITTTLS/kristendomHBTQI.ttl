@@ -1,0 +1,22 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<mz21dd20> a skos:Concept ;
+    dcterms:identifier "mz21dd20" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Kristna (hbtqi)" ;
+    skos:broader <fs91lv00> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000265> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <bf47oe08>,
+        <ib01vo16>,
+        <px55pp67>,
+        <st81qb94>,
+        <ym43ji04> ;
+    skos:prefLabel "Kristendom (hbtqi)" ;
+    skos:scopeNote "Används för skildringar av hbtqi-personer som är kristna. Används även för skildringar av hbtqi-personers förhållningssätt till kristendom eller andra kristnas förhållningssätt till hbtqi." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

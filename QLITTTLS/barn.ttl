@@ -1,0 +1,25 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<gz65sa45> a skos:Concept ;
+    dcterms:identifier "gz65sa45" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85023418>,
+        <https://homosaurus.org/v3/homoit0000255>,
+        <https://id.kb.se/term/barn/Barn>,
+        <https://id.kb.se/term/sao/Barn> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <ac07ta86>,
+        <nf67vq64>,
+        <pk92nl65>,
+        <qk35dh05>,
+        <rl94ul47> ;
+    skos:prefLabel "Barn" ;
+    skos:related <wv53po26>,
+        <xf74zb26>,
+        <zo32gs01> ;
+    skos:scopeNote "Används för skildringar av personer som beskrivs som barn - i regel personer under 15 år." .
+

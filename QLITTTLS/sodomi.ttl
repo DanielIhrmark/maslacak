@@ -1,0 +1,23 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<mo71rb07> a skos:Concept ;
+    dcterms:identifier "mo71rb07" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <qj48lh67> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85124275>,
+        <https://homosaurus.org/v3/homoit0001325>,
+        <https://id.kb.se/term/sao/Sodomi> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Sodomi" ;
+    skos:related <ky03lz27>,
+        <of65zl26>,
+        <op61iw59>,
+        <oq76dn75>,
+        <sq10os38> ;
+    skos:scopeNote "Används för skildringar, historiska eller historiserande, som använder begreppet sodomi - ett från Bibeln hämtat ord för oönskade eller \"onaturliga\" sexuella beteenden som inte syftar till önskad fortplantning. Bland annat har analsex räknats som sodomi, och begreppet har ofta använts om män som har sex med män." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

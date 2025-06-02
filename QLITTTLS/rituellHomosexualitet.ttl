@@ -1,0 +1,18 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<hz00ry27> a skos:Concept ;
+    dcterms:identifier "hz00ry27" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <cr97jg35>,
+        <of65zl26> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001240> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Rituell homosexualitet" ;
+    skos:related <mo36hy57> ;
+    skos:scopeNote "Används för skildringar av samkönade sexuella aktiviteter som sker som en del av en religiös eller kulturell rit, utan att de inblandade behöver identifiera sig som homosexuella." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

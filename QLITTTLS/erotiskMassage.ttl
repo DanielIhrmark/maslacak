@@ -1,0 +1,20 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<kd86jk33> a skos:Concept ;
+    dcterms:identifier "kd86jk33" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <ng97ok68>,
+        <of65zl26>,
+        <sq10os38> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000402> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Erotisk massage" ;
+    skos:related <cd03gv62>,
+        <in96gy48> ;
+    skos:scopeNote "Används för skildringar av massage med syfte att skapa sexuell njutning." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

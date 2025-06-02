@@ -1,0 +1,20 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<sh16ni93> a skos:Concept ;
+    dcterms:identifier "sh16ni93" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:hiddenLabel "Drag-mammor" ;
+    skos:broader <la19ou04>,
+        <rh61yd98>,
+        <vu62yz77> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000374> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Dragmammor" ;
+    skos:related <kp64ff95> ;
+    skos:scopeNote "Används för skildringar av mer erfarna dragqueens som är mentorer för mindre erfarna dragqueens." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

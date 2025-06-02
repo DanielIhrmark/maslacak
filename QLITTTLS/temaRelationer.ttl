@@ -1,0 +1,26 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<eh72ht67> a skos:Collection ;
+    dcterms:identifier "eh72ht67" ;
+    dcterms:issued "2022-12-19T13:03:41"^^xsd:dateTime ;
+    dcterms:modified "2022-12-19T13:03:41"^^xsd:dateTime ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:member <ba46pk33>,
+        <ev61wd95>,
+        <hu08zy84>,
+        <ix39kn40>,
+        <jc34hl12>,
+        <kp91xn92>,
+        <lm49rl65>,
+        <ni09mn87>,
+        <sr56ul39>,
+        <um90bw50>,
+        <uz31xm23>,
+        <xf74zb26>,
+        <xv86md55>,
+        <yi63rn93>,
+        <yu17am57> ;
+    skos:prefLabel "Tema: Relationer (hbtqi)" .

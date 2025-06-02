@@ -1,0 +1,20 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<dz11mk54> a skos:Concept ;
+    dcterms:identifier "dz11mk54" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Tjejpojkar" ;
+    skos:broader <pk92nl65>,
+        <xw31re99> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001313> ;
+    skos:hiddenLabel "Flick-pojkar" ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Flickpojkar" ;
+    skos:related <pm44fs90> ;
+    skos:scopeNote "Används för skildringar av pojkar som uppfattas som feminina eller vars beteende och uttryck inte överensstämmer med traditionella maskulina roller. Kan uppfattas som eller användas nedsättande." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

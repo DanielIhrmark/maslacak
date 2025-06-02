@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<bt16zp60> a skos:Concept ;
+    dcterms:identifier "bt16zp60" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:hiddenLabel "Förvandlings-symbolik (hbtqi)" ;
+    skos:broader <bv22nv79>,
+        <he13pb69> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Förvandlingssymbolik (hbtqi)" ;
+    skos:related <gm75ni75>,
+        <xr55rs91> ;
+    skos:scopeNote "Används för skildringar där kroppslig förvandling används som symbolik för att signalera samkönade sexuella praktiker, känslor, identiteter och/eller överskridanden av binära könsnormer. Förvandlingen bör i någon mån vara magisk eller oförklarlig och behöver inte handla om att transformeras från ett kön till ett annat. Används inte för avsiktliga transitioneringserfarenheter." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

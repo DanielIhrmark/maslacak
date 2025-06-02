@@ -1,0 +1,23 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<cs56jh91> a skos:Concept ;
+    dcterms:identifier "cs56jh91" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Transfäder" ;
+    skos:hiddenLabel "Trans-pappor",
+        "Trans-fäder" ;
+    skos:broader <jt69hs39>,
+        <ch36fv43>,
+        <ds06gp49> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001413> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Transpappor" ;
+    skos:related <es72xt95>,
+        <xx95hc99> ;
+    skos:scopeNote "Används för skildringar av transmän som är pappor." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

@@ -1,0 +1,21 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<qo99it05> a skos:Concept ;
+    dcterms:identifier "qo99it05" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <wk10nx66> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000773> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Lesbiska relationer" ;
+    skos:related <io33bc56>,
+        <ip90hk23>,
+        <qq09uc15>,
+        <sr72nr60>,
+        <px83mo29> ;
+    skos:scopeNote "Används för skildringar av nära relationer mellan lesbiska. Kan omfatta aspekter som släktskap, vänskap, sex och/eller kärlek." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

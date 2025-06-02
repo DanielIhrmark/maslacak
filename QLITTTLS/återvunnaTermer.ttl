@@ -1,0 +1,23 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<hv28qb07> a skos:Concept ;
+    dcterms:identifier "hv28qb07" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Återvunna begrepp",
+        "Återvunna ord" ;
+    skos:broader <fa51om46> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001559> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <gs35mz40>,
+        <wq11aj19> ;
+    skos:prefLabel "Återvunna termer" ;
+    skos:related <bq82fj53>,
+        <gc82ev34>,
+        <yd09fz28> ;
+    skos:scopeNote "Används för skildringar av termer som tidigare använts nedsättande men som återtagits och uppvärderats av den grupp som termen riktats mot." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

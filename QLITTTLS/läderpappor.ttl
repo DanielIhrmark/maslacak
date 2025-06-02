@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<uk90xn87> a skos:Concept ;
+    dcterms:identifier "uk90xn87" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <cv43ns83>,
+        <ef49js51>,
+        <wo70nt95> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000706> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Läderpappor" ;
+    skos:related <ax94ed37> ;
+    skos:scopeNote "Används för skildringar av män som är dominanta och/eller har en mentorsroll inom lädergemenskaper." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

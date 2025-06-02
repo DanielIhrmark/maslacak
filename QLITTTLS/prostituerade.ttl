@@ -1,0 +1,31 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<aq16rl33> a skos:Concept ;
+    dcterms:identifier "aq16rl33" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Demimonder",
+        "Eskorter",
+        "Horor",
+        "Kurtisaner",
+        "Nattfjärilar",
+        "Sexsäljare" ;
+    skos:broader <cd03gv62> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85107622>,
+        <https://id.kb.se/term/sao/Prostituerade> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <fn83ny13>,
+        <hb45um93>,
+        <jo36mt43>,
+        <ny26ho14>,
+        <pi37cs64>,
+        <wn14yd68>,
+        <xv67mh68>,
+        <zl52bq90> ;
+    skos:prefLabel "Prostituerade" ;
+    skos:scopeNote "Används för skildringar av personer som säljer eller har sålt sexuella tjänster." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

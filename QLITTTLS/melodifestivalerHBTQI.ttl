@@ -1,0 +1,22 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<tv06mq01> a skos:Concept ;
+    dcterms:identifier "tv06mq01" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Melodifestivalen (hbtqi)",
+        "Mello (hbtqi)",
+        "Eurovision (hbtqi)",
+        "Eurovision Song Contest (hbtqi)",
+        "ESC (hbtqi)",
+        "Schlagerfestivalen (hbtqi)" ;
+    skos:broader <jh68dn44> ;
+    skos:closeMatch <https://id.kb.se/term/sao/Melodifestivaler> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Melodifestivaler (hbtqi)" ;
+    skos:scopeNote "Används för skildringar av melodifestivaler där kopplingen till hbtqi har en framträdande betydelse." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

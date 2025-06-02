@@ -1,0 +1,17 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ce30cv53> a skos:Concept ;
+    dcterms:identifier "ce30cv53" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:hiddenLabel "Trans-separatism" ;
+    skos:broader <he13pb69>,
+        <ux32oc19> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Transseparatism" ;
+    skos:scopeNote "Används för skildringar av frivillig ideologisk, social, kulturell och ibland fysisk separation av transpersoner från cispersoner." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

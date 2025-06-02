@@ -1,0 +1,26 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<mo36hy57> a skos:Concept ;
+    dcterms:identifier "mo36hy57" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Urbefolkningar (hbtqi)",
+        "Urfolk (hbtqi)",
+        "Urinvånare (hbtqi)" ;
+    skos:broader <nj44aa03> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000886> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <ep67oc83>,
+        <et08az97>,
+        <ld35mi88>,
+        <na27vd54> ;
+    skos:prefLabel "Ursprungsbefolkningar (hbtqi)" ;
+    skos:related <hz00ry27>,
+        <ug69ck69>,
+        <zq57kl95> ;
+    skos:scopeNote "Används för skildringar av hbtqi-personer inom folkgrupper som definieras som ursprungsbefolkningar - ättlingar till de befolkningsgrupper som ursprungligen bebott områden som senare koloniserats och/eller invaderats." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

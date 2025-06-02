@@ -1,0 +1,33 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<gd64om76> a skos:Concept ;
+    dcterms:identifier "gd64om76" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Att outa någon",
+        "Outing" ;
+    skos:broader <ap82ka21> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001065>,
+    <http://id.loc.gov/authorities/subjects/sh93002177> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Outning" ;
+    skos:related <ev61wd95>,
+        <hg41ea96>,
+        <ik01ja84>,
+        <kk47bz38>,
+        <kp91xn92>,
+        <mk46kv76>,
+        <mw94xh06>,
+        <mw98ml69>,
+        <oi78cp72>,
+        <qy59io46>,
+        <sm18jx44>,
+        <uj94qg47>,
+        <vr41yw40>,
+        <vv82yi14> ;
+    skos:scopeNote "Används för skildringar av att utan medgivande offentliggöra någon annans sexuella läggning, transitionserfarenhet eller intersextillstånd." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

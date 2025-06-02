@@ -1,0 +1,17 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<zt16av80> a skos:Concept ;
+    dcterms:identifier "zt16av80" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Hbtqi-personer i 12-stegsprogram" ;
+    skos:broader <ot53zk29> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0001549> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Hbtqi-personer i avvänjning" ;
+    skos:scopeNote "Används för skildringar av hbtqi-personer som är i ett missbruk och strävar efter att ta sig ur det." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

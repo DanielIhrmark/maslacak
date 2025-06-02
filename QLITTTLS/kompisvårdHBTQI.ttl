@@ -1,0 +1,25 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<mt82qy45> a skos:Concept ;
+    dcterms:identifier "mt82qy45" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Buddies",
+        "Buddy care",
+        "Buddy-omsorg",
+        "Buddy-vård",
+        "Kamratomsorg (hbtqi)",
+        "Kamratvård (hbtqi)",
+        "Kompisomsorg (hbtqi)" ;
+    skos:broader <tp87vt58> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000226> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Kompisvård (hbtqi)" ;
+    skos:related <by72wh90>,
+        <kp96rj33> ;
+    skos:scopeNote "Används för skildringar av peer-to-peer-form av hälso- och sjukvårdsstöd för hbtqi-personer där vänner eller volontärer bistår med vård och omsorg i hemmet eller följer med på patienters sjukvårdsbesök för att ge känslomässigt och logistiskt stöd." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

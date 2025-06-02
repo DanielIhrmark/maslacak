@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<px55pp67> a skos:Concept ;
+    dcterms:identifier "px55pp67" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Katoliker (hbtqi)",
+        "Papism (hbtqi)",
+        "Papister (hbtqi)" ;
+    skos:broader <mz21dd20> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0001244> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Katolicism (hbtqi)" ;
+    skos:scopeNote "Används för skildringar av hbtqi-personer som är anhängare av romersk-katolska kyrkan. Används även för skildringar av hbtqi-personers förhållningssätt till katolicism eller andra katolikers förhållningssätt till hbtqi." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

@@ -1,0 +1,26 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ss55ax39> a skos:Concept ;
+    dcterms:identifier "ss55ax39" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Genus" ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000560>,
+        <https://homosaurus.org/v3/homoit0001269> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <aq42lk11>,
+        <hh96dh44>,
+        <jp21cy02>,
+        <op23ar73> ;
+    skos:prefLabel "Kön" ;
+    skos:related <pq04vl34>,
+        <qn64mm90>,
+        <qs33fu26>,
+        <rb83rq15>,
+        <rq22xv55>,
+        <vr41yw40> ;
+    skos:scopeNote "Används för skildringar av kön, en mångfacetterad kategorisering för gruppindelning efter biologiska, juridiska, sociala, och/eller identitetsmässiga faktorer. Detta övergripande ämnesord används om verk där flera av dessa aspekter har en framträdande betydelse i verket." .
+

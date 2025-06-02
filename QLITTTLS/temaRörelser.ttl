@@ -1,0 +1,26 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<wp43vv13> a skos:Collection ;
+    dcterms:identifier "wp43vv13" ;
+    dcterms:issued "2022-12-19T13:03:41"^^xsd:dateTime ;
+    dcterms:modified "2022-12-19T13:03:41"^^xsd:dateTime ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:member <aj40pz93>,
+        <ap82ka21>,
+        <as34mb58>,
+        <hc32bh86>,
+        <ij02nz52>,
+        <kb69pe59>,
+        <lj92bs38>,
+        <no07qg24>,
+        <pn94ds23>,
+        <qc44ku86>,
+        <qs37gp76>,
+        <sv13oe15>,
+        <sw59hr91>,
+        <ul49bf14>,
+        <ux32oc19> ;
+    skos:prefLabel "Tema: Rörelser och rättigheter (hbtqi)" .

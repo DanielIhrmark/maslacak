@@ -1,0 +1,24 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<no07qg24> a skos:Concept ;
+    dcterms:identifier "no07qg24" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000712> ;
+    skos:closeMatch <http://id.loc.gov/authorities/subjects/sh99004999> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <be84pp13>,
+        <ey75ly87>,
+        <le14is10>,
+        <nk19mk45> ;
+    skos:prefLabel "Rättsstatus" ;
+    skos:related <ch10wc66>,
+        <os76md08>,
+        <pi26jy10>,
+        <pi77tc72>,
+        <uh63yy69> ;
+    skos:scopeNote "Används för skildringar där personers relation till juridiska regelverk som reglerar personliga rättigheter har betydelse för verket." .
+

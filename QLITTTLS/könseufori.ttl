@@ -1,0 +1,23 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<or82kx62> a skos:Concept ;
+    dcterms:identifier "or82kx62" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Kroppseufori",
+    "Köns-eufori" ;
+    skos:broader <he13pb69>,
+        <qd17qs25> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh2022005656>,
+        <https://homosaurus.org/v3/homoit0002256> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Könseufori" ;
+    skos:related <ie81fz88>,
+        <op23ar73>,
+        <wj27lv47> ;
+    skos:scopeNote "Används för skildringar av känslor av lycka och tillfredsställelse över ens upplevda/uttryckta kön, ofta relaterat till att detta bekräftas socialt eller i ens kropp. Begreppet används oftast relaterat till transpersoner." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

@@ -1,0 +1,22 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ad73kh62> a skos:Concept ;
+    dcterms:identifier "ad73kh62" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Glädjehus",
+        "Horhus" ;
+    skos:broader <qs69pq40> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh2005004145>,
+        <https://homosaurus.org/v3/homoit0000223>,
+        <https://id.kb.se/term/barn/Bordeller>,
+        <https://id.kb.se/term/sao/Bordeller> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Bordeller" ;
+    skos:related <gx15nx98> ;
+    skos:scopeNote "Används för skildringar av lokaler där organiserad prostitution bedrivs av fler än en person." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

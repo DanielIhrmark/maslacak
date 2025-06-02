@@ -1,0 +1,24 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<iq08ee58> a skos:Concept ;
+    dcterms:identifier "iq08ee58" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <ef49js51>,
+        <eo15qd89>,
+        <gb03ie03>,
+        <iy93lr17> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Masters (hbtqi)" ;
+    skos:related <ek27kt77>,
+        <hi30mc55>,
+        <nh99bq54>,
+        <oj77yj15>,
+        <tk37pb02>,
+        <wm33rr79> ;
+    skos:scopeNote "Används för skildringar av en manligt identifierad dominerande part i en BDSM-kontext." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

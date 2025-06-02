@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ux32oc19> a skos:Concept ;
+    dcterms:identifier "ux32oc19" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <ce30cv53>,
+        <db31do17>,
+        <fl40sz20>,
+        <lx88hn91>,
+        <ze55dx31> ;
+    skos:prefLabel "Hbtqi-separatism" ;
+    skos:related <rq22xv55> ;
+    skos:scopeNote "Används för skildringar av frivillig ideologisk, social, kulturell och ibland fysisk separation av hbtqi-personer från heterosexuella och/eller cispersoner." .
+

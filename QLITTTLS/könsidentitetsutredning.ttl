@@ -1,0 +1,23 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<bw23bo45> a skos:Concept ;
+    dcterms:identifier "bw23bo45" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Fastställande av könstillhörighet i vissa fall",
+        "Könsdysforiutredning",
+        "Könsutredning" ;
+    skos:broader <he13pb69>,
+        <tp87vt58> ;
+    skos:hiddenLabel "Könsidentitets-utredning" ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Könsidentitetsutredning" ;
+    skos:related <qb68kn73>,
+        <rb83rq15>,
+        <ua71em06> ;
+    skos:scopeNote "Används för skildringar av diagnostiserande utredning inom vården, med syfte att fastställa om en person ska tilldelas diagnosen könsdysfori/transsexualism och därmed ha rätt till könsbekräftande behandling." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

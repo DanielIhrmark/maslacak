@@ -1,0 +1,23 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ui21uh29> a skos:Concept ;
+    dcterms:identifier "ui21uh29" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Transkvinnors fäder",
+        "Transkvinnors pappor",
+        "Fäder till transkvinnor",
+        "Pappor till transkvinnor",
+        "Transflickors fäder",
+        "Transflickors pappor",
+        "Fäder till transflickor" ;
+    skos:broader <nl66hc26>,
+        <tt22xp58> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Pappor till transkvinnor" ;
+    skos:scopeNote "Används för skildringar av pappor till transkvinnor, oavsett pappans egen identitet." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

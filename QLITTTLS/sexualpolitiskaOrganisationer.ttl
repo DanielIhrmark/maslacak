@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<rq71or71> a skos:Concept ;
+    dcterms:identifier "rq71or71" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Organisationer för sexualvetenskap och sexualreform" ;
+    skos:broader <jy58jm84> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001061> ;
+    skos:hiddenLabel "Sexual-politiska organisationer" ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Sexualpolitiska organisationer" ;
+    skos:related <pq80mi93> ;
+    skos:scopeNote "Används för skildringar av organisationer som strävar efter sexuella reformer, kämpar för sexuella rättigheter och/eller förmedlar information om sex." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

@@ -1,0 +1,19 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<sf24zw50> a skos:Concept ;
+    dcterms:identifier "sf24zw50" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Barn till intersexuella" ;
+    skos:broader <pz95ay20> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0001767> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Barn till intersexpersoner" ;
+    skos:related <bk40bw82>,
+        <jm19os62> ;
+    skos:scopeNote "Används för skildringar av barn till personer som beskrivs som intersexpersoner." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

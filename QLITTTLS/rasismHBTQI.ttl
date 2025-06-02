@@ -1,0 +1,20 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<rh68hi28> a skos:Concept ;
+    dcterms:identifier "rh68hi28" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0002038> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Rasism (hbtqi)" ;
+    skos:related <ba31au62>,
+        <cy27yx08>,
+        <pq70kh99>,
+        <ug69ck69>,
+        <xw72hx88>,
+        <yf82lc16> ;
+    skos:scopeNote "Används för skildringar av idéer, fördomar och handlingar baserade på föreställningar om en hierarkisk uppdelning av människor i raser, då dessa drabbar och/eller upprätthålls av hbtqi-personer." .
+

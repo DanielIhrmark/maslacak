@@ -1,0 +1,29 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<mb29ll46> a skos:Concept ;
+    dcterms:identifier "mb29ll46" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Hbtqi-personers föräldrar" ;
+    skos:broader <cb60ry21> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0002224> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <bi56bw40>,
+        <fv17pe76>,
+        <gf03gn85>,
+        <gp40jp83>,
+        <um33qf35>,
+        <gc11ac86>,
+        <ad66zi96> ;
+    skos:prefLabel "Föräldrar till hbtqi-personer" ;
+    skos:related <ot53zk29>,
+        <rl94ul47>,
+        <jv45ng56>,
+        <uc52sc28>,
+        <sj39nw12> ;
+    skos:scopeNote "Används för skildringar av föräldrar till hbtqi-personer, oavsett biologiskt släktskap." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

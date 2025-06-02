@@ -1,0 +1,22 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<kj50rg43> a skos:Concept ;
+    dcterms:identifier "kj50rg43" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Assigned male at birth",
+        "Tilldelat manligt kön vid födseln",
+        "Tillskrivet manligt kön vid födseln" ;
+    skos:broader <vr86mj99> ;
+    skos:exactMatch <https://homosaurus.org/v3/homoit0000079> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "AMAB" ;
+    skos:related <tc60ce15>,
+        <kh58tg68>,
+        <pm74au97> ;
+    skos:scopeNote "Används för skildringar av manligt kön som tilldelas ett barn vid födseln, baserat på hur barnets kropp tolkas. Används när det tilldelade könet har betydelse för verket, huvudsakligen i de fall där det inte överensstämmer med personers senare könsidentitet." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

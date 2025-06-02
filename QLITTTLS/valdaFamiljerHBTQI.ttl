@@ -1,0 +1,20 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<nc18mo76> a skos:Concept ;
+    dcterms:identifier "nc18mo76" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:broader <sr56ul39> ;
+    skos:closeMatch <https://homosaurus.org/v3/homoit0000834> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:narrower <vu62yz77>,
+        <wg03fj93>,
+        <wo70nt95> ;
+    skos:prefLabel "Valda familjer (hbtqi)" ;
+    skos:related <zw83ms79> ;
+    skos:scopeNote "Används för skildringar av grupper av personer som tar samma roll i en varandras liv som en idealbild av en biologisk familj, i form av stöd och gemenskap, och självdefinerar detta som en familjegrupp." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+

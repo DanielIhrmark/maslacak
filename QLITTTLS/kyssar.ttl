@@ -1,0 +1,23 @@
+@base <https://queerlit.dh.gu.se/qlit/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ea97yu27> a skos:Concept ;
+    dcterms:identifier "ea97yu27" ;
+    dcterms:issued "2022-05-19T10:12:00"^^xsd:dateTime ;
+    dcterms:modified "2022-05-19T10:12:00"^^xsd:dateTime ;
+    skos:altLabel "Hångel" ;
+    skos:broader <eh73kd00>,
+        <of65zl26>,
+        <sq10os38>,
+        <xe85mp67> ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85072549>,
+        <https://homosaurus.org/v3/homoit0000691>,
+        <https://id.kb.se/term/barn/Kyssar>,
+        <https://id.kb.se/term/sao/Kyssar> ;
+    skos:inScheme <https://queerlit.dh.gu.se/qlit/v1> ;
+    skos:prefLabel "Kyssar" ;
+    skos:scopeNote "Används för skildringar där kyssar har betydelse för verket." ;
+    skos:topConceptOf <https://queerlit.dh.gu.se/qlit/v1> .
+
