@@ -1,7 +1,8 @@
-streamlit >= 1.9.2
+streamlit
+toml
 openai
 requests
 google-generativeai
-toml
 anthropic
+pandas
 openpyxl
