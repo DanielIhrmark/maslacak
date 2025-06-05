@@ -1,8 +1,8 @@
-streamlit
-toml
-openai
-requests
-google-generativeai
-anthropic
-pandas
-openpyxl
+streamlit>=1.28.0
+toml>=0.10.2
+openai>=1.0.0
+requests>=2.31.0
+google-generativeai>=0.3.0
+anthropic>=0.7.0
+pandas>=2.0.0
+openpyxl>=3.1.0
