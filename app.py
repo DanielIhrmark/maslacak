@@ -9,6 +9,8 @@ import os
 import re
 import pandas as pd
 import io
+import time
+from typing import Optional, Dict, List, Tuple
 
 
 # Load secrets from either Streamlit Cloud or local `.streamlit/secrets.toml`
@@ -34,29 +36,42 @@ def estimate_tokens(text):
 
 # Helper function to create model-specific prompts based on token limits
 def create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, model_name):
-    """Create model-specific prompts respecting token limits"""
+    """Create model-specific prompts respecting token limits - prioritizes vocabulary over text length"""
 
-    # Token limits per model (very conservative, leaving lots of room for response)
+    # Token limits - leave room for response
     model_limits = {
-        "gpt-4": 3000,
-        "claude": 180000,
-        "gemini": 25000,
-        "deepseek": 25000
+        "gpt-4": 7192,
+        "claude": 200000,
+        "gemini": 1048576,
+        "deepseek": 30768
     }
 
-    # Determine model type
+    # Response token reservations
+    response_reserves = {
+        "gpt-4": 2000,
+        "claude": 4000,
+        "gemini": 4000,
+        "deepseek": 2000
+    }
+
+    # Determine model type and limits
     if "gpt" in model_name.lower() or model_name == "chatgpt":
         limit = model_limits["gpt-4"]
+        response_reserve = response_reserves["gpt-4"]
     elif "claude" in model_name.lower():
         limit = model_limits["claude"]
+        response_reserve = response_reserves["claude"]
     elif "gemini" in model_name.lower():
         limit = model_limits["gemini"]
+        response_reserve = response_reserves["gemini"]
     elif "deepseek" in model_name.lower():
         limit = model_limits["deepseek"]
+        response_reserve = response_reserves["deepseek"]
     else:
-        limit = 3000
+        limit = 8192
+        response_reserve = 2000
 
-    # Create base instruction without vocabulary first
+    # Base instruction (same for all models)
     base_instruction = """You are a subject indexer specializing in LGBTQI+ literature analysis. Your task is to analyze the provided literary work and suggest relevant subject terms from the QueerLit controlled vocabulary.
 
 Please analyze ONLY the literary text provided (ignore any metadata) and:
@@ -67,70 +82,85 @@ Please analyze ONLY the literary text provided (ignore any metadata) and:
 
 Base your analysis solely on the literary content, not on external knowledge about the author or work."""
 
-    # Calculate tokens for base instruction and text
-    base_tokens = estimate_tokens(base_instruction)
-    text_tokens = estimate_tokens(full_text)
-
-    # For GPT-4, if the text itself is too long, truncate it
-    if model_name.lower() in ["gpt-4", "chatgpt"] and (base_tokens + text_tokens) > limit:
-        available_for_text = limit - base_tokens - 200
-        max_text_chars = available_for_text * 4
-
-        if len(full_text) > max_text_chars:
-            truncated_text = full_text[:max_text_chars] + "\n\n[TEXT TRUNCATED DUE TO TOKEN LIMITS]"
-            st.warning(
-                f"⚠️ Text truncated for {model_name} due to token limits ({len(full_text):,} → {len(truncated_text):,} characters)")
-            full_text = truncated_text
-
-    # Now add vocabulary if there's room
-    tokens_used = estimate_tokens(base_instruction + full_text)
-    tokens_remaining = limit - tokens_used
-
-    if not vocabulary_terms or tokens_remaining < 100:
+    # Create vocabulary information (SAME for all models - this is important for fair comparison)
+    if not vocabulary_terms:
         vocab_info = "Focus on standard LGBTQI+ terminology."
     elif vocab_access_method == "Sample Terms (Fast)":
-        vocab_sample = vocabulary_terms[:30]
+        vocab_sample = vocabulary_terms[:30]  # Same sample size for all
         vocab_text = ", ".join(vocab_sample)
         vocab_info = f"Some QueerLit vocabulary terms: {vocab_text}..."
     elif vocab_access_method == "Full List (Comprehensive)":
-        available_chars = tokens_remaining * 4
-        vocab_subset = []
-        chars_used = 0
-        prefix = "QueerLit vocabulary includes: "
-
-        for term in vocabulary_terms:
-            term_length = len(term) + 2
-            if chars_used + term_length + len(prefix) < available_chars:
-                vocab_subset.append(term)
-                chars_used += term_length
-            else:
-                break
-
-        if vocab_subset:
-            vocab_text = ", ".join(vocab_subset)
-            remaining = len(vocabulary_terms) - len(vocab_subset)
-            vocab_info = f"QueerLit vocabulary includes: {vocab_text}" + (
-                f"... and {remaining} more terms" if remaining > 0 else "")
-        else:
-            vocab_info = f"QueerLit vocabulary has {len(vocabulary_terms)} terms available for reference."
-
+        # Include ALL vocabulary terms for all models
+        vocab_text = ", ".join(vocabulary_terms)
+        vocab_info = f"QueerLit vocabulary includes: {vocab_text}"
     elif vocab_access_method == "Categorized (Organized)":
+        # Same categorization for all models
         identity_terms = [t for t in vocabulary_terms[:50] if
                           any(keyword in t.lower() for keyword in ['person', 'identitet', 'sexual', 'gender'])][:10]
         relationship_terms = [t for t in vocabulary_terms[:50] if
                               any(keyword in t.lower() for keyword in ['kärlek', 'relation', 'familj'])][:10]
+        theme_terms = [t for t in vocabulary_terms[:50] if
+                       any(keyword in t.lower() for keyword in ['tema', 'ämne', 'område'])][:10]
 
         vocab_info = f"""QueerLit vocabulary includes:
-Identity/Gender: {', '.join(identity_terms)}...
-Relationships: {', '.join(relationship_terms)}...
-(Plus many more terms available)"""
+Identity/Gender: {', '.join(identity_terms)}
+Relationships: {', '.join(relationship_terms)}
+Themes: {', '.join(theme_terms)}
+(Full vocabulary contains {len(vocabulary_terms)} terms total)"""
 
-    return f"""{base_instruction}
+    # Calculate tokens for fixed parts (instruction + vocabulary)
+    fixed_content = f"{base_instruction}\n\n{vocab_info}\n\n--- LITERARY TEXT TO ANALYZE ---\n"
+    fixed_tokens = estimate_tokens(fixed_content)
 
-{vocab_info}
+    # Calculate available tokens for the text
+    available_for_prompt = limit - response_reserve
+    available_for_text = available_for_prompt - fixed_tokens - 100  # 100 token safety buffer
 
---- LITERARY TEXT TO ANALYZE ---
-{full_text}"""
+    # Convert available tokens to characters (roughly 4 chars per token)
+    max_text_chars = max(available_for_text * 4, 500)  # At least 500 chars
+
+    # Truncate text if needed
+    if len(full_text) > max_text_chars:
+        # Try to truncate at a sentence boundary
+        truncated_text = full_text[:max_text_chars]
+
+        # Find last period, exclamation, or question mark
+        last_sentence = max(
+            truncated_text.rfind('.'),
+            truncated_text.rfind('!'),
+            truncated_text.rfind('?')
+        )
+
+        if last_sentence > max_text_chars * 0.8:  # If we found a sentence ending in the last 20%
+            truncated_text = truncated_text[:last_sentence + 1]
+
+        truncated_text += "\n\n[TEXT TRUNCATED DUE TO MODEL TOKEN LIMITS - Showing first ~{:,} of {:,} characters]".format(
+            len(truncated_text), len(full_text)
+        )
+
+        # Show info about truncation
+        percentage_shown = (len(truncated_text) / len(full_text)) * 100
+        st.info(
+            f"ℹ️ {model_name}: Showing {percentage_shown:.1f}% of text to fit token limits while preserving full vocabulary")
+
+        text_to_analyze = truncated_text
+    else:
+        text_to_analyze = full_text
+
+    # Assemble final prompt
+    final_prompt = f"{fixed_content}{text_to_analyze}"
+
+    # Final safety check
+    final_tokens = estimate_tokens(final_prompt)
+    if final_tokens > available_for_prompt:
+        # Emergency truncation - remove more text
+        excess_tokens = final_tokens - available_for_prompt
+        chars_to_remove = excess_tokens * 4 + 200  # Extra safety margin
+        if len(text_to_analyze) > chars_to_remove:
+            text_to_analyze = text_to_analyze[:-chars_to_remove] + "\n[TRUNCATED]"
+            final_prompt = f"{fixed_content}{text_to_analyze}"
+
+    return final_prompt
 
 
 # Helper function to extract vocabulary terms from text
@@ -190,6 +220,7 @@ def calculate_metrics(predicted_terms, ground_truth_terms):
 
 
 # Helper function to load QueerLit vocabulary from TTL files
+@st.cache_data
 def load_queerlit_vocabulary(ttl_directory="QLITTTLS"):
     """Load and parse QueerLit vocabulary terms from TTL files"""
     vocabulary_terms = []
@@ -241,23 +272,72 @@ def parse_file_content(file_content):
         marc_section = '\n'.join(lines[:marc_end])
         full_text = '\n'.join(lines[marc_end:])
 
-    qlit_terms = []
+    existing_qlit_terms = []
+    peripheral_terms = []
+
     for line in marc_section.split('\n'):
-        if 'qlit' in line.lower() and '650' in line:
+        # Extract main QLIT terms from 650 fields
+        if '650' in line and 'qlit' in line.lower():
             if 'https://queerlit.dh.gu.se/qlit/v1/' in line:
                 parts = line.split('a ')
                 if len(parts) > 1:
                     term = parts[1].split('0 ')[0].strip()
-                    if term and '(' in term:
-                        qlit_terms.append(term)
+                    if term:  # Removed the requirement for parentheses
+                        existing_qlit_terms.append(term)
 
-    return marc_section, full_text, qlit_terms
+        # Extract peripheral terms from 590 fields
+        elif '590' in line and 'a ' in line:
+            # Handle various possible formats
+            if '\ta ' in line:  # Tab separator
+                parts = line.split('\ta ')
+            else:
+                parts = line.split('a ')
+
+            if len(parts) > 1:
+                # Extract the term, handling potential 'qlit' suffix
+                term_part = parts[1].strip()
+                if ' qlit' in term_part:
+                    term = term_part.split(' qlit')[0].strip()
+                else:
+                    term = term_part.strip()
+
+                if term:
+                    peripheral_terms.append(term)
+
+    # Combine all terms for evaluation purposes
+    all_terms = existing_qlit_terms + peripheral_terms
+
+    return marc_section, full_text, existing_qlit_terms, peripheral_terms, all_terms
 
 
-# ----------- Model Wrappers -----------
+
+
+# NEW: Enhanced error handling with retry logic
+def call_model_with_retry(model_func, prompt, api_key, model_name, max_retries=3):
+    """Call model with exponential backoff retry"""
+    for attempt in range(max_retries):
+        try:
+            result = model_func(prompt, api_key)
+            if not result.startswith("Error"):
+                return result
+            # If it's an error response, try again
+            if attempt < max_retries - 1:
+                time.sleep(2 ** attempt)  # Exponential backoff
+                continue
+            return result
+        except Exception as e:
+            if attempt == max_retries - 1:
+                return f"Error calling {model_name} after {max_retries} attempts: {str(e)}"
+            time.sleep(2 ** attempt)  # Exponential backoff
+    return f"Error: Max retries exceeded for {model_name}"
+
+
+# ----------- Model Wrappers with Enhanced Error Handling -----------
 
 def call_claude(prompt, api_key):
     try:
+        if not api_key:
+            return "Error calling Claude: No API key provided"
         client = anthropic.Anthropic(api_key=api_key)
         response = client.messages.create(
             model="claude-3-5-sonnet-20241022",
@@ -265,12 +345,16 @@ def call_claude(prompt, api_key):
             messages=[{"role": "user", "content": prompt}]
         )
         return response.content[0].text
+    except anthropic.APIError as e:
+        return f"Error calling Claude API: {str(e)}"
     except Exception as e:
         return f"Error calling Claude: {str(e)}"
 
 
 def call_chatgpt(prompt, api_key):
     try:
+        if not api_key:
+            return "Error calling ChatGPT: No API key provided"
         client = OpenAI(api_key=api_key)
         response = client.chat.completions.create(
             model="gpt-4",
@@ -284,6 +368,8 @@ def call_chatgpt(prompt, api_key):
 
 def call_deepseek(prompt, api_key):
     try:
+        if not api_key:
+            return "Error calling DeepSeek: No API key provided"
         headers = {"Authorization": f"Bearer {api_key}"}
         json_data = {
             "model": "deepseek-chat",
@@ -293,16 +379,23 @@ def call_deepseek(prompt, api_key):
         response = requests.post(
             "https://api.deepseek.com/v1/chat/completions",
             headers=headers,
-            json=json_data
+            json=json_data,
+            timeout=30  # Add timeout
         )
         response.raise_for_status()
         return response.json()["choices"][0]["message"]["content"]
+    except requests.exceptions.Timeout:
+        return "Error calling DeepSeek: Request timed out"
+    except requests.exceptions.RequestException as e:
+        return f"Error calling DeepSeek: {str(e)}"
     except Exception as e:
         return f"Error calling DeepSeek: {str(e)}"
 
 
 def call_gemini(prompt, api_key):
     try:
+        if not api_key:
+            return "Error calling Gemini: No API key provided"
         genai.configure(api_key=api_key)
         model = genai.GenerativeModel("gemini-1.5-flash")
         response = model.generate_content(prompt)
@@ -312,25 +405,104 @@ def call_gemini(prompt, api_key):
         elif hasattr(response, 'parts') and response.parts:
             return ''.join([part.text for part in response.parts if hasattr(part, 'text')])
         else:
-            return "No response generated"
+            return "Error: No response generated from Gemini"
     except Exception as e:
         return f"Error calling Gemini: {str(e)}"
 
 
+# NEW: Process single file function for better memory management
+def process_single_file(file, base_prompt, vocabulary_terms, vocab_access_method, api_keys):
+    """Process a single file and return results"""
+    try:
+        # Read file content
+        file.seek(0)  # Reset file pointer
+        file_content = file.read().decode('utf-8')
+
+        # Parse file content
+        marc_section, full_text, existing_qlit_terms, peripheral_terms, all_terms = parse_file_content(file_content)
+
+        # Create model-specific prompts
+        prompts = {
+            "claude": create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, "claude"),
+            "chatgpt": create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, "chatgpt"),
+            "deepseek": create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, "deepseek"),
+            "gemini": create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, "gemini")
+        }
+
+        # Call models with retry logic
+        results = {
+            "claude": call_model_with_retry(call_claude, prompts["claude"], api_keys.get("anthropic", ""), "Claude"),
+            "chatgpt": call_model_with_retry(call_chatgpt, prompts["chatgpt"], api_keys.get("openai", ""), "ChatGPT"),
+            "deepseek": call_model_with_retry(call_deepseek, prompts["deepseek"], api_keys.get("deepseek", ""),
+                                              "DeepSeek"),
+            "gemini": call_model_with_retry(call_gemini, prompts["gemini"], api_keys.get("gemini", ""), "Gemini")
+        }
+
+        return {
+            "filename": file.name,
+            "marc_section": marc_section,
+            "full_text": full_text,
+            "existing_qlit_terms": existing_qlit_terms,
+            "results": results
+        }
+
+    except Exception as e:
+        return {
+            "filename": file.name,
+            "error": f"Error processing file: {str(e)}"
+        }
+
+
 # Helper function to safely render markdown with HTML
-def safe_render_response(text):
-    """Safely render model response with proper formatting"""
-    if text.startswith("Error:"):
-        return f'<div style="color: red; font-weight: bold;">{text}</div>'
+def safe_render_response(text, label="View Response"):
+    """Safely render model response in a collapsible container"""
+    if text.startswith("Error"):
+        return f'''
+        <div style="
+            color: #721c24;
+            background-color: #f8d7da;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #f5c6cb;
+            font-size: 14px;
+            line-height: 1.6;
+            font-family: system-ui, sans-serif;
+            font-weight: bold;">
+            {text}
+        </div>
+        '''
 
     # Convert markdown-like formatting to HTML
     text = text.replace('\n', '<br>')
     text = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', text)
     text = re.sub(r'\*(.*?)\*', r'<em>\1</em>', text)
 
-    # Ensure text is black
-    return f'<div style="color: black;">{text}</div>'
-
+    return f'''
+    <details style="margin-bottom: 1em;">
+        <summary style="
+            color: #212529;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+            padding: 8px;
+            background-color: #e9ecef;
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            font-family: system-ui, sans-serif;">{label}</summary>
+        <div style="
+            color: #212529;
+            background-color: #fefefe;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #dee2e6;
+            font-size: 14px;
+            line-height: 1.6;
+            font-family: system-ui, sans-serif;
+            margin-top: 10px;">
+            {text}
+        </div>
+    </details>
+    '''
 
 # ----------- Streamlit UI -----------
 
@@ -362,10 +534,10 @@ else:
 with st.expander("ℹ️ Model Information", expanded=False):
     st.markdown("""
     **Models being compared:**
-    - **Claude**: claude-3-5-sonnet-20241022 (Anthropic)
-    - **ChatGPT**: gpt-4 (OpenAI)
-    - **DeepSeek**: deepseek-chat (DeepSeek)
-    - **Gemini**: gemini-1.5-flash (Google)
+    - **Claude**: claude-3-5-sonnet-20241022 (Anthropic) - 200K tokens
+    - **ChatGPT**: gpt-4 (OpenAI) - 8K tokens
+    - **DeepSeek**: deepseek-chat (DeepSeek) - 32K tokens
+    - **Gemini**: gemini-1.5-flash (Google) - 1M tokens
 
     All models use temperature=0.7 for consistent comparison.
     """)
@@ -497,14 +669,18 @@ Be thorough and scholarly in your analysis."""
         file_content = selected_file.read().decode('utf-8')
 
         # Parse file content
-        marc_section, full_text, existing_qlit_terms = parse_file_content(file_content)
+        marc_section, full_text, existing_qlit_terms, peripheral_terms, all_terms = parse_file_content(file_content)
 
         # Display file info
         st.info(f"**Selected file:** {selected_file.name} ({len(file_content):,} characters)")
 
         # Show existing QLIT terms if found
-        if existing_qlit_terms:
-            st.success(f"**Existing QLIT terms found:** {', '.join(existing_qlit_terms)}")
+        if existing_qlit_terms or peripheral_terms:
+            if existing_qlit_terms:
+                st.success(f"**Main QLIT terms (650) found:** {', '.join(existing_qlit_terms)}")
+            if peripheral_terms:
+                st.info(f"**Peripheral terms (590) found:** {', '.join(peripheral_terms)}")
+            st.markdown(f"**Total terms for evaluation:** {len(all_terms)}")
         else:
             st.warning("No existing QLIT terms found in MARC metadata")
 
@@ -556,10 +732,10 @@ if st.button(run_button_text):
         if test_mode == "Custom Prompt Testing":
             # Simple custom prompt testing
             with st.spinner("Running models..."):
-                claude_result = call_claude(user_prompt, api_keys.get("anthropic", ""))
-                gpt_result = call_chatgpt(user_prompt, api_keys.get("openai", ""))
-                ds_result = call_deepseek(user_prompt, api_keys.get("deepseek", ""))
-                gem_result = call_gemini(user_prompt, api_keys.get("gemini", ""))
+                claude_result = call_model_with_retry(call_claude, user_prompt, api_keys.get("anthropic", ""), "Claude")
+                gpt_result = call_model_with_retry(call_chatgpt, user_prompt, api_keys.get("openai", ""), "ChatGPT")
+                ds_result = call_model_with_retry(call_deepseek, user_prompt, api_keys.get("deepseek", ""), "DeepSeek")
+                gem_result = call_model_with_retry(call_gemini, user_prompt, api_keys.get("gemini", ""), "Gemini")
 
             # Display results
             col1, col2 = st.columns(2)
@@ -581,34 +757,43 @@ if st.button(run_button_text):
         else:
             # QueerLit Subject Indexing Task
             if batch_mode and len(uploaded_files) > 1:
-                # Batch processing
+                # ENHANCED: Batch processing with better memory management
                 st.subheader("🔄 Batch Processing Results")
 
+                # Progress tracking
+                progress_bar = st.progress(0)
+                status_text = st.empty()
+
+                # Process files one at a time to manage memory
                 for i, file in enumerate(uploaded_files):
+                    progress = (i + 1) / len(uploaded_files)
+                    progress_bar.progress(progress)
+                    status_text.text(f'Processing file {i + 1} of {len(uploaded_files)}: {file.name}')
+
                     st.markdown(f"### 📄 File {i + 1}: {file.name}")
 
-                    file_content = file.read().decode('utf-8')
-                    marc_section, full_text, existing_qlit_terms = parse_file_content(file_content)
+                    # Process single file
+                    file_results = process_single_file(file, base_prompt, vocabulary_terms, vocab_access_method,
+                                                       api_keys)
 
-                    if existing_qlit_terms:
-                        st.success(f"**Existing QLIT terms:** {', '.join(existing_qlit_terms)}")
+                    if "error" in file_results:
+                        st.error(file_results["error"])
+                        continue
 
-                    # Create model-specific prompts
-                    claude_prompt = create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method,
-                                                        "claude")
-                    gpt_prompt = create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method,
-                                                     "chatgpt")
-                    deepseek_prompt = create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method,
-                                                          "deepseek")
-                    gemini_prompt = create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method,
-                                                        "gemini")
+                    # Display existing QLIT terms
+                    if file_results["existing_qlit_terms"] or file_results.get("peripheral_terms", []):
+                        if file_results["existing_qlit_terms"]:
+                            st.success(f"**Main QLIT terms (650):** {', '.join(file_results['existing_qlit_terms'])}")
 
-                    # Process with all models
-                    with st.spinner(f"Processing {file.name}..."):
-                        claude_result = call_claude(claude_prompt, api_keys.get("anthropic", ""))
-                        gpt_result = call_chatgpt(gpt_prompt, api_keys.get("openai", ""))
-                        ds_result = call_deepseek(deepseek_prompt, api_keys.get("deepseek", ""))
-                        gem_result = call_gemini(gemini_prompt, api_keys.get("gemini", ""))
+                        if file_results.get("peripheral_terms", []):
+                            st.info(f"**Peripheral terms (590):** {', '.join(file_results['peripheral_terms'])}")
+
+                        all_terms = file_results.get("all_existing_terms",
+                                                     file_results["existing_qlit_terms"] + file_results.get(
+                                                         "peripheral_terms", []))
+                        st.markdown(f"**Total reference terms:** {len(all_terms)} terms")
+                    else:
+                        st.warning("No existing QLIT terms found in MARC metadata")
 
                     # Display results in columns
                     col1, col2 = st.columns(2)
@@ -617,38 +802,49 @@ if st.button(run_button_text):
                         with st.container():
                             st.markdown("#### 🤖 Claude")
                             st.markdown(
-                                f'<div style="border: 2px solid #1f77b4; border-radius: 8px; padding: 15px; margin: 5px 0; background-color: #f0f8ff;">{safe_render_response(claude_result)}</div>',
+                                f'<div style="border: 2px solid #1f77b4; border-radius: 8px; padding: 15px; margin: 5px 0; background-color: #f0f8ff;">{safe_render_response(file_results["results"]["claude"])}</div>',
                                 unsafe_allow_html=True)
 
                         with st.container():
                             st.markdown("#### 🌊 DeepSeek")
                             st.markdown(
-                                f'<div style="border: 2px solid #2ca02c; border-radius: 8px; padding: 15px; margin: 5px 0; background-color: #f0fff0;">{safe_render_response(ds_result)}</div>',
+                                f'<div style="border: 2px solid #2ca02c; border-radius: 8px; padding: 15px; margin: 5px 0; background-color: #f0fff0;">{safe_render_response(file_results["results"]["deepseek"])}</div>',
                                 unsafe_allow_html=True)
 
                     with col2:
                         with st.container():
                             st.markdown("#### 🔥 ChatGPT")
                             st.markdown(
-                                f'<div style="border: 2px solid #ff7f0e; border-radius: 8px; padding: 15px; margin: 5px 0; background-color: #fff8f0;">{safe_render_response(gpt_result)}</div>',
+                                f'<div style="border: 2px solid #ff7f0e; border-radius: 8px; padding: 15px; margin: 5px 0; background-color: #fff8f0;">{safe_render_response(file_results["results"]["chatgpt"])}</div>',
                                 unsafe_allow_html=True)
 
                         with st.container():
                             st.markdown("#### 💎 Gemini")
                             st.markdown(
-                                f'<div style="border: 2px solid #d62728; border-radius: 8px; padding: 15px; margin: 5px 0; background-color: #fff0f0;">{safe_render_response(gem_result)}</div>',
+                                f'<div style="border: 2px solid #d62728; border-radius: 8px; padding: 15px; margin: 5px 0; background-color: #fff0f0;">{safe_render_response(file_results["results"]["gemini"])}</div>',
                                 unsafe_allow_html=True)
+
+                    # Clear memory after each file
+                    del file_results
 
                     if i < len(uploaded_files) - 1:
                         st.markdown("---")
 
+                # Clear progress indicators
+                progress_bar.empty()
+                status_text.empty()
+                st.success(f"✅ Batch processing complete! Processed {len(uploaded_files)} files.")
+
             else:
                 # Single file processing
                 with st.spinner("Running analysis with all models..."):
-                    claude_result = call_claude(claude_prompt, api_keys.get("anthropic", ""))
-                    gpt_result = call_chatgpt(gpt_prompt, api_keys.get("openai", ""))
-                    ds_result = call_deepseek(deepseek_prompt, api_keys.get("deepseek", ""))
-                    gem_result = call_gemini(gemini_prompt, api_keys.get("gemini", ""))
+                    # Use retry logic for each model
+                    claude_result = call_model_with_retry(call_claude, claude_prompt, api_keys.get("anthropic", ""),
+                                                          "Claude")
+                    gpt_result = call_model_with_retry(call_chatgpt, gpt_prompt, api_keys.get("openai", ""), "ChatGPT")
+                    ds_result = call_model_with_retry(call_deepseek, deepseek_prompt, api_keys.get("deepseek", ""),
+                                                      "DeepSeek")
+                    gem_result = call_model_with_retry(call_gemini, gemini_prompt, api_keys.get("gemini", ""), "Gemini")
 
                 # Results with comparison to existing QLIT terms
                 st.subheader("🏷️ Subject Indexing Results")
@@ -656,10 +852,10 @@ if st.button(run_button_text):
                 # Show existing QLIT terms at the top
                 if existing_qlit_terms:
                     st.markdown("### 📋 Existing QLIT Terms (for comparison)")
-                    st.success(f"**Reference terms:** {', '.join(existing_qlit_terms)}")
+                    st.success(f"**Reference terms:** {', '.join(all_terms)}")
 
                     if vocabulary_terms:
-                        found_terms = [term for term in existing_qlit_terms if any(
+                        found_terms = [term for term in all_terms if any(
                             vocab_term.lower() in term.lower() or term.lower() in vocab_term.lower() for vocab_term in
                             vocabulary_terms)]
                         if found_terms:
@@ -681,7 +877,7 @@ if st.button(run_button_text):
                     metrics_data = []
 
                     for model_name, response_text in model_results.items():
-                        if not response_text.startswith("Error:"):
+                        if not response_text.startswith("Error"):
                             extracted_terms = extract_vocabulary_terms_from_text(response_text, vocabulary_terms)
                             metrics = calculate_metrics(extracted_terms, existing_qlit_terms)
 
@@ -782,4 +978,4 @@ if st.button(run_button_text):
 # Footer
 st.markdown("---")
 st.markdown(
-    "**Note:** This tool compares AI models for LGBTQI+ literature subject indexing. Results may vary based on model availability and API limits.")
+    "**Note:** This tool compares AI models for LGBTQI+ literature subject indexing. Results may vary based on model availability and API limits. Tokens funded by the programmer's beer money. Use responsibly.")
