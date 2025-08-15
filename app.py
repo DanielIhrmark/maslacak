@@ -11,6 +11,9 @@ import pandas as pd
 import io
 import time
 from typing import Optional, Dict, List, Tuple
+import json
+import gc
+
 
 
 # Load secrets from either Streamlit Cloud or local `.streamlit/secrets.toml`
@@ -312,36 +315,39 @@ def parse_file_content(file_content):
 
 
 
-# NEW: Enhanced error handling with retry logic
-def call_model_with_retry(model_func, prompt, api_key, model_name, max_retries=3):
-    """Call model with exponential backoff retry"""
+# Error handling with retry logic
+def call_model_with_retry(model_func, prompt, api_key, model_name, max_retries=3, **kwargs):
+    """Call model with exponential backoff retry, forwarding kwargs (e.g., temperature, max_tokens)."""
     for attempt in range(max_retries):
         try:
-            result = model_func(prompt, api_key)
-            if not result.startswith("Error"):
+            result = model_func(prompt, api_key, **kwargs)
+            # If it's not an error string, or doesn't start with "Error", treat as success
+            if not (isinstance(result, str) and result.startswith("Error")):
                 return result
-            # If it's an error response, try again
+            # Otherwise, retry if we have attempts left
             if attempt < max_retries - 1:
-                time.sleep(2 ** attempt)  # Exponential backoff
+                time.sleep(2 ** attempt)
                 continue
             return result
         except Exception as e:
             if attempt == max_retries - 1:
                 return f"Error calling {model_name} after {max_retries} attempts: {str(e)}"
-            time.sleep(2 ** attempt)  # Exponential backoff
+            time.sleep(2 ** attempt)
     return f"Error: Max retries exceeded for {model_name}"
+
 
 
 # ----------- Model Wrappers with Enhanced Error Handling -----------
 
-def call_claude(prompt, api_key):
+def call_claude(prompt, api_key, temperature=0.7, max_tokens=1000):
     try:
         if not api_key:
             return "Error calling Claude: No API key provided"
         client = anthropic.Anthropic(api_key=api_key)
         response = client.messages.create(
             model="claude-3-5-sonnet-20241022",
-            max_tokens=1000,
+            max_tokens=int(max_tokens),
+            temperature=float(temperature),
             messages=[{"role": "user", "content": prompt}]
         )
         return response.content[0].text
@@ -351,22 +357,23 @@ def call_claude(prompt, api_key):
         return f"Error calling Claude: {str(e)}"
 
 
-def call_chatgpt(prompt, api_key):
+def call_chatgpt(prompt, api_key, temperature=0.7, max_tokens=1000):
     try:
         if not api_key:
             return "Error calling ChatGPT: No API key provided"
         client = OpenAI(api_key=api_key)
         response = client.chat.completions.create(
-            model="gpt-4",
+            model="gpt-4o",  # keep as-is; update to your preferred model name if needed
             messages=[{"role": "user", "content": prompt}],
-            temperature=0.7
+            temperature=float(temperature),
+            max_tokens=int(max_tokens)
         )
         return response.choices[0].message.content
     except Exception as e:
         return f"Error calling ChatGPT: {str(e)}"
 
 
-def call_deepseek(prompt, api_key):
+def call_deepseek(prompt, api_key, temperature=0.7, max_tokens=1000):
     try:
         if not api_key:
             return "Error calling DeepSeek: No API key provided"
@@ -374,13 +381,14 @@ def call_deepseek(prompt, api_key):
         json_data = {
             "model": "deepseek-chat",
             "messages": [{"role": "user", "content": prompt}],
-            "temperature": 0.7
+            "temperature": float(temperature),
+            "max_tokens": int(max_tokens)
         }
         response = requests.post(
             "https://api.deepseek.com/v1/chat/completions",
             headers=headers,
             json=json_data,
-            timeout=30  # Add timeout
+            timeout=30
         )
         response.raise_for_status()
         return response.json()["choices"][0]["message"]["content"]
@@ -392,14 +400,19 @@ def call_deepseek(prompt, api_key):
         return f"Error calling DeepSeek: {str(e)}"
 
 
-def call_gemini(prompt, api_key):
+def call_gemini(prompt, api_key, temperature=0.7, max_tokens=1000):
     try:
         if not api_key:
             return "Error calling Gemini: No API key provided"
         genai.configure(api_key=api_key)
         model = genai.GenerativeModel("gemini-1.5-flash")
-        response = model.generate_content(prompt)
-
+        response = model.generate_content(
+            prompt,
+            generation_config={
+                "temperature": float(temperature),
+                "max_output_tokens": int(max_tokens)
+            }
+        )
         if hasattr(response, 'text') and response.text:
             return response.text
         elif hasattr(response, 'parts') and response.parts:
@@ -409,19 +422,16 @@ def call_gemini(prompt, api_key):
     except Exception as e:
         return f"Error calling Gemini: {str(e)}"
 
-
-# NEW: Process single file function for better memory management
-def process_single_file(file, base_prompt, vocabulary_terms, vocab_access_method, api_keys):
+# Process single file function for better memory management
+def process_single_file(file, base_prompt, vocabulary_terms, vocab_access_method, api_keys,
+                        temperature=0.7, max_tokens_out=1000):
     """Process a single file and return results"""
     try:
-        # Read file content
-        file.seek(0)  # Reset file pointer
+        file.seek(0)
         file_content = file.read().decode('utf-8')
 
-        # Parse file content
         marc_section, full_text, existing_qlit_terms, peripheral_terms, all_terms = parse_file_content(file_content)
 
-        # Create model-specific prompts
         prompts = {
             "claude": create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, "claude"),
             "chatgpt": create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, "chatgpt"),
@@ -429,13 +439,23 @@ def process_single_file(file, base_prompt, vocabulary_terms, vocab_access_method
             "gemini": create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, "gemini")
         }
 
-        # Call models with retry logic
         results = {
-            "claude": call_model_with_retry(call_claude, prompts["claude"], api_keys.get("anthropic", ""), "Claude"),
-            "chatgpt": call_model_with_retry(call_chatgpt, prompts["chatgpt"], api_keys.get("openai", ""), "ChatGPT"),
-            "deepseek": call_model_with_retry(call_deepseek, prompts["deepseek"], api_keys.get("deepseek", ""),
-                                              "DeepSeek"),
-            "gemini": call_model_with_retry(call_gemini, prompts["gemini"], api_keys.get("gemini", ""), "Gemini")
+            "claude": call_model_with_retry(
+                call_claude, prompts["claude"], api_keys.get("anthropic", ""), "Claude",
+                temperature=temperature, max_tokens=max_tokens_out
+            ),
+            "chatgpt": call_model_with_retry(
+                call_chatgpt, prompts["chatgpt"], api_keys.get("openai", ""), "ChatGPT",
+                temperature=temperature, max_tokens=max_tokens_out
+            ),
+            "deepseek": call_model_with_retry(
+                call_deepseek, prompts["deepseek"], api_keys.get("deepseek", ""), "DeepSeek",
+                temperature=temperature, max_tokens=max_tokens_out
+            ),
+            "gemini": call_model_with_retry(
+                call_gemini, prompts["gemini"], api_keys.get("gemini", ""), "Gemini",
+                temperature=temperature, max_tokens=max_tokens_out
+            ),
         }
 
         return {
@@ -443,6 +463,8 @@ def process_single_file(file, base_prompt, vocabulary_terms, vocab_access_method
             "marc_section": marc_section,
             "full_text": full_text,
             "existing_qlit_terms": existing_qlit_terms,
+            "peripheral_terms": peripheral_terms,
+            "all_existing_terms": all_terms,
             "results": results
         }
 
@@ -541,6 +563,7 @@ with st.expander("ℹ️ Model Information", expanded=False):
 
     All models use temperature=0.7 for consistent comparison.
     """)
+    st.caption(f"Current generation settings → Temperature: {temperature:.1f} • Max tokens: {max_tokens_out}")
 
 # Test Mode Selection
 test_mode = st.radio(
@@ -548,6 +571,21 @@ test_mode = st.radio(
     ["Custom Prompt Testing", "QueerLit Subject Indexing Task"],
     horizontal=True
 )
+
+# ---- Generation controls (applies to all model calls) ----
+col_t1, col_t2 = st.columns([1, 1])
+with col_t1:
+    temperature = st.slider(
+        "Sampling temperature",
+        min_value=0.0, max_value=1.5, value=0.7, step=0.1,
+        help="Higher = more diverse; lower = more deterministic."
+    )
+with col_t2:
+    max_tokens_out = st.number_input(
+        "Max tokens in responses (per model)",
+        min_value=128, max_value=4000, value=1000, step=128,
+        help="Upper bound for each model's reply (when supported)."
+    )
 
 # Initialize variables
 user_prompt = ""
@@ -732,10 +770,22 @@ if st.button(run_button_text):
         if test_mode == "Custom Prompt Testing":
             # Simple custom prompt testing
             with st.spinner("Running models..."):
-                claude_result = call_model_with_retry(call_claude, user_prompt, api_keys.get("anthropic", ""), "Claude")
-                gpt_result = call_model_with_retry(call_chatgpt, user_prompt, api_keys.get("openai", ""), "ChatGPT")
-                ds_result = call_model_with_retry(call_deepseek, user_prompt, api_keys.get("deepseek", ""), "DeepSeek")
-                gem_result = call_model_with_retry(call_gemini, user_prompt, api_keys.get("gemini", ""), "Gemini")
+                claude_result = call_model_with_retry(
+                    call_claude, user_prompt, api_keys.get("anthropic", ""), "Claude",
+                    temperature=temperature, max_tokens=max_tokens_out
+                )
+                gpt_result = call_model_with_retry(
+                    call_chatgpt, user_prompt, api_keys.get("openai", ""), "ChatGPT",
+                    temperature=temperature, max_tokens=max_tokens_out
+                )
+                ds_result = call_model_with_retry(
+                    call_deepseek, user_prompt, api_keys.get("deepseek", ""), "DeepSeek",
+                    temperature=temperature, max_tokens=max_tokens_out
+                )
+                gem_result = call_model_with_retry(
+                    call_gemini, user_prompt, api_keys.get("gemini", ""), "Gemini",
+                    temperature=temperature, max_tokens=max_tokens_out
+                )
 
             # Display results
             col1, col2 = st.columns(2)
@@ -764,6 +814,10 @@ if st.button(run_button_text):
                 progress_bar = st.progress(0)
                 status_text = st.empty()
 
+                # Collect all per-file results for downloads
+                batch_records = []  # each item: {"filename", "existing_qlit_terms", "peripheral_terms", "all_terms",
+                #             "results": {model: text}, "extracted": {model: [terms]}, "metrics": {model: {...}}}
+
                 # Process files one at a time to manage memory
                 for i, file in enumerate(uploaded_files):
                     progress = (i + 1) / len(uploaded_files)
@@ -773,8 +827,44 @@ if st.button(run_button_text):
                     st.markdown(f"### 📄 File {i + 1}: {file.name}")
 
                     # Process single file
-                    file_results = process_single_file(file, base_prompt, vocabulary_terms, vocab_access_method,
-                                                       api_keys)
+                    file_results = process_single_file(
+                        file, base_prompt, vocabulary_terms, vocab_access_method, api_keys,
+                        temperature=temperature, max_tokens_out=max_tokens_out
+                    )
+
+                    # --- Compute per-model extracted terms & metrics for this file ---
+                    per_file_extracted = {}
+                    per_file_metrics = {}
+
+                    if vocabulary_terms and file_results.get("existing_qlit_terms"):
+                        for model_name, response_text in file_results["results"].items():
+                            if isinstance(response_text, str) and response_text.startswith("Error"):
+                                continue
+                            # Extract terms mentioned by the model
+                            extracted_terms = extract_vocabulary_terms_from_text(response_text, vocabulary_terms)
+                            per_file_extracted[model_name] = extracted_terms
+
+                            # Calculate metrics vs. existing MARC terms (650 + 590 combined if present)
+                            gt_terms = file_results.get("all_existing_terms", file_results["existing_qlit_terms"])
+                            metrics = calculate_metrics(extracted_terms, gt_terms)
+                            per_file_metrics[model_name] = metrics
+                    else:
+                        # Still record keys to keep structure uniform
+                        for model_name in file_results["results"].keys():
+                            per_file_extracted[model_name] = []
+                            per_file_metrics[model_name] = None
+
+                    # --- Store a compact record for batch downloads ---
+                    batch_records.append({
+                        "filename": file_results["filename"],
+                        "existing_qlit_terms": file_results.get("existing_qlit_terms", []),
+                        "peripheral_terms": file_results.get("peripheral_terms", []),
+                        "all_terms": file_results.get("all_existing_terms",
+                                                      file_results.get("existing_qlit_terms", [])),
+                        "results": file_results["results"],  # raw model outputs
+                        "extracted": per_file_extracted,  # per-model extracted terms
+                        "metrics": per_file_metrics  # per-model metrics dicts (or None)
+                    })
 
                     if "error" in file_results:
                         st.error(file_results["error"])
@@ -835,16 +925,85 @@ if st.button(run_button_text):
                 status_text.empty()
                 st.success(f"✅ Batch processing complete! Processed {len(uploaded_files)} files.")
 
+                # --- Build batch metrics summary table (one row per file x model) ---
+                summary_rows = []
+                for rec in batch_records:
+                    gt_count = len(rec.get("all_terms", []))
+                    for model_name, metrics in rec["metrics"].items():
+                        if metrics is None:
+                            summary_rows.append({
+                                "Filename": rec["filename"],
+                                "Model": model_name,
+                                "GT_Term_Count": gt_count,
+                                "Precision": "",
+                                "Recall": "",
+                                "F1": "",
+                                "Terms_Found": len(rec["extracted"].get(model_name, [])),
+                                "Correct": ""
+                            })
+                        else:
+                            summary_rows.append({
+                                "Filename": rec["filename"],
+                                "Model": model_name,
+                                "GT_Term_Count": gt_count,
+                                "Precision": f"{metrics['precision']:.3f}",
+                                "Recall": f"{metrics['recall']:.3f}",
+                                "F1": f"{metrics['f1']:.3f}",
+                                "Terms_Found": len(rec["extracted"].get(model_name, [])),
+                                "Correct": metrics["tp"]
+                            })
+
+                if summary_rows:
+                    df_batch_summary = pd.DataFrame(summary_rows)
+                    st.subheader("📊 Batch Metrics Summary")
+                    st.dataframe(df_batch_summary, use_container_width=True)
+
+                    # --- Downloads: CSV + JSON for batch ---
+                    csv_bytes_batch = df_batch_summary.to_csv(index=False).encode("utf-8")
+                    st.download_button(
+                        "⬇️ Download batch summary CSV",
+                        data=csv_bytes_batch,
+                        file_name="batch_metrics_summary.csv",
+                        mime="text/csv"
+                    )
+
+                    # Full JSON includes raw model outputs, extracted terms, and metrics per file
+                    batch_full_payload = {
+                        "files_processed": len(batch_records),
+                        "records": batch_records
+                    }
+                    json_bytes_batch = json.dumps(batch_full_payload, ensure_ascii=False, indent=2).encode("utf-8")
+                    st.download_button(
+                        "⬇️ Download full batch results JSON",
+                        data=json_bytes_batch,
+                        file_name="batch_metrics_full.json",
+                        mime="application/json"
+                    )
+
+                # Light memory tidy
+                gc.collect()
+
+
             else:
                 # Single file processing
                 with st.spinner("Running analysis with all models..."):
                     # Use retry logic for each model
-                    claude_result = call_model_with_retry(call_claude, claude_prompt, api_keys.get("anthropic", ""),
-                                                          "Claude")
-                    gpt_result = call_model_with_retry(call_chatgpt, gpt_prompt, api_keys.get("openai", ""), "ChatGPT")
-                    ds_result = call_model_with_retry(call_deepseek, deepseek_prompt, api_keys.get("deepseek", ""),
-                                                      "DeepSeek")
-                    gem_result = call_model_with_retry(call_gemini, gemini_prompt, api_keys.get("gemini", ""), "Gemini")
+                    claude_result = call_model_with_retry(
+                        call_claude, claude_prompt, api_keys.get("anthropic", ""), "Claude",
+                        temperature=temperature, max_tokens=max_tokens_out
+                    )
+                    gpt_result = call_model_with_retry(
+                        call_chatgpt, gpt_prompt, api_keys.get("openai", ""), "ChatGPT",
+                        temperature=temperature, max_tokens=max_tokens_out
+                    )
+                    ds_result = call_model_with_retry(
+                        call_deepseek, deepseek_prompt, api_keys.get("deepseek", ""), "DeepSeek",
+                        temperature=temperature, max_tokens=max_tokens_out
+                    )
+                    gem_result = call_model_with_retry(
+                        call_gemini, gemini_prompt, api_keys.get("gemini", ""), "Gemini",
+                        temperature=temperature, max_tokens=max_tokens_out
+                    )
 
                 # Results with comparison to existing QLIT terms
                 st.subheader("🏷️ Subject Indexing Results")
@@ -908,6 +1067,28 @@ if st.button(run_button_text):
 
                         df_summary = pd.DataFrame(summary_data)
                         st.dataframe(df_summary, use_container_width=True)
+
+                        # --- Downloads: summary CSV ---
+                        csv_bytes = df_summary.to_csv(index=False).encode("utf-8")
+                        st.download_button(
+                            "Download summary CSV",
+                            data=csv_bytes,
+                            file_name="model_metrics_summary.csv",
+                            mime="text/csv"
+                        )
+
+                        # --- Downloads: full metrics JSON (per-model details + reference terms) ---
+                        full_metrics_payload = {
+                            "metrics": metrics_data,  # includes extracted, matched, TP/FP/FN, etc.
+                            "reference_terms": all_terms
+                        }
+                        json_bytes = json.dumps(full_metrics_payload, ensure_ascii=False, indent=2).encode("utf-8")
+                        st.download_button(
+                            "Download full metrics JSON",
+                            data=json_bytes,
+                            file_name="model_metrics_full.json",
+                            mime="application/json"
+                        )
 
                         # Best model
                         best_model = max(metrics_data, key=lambda x: x["F1"])
