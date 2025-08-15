@@ -46,7 +46,7 @@ def create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_m
         "gpt-4": 7192,
         "claude": 200000,
         "gemini": 1048576,
-        "deepseek": 30768
+        "deepseek": 24000
     }
 
     # Response token reservations
@@ -54,7 +54,7 @@ def create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_m
         "gpt-4": 2000,
         "claude": 4000,
         "gemini": 4000,
-        "deepseek": 2000
+        "deepseek": 1500
     }
 
     # Determine model type and limits
