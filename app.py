@@ -561,9 +561,8 @@ with st.expander("ℹ️ Model Information", expanded=False):
     - **DeepSeek**: deepseek-chat (DeepSeek) - 32K tokens
     - **Gemini**: gemini-1.5-flash (Google) - 1M tokens
 
-    All models use temperature=0.7 for consistent comparison.
+    All models use temperature=0.7 as default for consistent comparison.
     """)
-    st.caption(f"Current generation settings → Temperature: {temperature:.1f} • Max tokens: {max_tokens_out}")
 
 # Test Mode Selection
 test_mode = st.radio(
@@ -586,6 +585,8 @@ with col_t2:
         min_value=128, max_value=4000, value=1000, step=128,
         help="Upper bound for each model's reply (when supported)."
     )
+
+st.caption(f"Current generation settings → Temperature: {temperature:.1f} • Max tokens: {max_tokens_out}")
 
 # Initialize variables
 user_prompt = ""
