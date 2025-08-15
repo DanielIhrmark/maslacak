@@ -377,27 +377,63 @@ def call_deepseek(prompt, api_key, temperature=0.7, max_tokens=1000):
     try:
         if not api_key:
             return "Error calling DeepSeek: No API key provided"
-        headers = {"Authorization": f"Bearer {api_key}"}
+
+        # Use a Session with retries on 429/5xx
+        from requests.adapters import HTTPAdapter
+        from urllib3.util.retry import Retry
+
+        session = requests.Session()
+        retries = Retry(
+            total=3,
+            backoff_factor=1.0,                       # 1s, 2s, 4s
+            status_forcelist=[429, 500, 502, 503, 504],
+            allowed_methods=frozenset(["POST"])
+        )
+        session.mount("https://", HTTPAdapter(max_retries=retries))
+
+        headers = {
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+        }
+
         json_data = {
             "model": "deepseek-chat",
             "messages": [{"role": "user", "content": prompt}],
             "temperature": float(temperature),
-            "max_tokens": int(max_tokens)
+            "max_tokens": int(max_tokens),
         }
-        response = requests.post(
+
+        # Use connect/read timeouts; increase read to allow slower generations
+        response = session.post(
             "https://api.deepseek.com/v1/chat/completions",
             headers=headers,
             json=json_data,
-            timeout=30
+            timeout=(10, 120)  # (connect timeout, read timeout)
         )
-        response.raise_for_status()
+
+        # If server answered but with error status, surface details
+        try:
+            response.raise_for_status()
+        except requests.HTTPError as e:
+            req_id = response.headers.get("x-request-id", "")
+            detail = ""
+            try:
+                detail = response.text[:500]
+            except Exception:
+                pass
+            return f"Error calling DeepSeek: HTTP {response.status_code} {e}. Request-Id={req_id}. {detail}"
+
         return response.json()["choices"][0]["message"]["content"]
-    except requests.exceptions.Timeout:
-        return "Error calling DeepSeek: Request timed out"
+
+    except requests.exceptions.ReadTimeout:
+        return "Error calling DeepSeek: Request timed out (server took too long to respond)"
+    except requests.exceptions.ConnectTimeout:
+        return "Error calling DeepSeek: Connection timed out"
     except requests.exceptions.RequestException as e:
         return f"Error calling DeepSeek: {str(e)}"
     except Exception as e:
         return f"Error calling DeepSeek: {str(e)}"
+
 
 
 def call_gemini(prompt, api_key, temperature=0.7, max_tokens=1000):
@@ -753,7 +789,7 @@ Be thorough and scholarly in your analysis."""
             # Show token estimates
             st.info(f"""**Token estimates:** 
             Claude: ~{estimate_tokens(claude_prompt):,} tokens | 
-            GPT-4: ~{estimate_tokens(gpt_prompt):,} tokens | 
+            GPT-4o: ~{estimate_tokens(gpt_prompt):,} tokens | 
             DeepSeek: ~{estimate_tokens(deepseek_prompt):,} tokens | 
             Gemini: ~{estimate_tokens(gemini_prompt):,} tokens""")
 
