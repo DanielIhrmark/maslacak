@@ -46,7 +46,8 @@ def _join_terms(lst):
 
 
 # Helper function to create model-specific prompts based on token limits
-def create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, model_name):
+def create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, model_name,
+                        marc_section: str = "", include_mode: str = "Full text only"):
     """Create model-specific prompts respecting token limits - prioritizes vocabulary over text length"""
 
     # Token limits - leave room for response
@@ -85,13 +86,19 @@ def create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_m
     # Base instruction (same for all models)
     base_instruction = """You are a subject indexer specializing in LGBTQI+ literature analysis. Your task is to analyze the provided literary work and suggest relevant subject terms from the QueerLit controlled vocabulary.
 
-Please analyze ONLY the literary text provided (ignore any metadata) and:
+Please analyze ONLY the text provided and:
 1. Identify specific LGBTQI+ themes, characters, relationships, or content in the text
 2. Suggest appropriate QueerLit vocabulary terms that would apply (use exact terms from the vocabulary when possible)
 3. Provide brief justification for each suggested term based on textual evidence
 4. If no exact vocabulary match exists, suggest the closest appropriate terms or describe what terms might be needed
 
-Base your analysis solely on the literary content, not on external knowledge about the author or work."""
+Base your analysis solely on the provided text, not on external knowledge about the author or work."""
+    # Optional wording tweak for MARC-only mode
+    if include_mode == "MARC only":
+        base_instruction = base_instruction.replace(
+            "Please analyze ONLY the text provided",
+            "Please analyze ONLY the MARC metadata provided"
+        )
 
     # Create vocabulary information (SAME for all models - this is important for fair comparison)
     if not vocabulary_terms:
@@ -101,11 +108,9 @@ Base your analysis solely on the literary content, not on external knowledge abo
         vocab_text = ", ".join(vocab_sample)
         vocab_info = f"Some QueerLit vocabulary terms: {vocab_text}..."
     elif vocab_access_method == "Full List (Comprehensive)":
-        # Include ALL vocabulary terms for all models
         vocab_text = ", ".join(vocabulary_terms)
         vocab_info = f"QueerLit vocabulary includes: {vocab_text}"
     elif vocab_access_method == "Categorized (Organized)":
-        # Same categorization for all models
         identity_terms = [t for t in vocabulary_terms[:50] if
                           any(keyword in t.lower() for keyword in ['person', 'identitet', 'sexual', 'gender'])][:10]
         relationship_terms = [t for t in vocabulary_terms[:50] if
@@ -119,8 +124,26 @@ Relationships: {', '.join(relationship_terms)}
 Themes: {', '.join(theme_terms)}
 (Full vocabulary contains {len(vocabulary_terms)} terms total)"""
 
+    # --- Choose content based on include_mode ---
+    sections = []
+    if include_mode == "MARC only":
+        if marc_section.strip():
+            sections.append("--- MARC METADATA TO ANALYZE ---\n" + marc_section.strip())
+    elif include_mode == "Both MARC + full text":
+        if marc_section.strip():
+            sections.append("--- MARC METADATA ---\n" + marc_section.strip())
+        if full_text.strip():
+            sections.append("--- LITERARY TEXT ---\n" + full_text.strip())
+    else:  # Full text only
+        if full_text.strip():
+            sections.append("--- LITERARY TEXT TO ANALYZE ---\n" + full_text.strip())
+
+    combined_input = "\n\n".join(sections) if sections else ""
+
+    # Fixed content BEFORE truncation
+    fixed_content = f"{base_instruction}\n\n{vocab_info}\n\n"
+
     # Calculate tokens for fixed parts (instruction + vocabulary)
-    fixed_content = f"{base_instruction}\n\n{vocab_info}\n\n--- LITERARY TEXT TO ANALYZE ---\n"
     fixed_tokens = estimate_tokens(fixed_content)
 
     # Calculate available tokens for the text
@@ -130,35 +153,33 @@ Themes: {', '.join(theme_terms)}
     # Convert available tokens to characters (roughly 4 chars per token)
     max_text_chars = max(available_for_text * 4, 500)  # At least 500 chars
 
-    # Truncate text if needed
-    if len(full_text) > max_text_chars:
-        # Try to truncate at a sentence boundary
-        truncated_text = full_text[:max_text_chars]
+    # Truncate the *combined* input if needed
+    text_to_analyze = combined_input
+    if len(text_to_analyze) > max_text_chars:
+        truncated_text = text_to_analyze[:max_text_chars]
 
-        # Find last period, exclamation, or question mark
+        # Try to truncate at a sentence boundary
         last_sentence = max(
             truncated_text.rfind('.'),
             truncated_text.rfind('!'),
             truncated_text.rfind('?')
         )
-
         if last_sentence > max_text_chars * 0.8:  # If we found a sentence ending in the last 20%
             truncated_text = truncated_text[:last_sentence + 1]
 
         truncated_text += "\n\n[TEXT TRUNCATED DUE TO MODEL TOKEN LIMITS - Showing first ~{:,} of {:,} characters]".format(
-            len(truncated_text), len(full_text)
+            len(truncated_text), len(text_to_analyze)
         )
 
         # Show info about truncation
-        percentage_shown = (len(truncated_text) / len(full_text)) * 100
+        percentage_shown = (len(truncated_text) / len(text_to_analyze)) * 100
         st.info(
-            f"ℹ️ {model_name}: Showing {percentage_shown:.1f}% of text to fit token limits while preserving full vocabulary")
+            f"ℹ️ {model_name}: Showing {percentage_shown:.1f}% of input to fit token limits while preserving full vocabulary"
+        )
 
         text_to_analyze = truncated_text
-    else:
-        text_to_analyze = full_text
 
-    # Assemble final prompt
+    # Assemble final prompt (now include the combined/truncated input)
     final_prompt = f"{fixed_content}{text_to_analyze}"
 
     # Final safety check
@@ -172,6 +193,7 @@ Themes: {', '.join(theme_terms)}
             final_prompt = f"{fixed_content}{text_to_analyze}"
 
     return final_prompt
+
 
 
 # Helper function to extract vocabulary terms from text
@@ -468,7 +490,7 @@ def call_gemini(prompt, api_key, temperature=0.7, max_tokens=1000):
 
 # Process single file function for better memory management
 def process_single_file(file, base_prompt, vocabulary_terms, vocab_access_method, api_keys,
-                        temperature=0.7, max_tokens_out=1000):
+                        temperature=0.7, max_tokens_out=1000, include_mode="Full text only"):
     """Process a single file and return results"""
     try:
         file.seek(0)
@@ -477,11 +499,16 @@ def process_single_file(file, base_prompt, vocabulary_terms, vocab_access_method
         marc_section, full_text, existing_qlit_terms, peripheral_terms, all_terms = parse_file_content(file_content)
 
         prompts = {
-            "claude": create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, "claude"),
-            "chatgpt": create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, "chatgpt"),
-            "deepseek": create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, "deepseek"),
-            "gemini": create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, "gemini")
-        }
+        "claude":   create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, "claude",
+                                    marc_section=marc_section, include_mode=include_mode),
+        "chatgpt":  create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, "chatgpt",
+                                    marc_section=marc_section, include_mode=include_mode),
+        "deepseek": create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, "deepseek",
+                                    marc_section=marc_section, include_mode=include_mode),
+        "gemini":   create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, "gemini",
+                                    marc_section=marc_section, include_mode=include_mode),
+    }
+
 
         results = {
             "claude": call_model_with_retry(
@@ -631,6 +658,13 @@ with col_t2:
     )
 
 st.caption(f"Current generation settings → Temperature: {temperature:.1f} • Max tokens: {max_tokens_out}")
+
+# --- Which content to include in prompts? ---
+include_mode = st.radio(
+    "Content to include in prompts:",
+    ["Full text only", "MARC only", "Both MARC + full text"],
+    help="Choose whether the LLMs should see only the literary text, only the MARC metadata, or both."
+)
 
 # Initialize variables
 user_prompt = ""
@@ -788,11 +822,15 @@ Be thorough and scholarly in your analysis."""
 
         if not batch_mode:
             # Create optimized prompts for each model
-            claude_prompt = create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, "claude")
-            gpt_prompt = create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, "chatgpt")
-            deepseek_prompt = create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method,
-                                                  "deepseek")
-            gemini_prompt = create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, "gemini")
+            claude_prompt = create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, "claude",
+                                                marc_section=marc_section, include_mode=include_mode)
+            gpt_prompt    = create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, "chatgpt",
+                                                marc_section=marc_section, include_mode=include_mode)
+            deepseek_prompt = create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, "deepseek",
+                                                  marc_section=marc_section, include_mode=include_mode)
+            gemini_prompt = create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, "gemini",
+                                                marc_section=marc_section, include_mode=include_mode)
+
 
             # Show token estimates
             st.info(f"""**Token estimates:** 
@@ -874,7 +912,7 @@ if st.button(run_button_text):
                     # Process single file
                     file_results = process_single_file(
                         file, base_prompt, vocabulary_terms, vocab_access_method, api_keys,
-                        temperature=temperature, max_tokens_out=max_tokens_out
+                        temperature=temperature, max_tokens_out=max_tokens_out, include_mode=include_mode
                     )
 
                     # --- Compute per-model extracted terms & metrics for this file ---
