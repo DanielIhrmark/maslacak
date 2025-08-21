@@ -37,6 +37,14 @@ def estimate_tokens(text):
     return len(text) // 4
 
 
+def _join_terms(lst):
+    """Join a list of terms safely for CSV."""
+    if not lst:
+        return ""
+    # Use " | " to avoid conflicts with commas in CSV
+    return " | ".join(sorted(set([s.strip() for s in lst if s and s.strip()])))
+
+
 # Helper function to create model-specific prompts based on token limits
 def create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, model_name):
     """Create model-specific prompts respecting token limits - prioritizes vocabulary over text length"""
@@ -965,8 +973,14 @@ if st.button(run_button_text):
                 # --- Build batch metrics summary table (one row per file x model) ---
                 summary_rows = []
                 for rec in batch_records:
+                    main_terms_str = _join_terms(rec.get("existing_qlit_terms", []))
+                    peripheral_terms_str = _join_terms(rec.get("peripheral_terms", []))
                     gt_count = len(rec.get("all_terms", []))
+                    
                     for model_name, metrics in rec["metrics"].items():
+                        extracted_terms = rec["extracted"].get(model_name, []) if rec.get("extracted") else []
+                        extracted_terms_str = _join_terms(extracted_terms)
+                        
                         if metrics is None:
                             summary_rows.append({
                                 "Filename": rec["filename"],
@@ -975,8 +989,12 @@ if st.button(run_button_text):
                                 "Precision": "",
                                 "Recall": "",
                                 "F1": "",
-                                "Terms_Found": len(rec["extracted"].get(model_name, [])),
-                                "Correct": ""
+                                "Terms_Found": len(extracted_terms),
+                                "Correct": "",
+                                # New columns:
+                                "Main Terms (650)": main_terms_str,
+                                "Peripheral Terms (590)": peripheral_terms_str,
+                                "Extracted Terms (API)": extracted_terms_str,
                             })
                         else:
                             summary_rows.append({
@@ -986,8 +1004,12 @@ if st.button(run_button_text):
                                 "Precision": f"{metrics['precision']:.3f}",
                                 "Recall": f"{metrics['recall']:.3f}",
                                 "F1": f"{metrics['f1']:.3f}",
-                                "Terms_Found": len(rec["extracted"].get(model_name, [])),
-                                "Correct": metrics["tp"]
+                                "Terms_Found": len(extracted_terms),
+                                "Correct": metrics["tp"],
+                                # New columns:
+                                "Main Terms (650)": main_terms_str,
+                                "Peripheral Terms (590)": peripheral_terms_str,
+                                "Extracted Terms (API)": extracted_terms_str,
                             })
 
                 if summary_rows:
@@ -1093,13 +1115,23 @@ if st.button(run_button_text):
                     if metrics_data:
                         summary_data = []
                         for data in metrics_data:
-                            summary_data.append({
-                                "Model": data["Model"],
+                            model_name = data["Model"]
+                            # New columns:
+                            extracted_terms_str = _join_terms(data["Extracted_Terms"])
+                            main_terms_str = _join_terms(existing_qlit_terms)          # 650s
+                            peripheral_terms_str = _join_terms(peripheral_terms)       # 590s
+
+                                summary_data.append({
+                                "Model": model_name,
                                 "Precision": f"{data['Precision']:.3f}",
                                 "Recall": f"{data['Recall']:.3f}",
                                 "F1 Score": f"{data['F1']:.3f}",
                                 "Terms Found": len(data["Extracted_Terms"]),
-                                "Correct": data["TP"]
+                                "Correct": data["TP"],
+                                # New columns in CSV:
+                                "Main Terms (650)": main_terms_str,
+                                "Peripheral Terms (590)": peripheral_terms_str,
+                                "Extracted Terms (API)": extracted_terms_str,
                             })
 
                         df_summary = pd.DataFrame(summary_data)
