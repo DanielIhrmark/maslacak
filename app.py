@@ -835,7 +835,7 @@ Be thorough and scholarly in your analysis."""
             
             with st.expander("🔍 Preview final prompts (per model)"):
                 for k, v in prompts.items():
-                st.text_area(f"{k} prompt:", v, height=220)
+                    st.text_area(f"{k} prompt:", v, height=220)
             
             # Show token estimates
             st.info(f"""**Token estimates:** 
