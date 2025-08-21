@@ -646,7 +646,7 @@ test_mode = st.radio(
 include_mode = st.radio(
     "Content to include in prompts:",
     ["Full text only", "MARC only", "Both MARC + full text"],
-    ibndex=2,
+    index=2,
     help="Choose whether the LLMs should see only the literary text, only the MARC metadata, or both."
 )
 
