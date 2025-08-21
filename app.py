@@ -194,9 +194,6 @@ Themes: {', '.join(theme_terms)}
 
     return final_prompt
 
-with st.expander("🔍 Preview final prompt"):
-    st.text_area("Prompt being sent to model:", final_prompt, height=300)
-
 # Helper function to extract vocabulary terms from text
 def extract_vocabulary_terms_from_text(text, vocabulary_terms):
     """Extract QueerLit vocabulary terms mentioned in the model's response text"""
@@ -1265,6 +1262,9 @@ if st.button(run_button_text):
     else:
         st.warning("Please configure your inputs before running the analysis.")
 
+    with st.expander("🔍 Preview final prompt"):
+    st.text_area("Prompt being sent to model:", final_prompt, height=300)
+    
 # Footer
 st.markdown("---")
 st.markdown(
