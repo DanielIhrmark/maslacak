@@ -642,6 +642,13 @@ test_mode = st.radio(
     horizontal=True
 )
 
+# --- Which content to include in prompts? ---
+include_mode = st.radio(
+    "Content to include in prompts:",
+    ["Full text only", "MARC only", "Both MARC + full text"],
+    help="Choose whether the LLMs should see only the literary text, only the MARC metadata, or both."
+)
+
 # ---- Generation controls (applies to all model calls) ----
 col_t1, col_t2 = st.columns([1, 1])
 with col_t1:
@@ -658,13 +665,6 @@ with col_t2:
     )
 
 st.caption(f"Current generation settings → Temperature: {temperature:.1f} • Max tokens: {max_tokens_out}")
-
-# --- Which content to include in prompts? ---
-include_mode = st.radio(
-    "Content to include in prompts:",
-    ["Full text only", "MARC only", "Both MARC + full text"],
-    help="Choose whether the LLMs should see only the literary text, only the MARC metadata, or both."
-)
 
 # Initialize variables
 user_prompt = ""
