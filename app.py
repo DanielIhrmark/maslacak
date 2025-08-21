@@ -882,7 +882,7 @@ if st.button(run_button_text):
                             per_file_extracted[model_name] = extracted_terms
 
                             # Calculate metrics vs. existing MARC terms (650 + 590 combined if present)
-                            gt_terms = file_results.get("existing_qlit_terms", []) + file_results.get("peripheral_terms", []))
+                            gt_terms = file_results.get("existing_qlit_terms", []) + file_results.get("peripheral_terms", [])
                             metrics = calculate_metrics(extracted_terms, gt_terms)
                             per_file_metrics[model_name] = metrics
                     else:
