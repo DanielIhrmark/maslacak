@@ -142,6 +142,9 @@ Themes: {', '.join(theme_terms)}
 
     # Fixed content BEFORE truncation
     fixed_content = f"{base_instruction}\n\n{vocab_info}\n\n"
+    # Debug banner
+    fixed_content = f"[MODE: {include_mode} | MARC chars: {len(marc_section)} | TEXT chars: {len(full_text)}]\n" + fixed_content
+
 
     # Calculate tokens for fixed parts (instruction + vocabulary)
     fixed_tokens = estimate_tokens(fixed_content)
