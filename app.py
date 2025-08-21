@@ -1121,7 +1121,7 @@ if st.button(run_button_text):
                             main_terms_str = _join_terms(existing_qlit_terms)          # 650s
                             peripheral_terms_str = _join_terms(peripheral_terms)       # 590s
 
-                                summary_data.append({
+                            summary_data.append({
                                 "Model": model_name,
                                 "Precision": f"{data['Precision']:.3f}",
                                 "Recall": f"{data['Recall']:.3f}",
