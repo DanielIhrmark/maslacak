@@ -1262,8 +1262,8 @@ if st.button(run_button_text):
     else:
         st.warning("Please configure your inputs before running the analysis.")
 
-    with st.expander("🔍 Preview final prompt"):
-    st.text_area("Prompt being sent to model:", final_prompt, height=300)
+with st.expander("🔍 Preview final prompt"):
+st.text_area("Prompt being sent to model:", final_prompt, height=300)
     
 # Footer
 st.markdown("---")
