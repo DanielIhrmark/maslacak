@@ -506,7 +506,9 @@ def process_single_file(file, base_prompt, vocabulary_terms, vocab_access_method
         "gemini":   create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, "gemini",
                                     marc_section=marc_section, include_mode=include_mode),
     }
-
+        
+        with st.expander("🔍 Preview final prompt"):
+            st.text_area("Prompt being sent to model:", final_prompt, height=300)
 
         results = {
             "claude": call_model_with_retry(
@@ -829,8 +831,9 @@ Be thorough and scholarly in your analysis."""
                                                   marc_section=marc_section, include_mode=include_mode)
             gemini_prompt = create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, "gemini",
                                                 marc_section=marc_section, include_mode=include_mode)
-
-
+            with st.expander("🔍 Preview final prompt"):
+                st.text_area("Prompt being sent to model:", final_prompt, height=300)
+            
             # Show token estimates
             st.info(f"""**Token estimates:** 
             Claude: ~{estimate_tokens(claude_prompt):,} tokens | 
@@ -1261,9 +1264,6 @@ if st.button(run_button_text):
 
     else:
         st.warning("Please configure your inputs before running the analysis.")
-
-with st.expander("🔍 Preview final prompt"):
-st.text_area("Prompt being sent to model:", final_prompt, height=300)
     
 # Footer
 st.markdown("---")
