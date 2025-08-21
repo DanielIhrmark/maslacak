@@ -508,7 +508,7 @@ def process_single_file(file, base_prompt, vocabulary_terms, vocab_access_method
     }
         
         with st.expander("🔍 Preview final prompt"):
-            st.text_area("Prompt being sent to model:", final_prompt, height=300)
+            st.text_area("Prompt being sent to model:", claude_prompt, height=300)
 
         results = {
             "claude": call_model_with_retry(
@@ -832,7 +832,7 @@ Be thorough and scholarly in your analysis."""
             gemini_prompt = create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, "gemini",
                                                 marc_section=marc_section, include_mode=include_mode)
             with st.expander("🔍 Preview final prompt"):
-                st.text_area("Prompt being sent to model:", final_prompt, height=300)
+                st.text_area("Prompt being sent to model:", claude_prompt, height=300)
             
             # Show token estimates
             st.info(f"""**Token estimates:** 
