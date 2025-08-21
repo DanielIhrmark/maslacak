@@ -832,10 +832,12 @@ Be thorough and scholarly in your analysis."""
                                                   marc_section=marc_section, include_mode=include_mode)
             gemini_prompt = create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, "gemini",
                                                 marc_section=marc_section, include_mode=include_mode)
-            
-            with st.expander("🔍 Preview final prompts (per model)"):
-                for k, v in prompts.items():
-                    st.text_area(f"{k} prompt:", v, height=220)
+
+            with st.expander("🔍 Preview final prompts"):
+                st.text_area("Claude prompt:", claude_prompt, height=200)
+                st.text_area("ChatGPT prompt:", gpt_prompt, height=200)
+                st.text_area("DeepSeek prompt:", deepseek_prompt, height=200)
+                st.text_area("Gemini prompt:", gemini_prompt, height=200)
             
             # Show token estimates
             st.info(f"""**Token estimates:** 
