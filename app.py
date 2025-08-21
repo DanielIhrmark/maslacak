@@ -873,7 +873,7 @@ if st.button(run_button_text):
                     per_file_extracted = {}
                     per_file_metrics = {}
 
-                    if vocabulary_terms and file_results.get("existing_qlit_terms"):
+                    if vocabulary_terms and file_results.get("all_terms"):
                         for model_name, response_text in file_results["results"].items():
                             if isinstance(response_text, str) and response_text.startswith("Error"):
                                 continue
@@ -882,7 +882,7 @@ if st.button(run_button_text):
                             per_file_extracted[model_name] = extracted_terms
 
                             # Calculate metrics vs. existing MARC terms (650 + 590 combined if present)
-                            gt_terms = file_results.get("all_existing_terms", file_results["existing_qlit_terms"])
+                            gt_terms = file_results.get("existing_qlit_terms", []) + file_results.get("peripheral_terms", []))
                             metrics = calculate_metrics(extracted_terms, gt_terms)
                             per_file_metrics[model_name] = metrics
                     else:
@@ -1060,7 +1060,7 @@ if st.button(run_button_text):
                 st.markdown("---")
 
                 # Extract vocabulary terms and calculate metrics if possible
-                if vocabulary_terms and existing_qlit_terms:
+                if vocabulary_terms and all_terms:
                     st.subheader("📊 Automatic Term Extraction & Metrics")
 
                     model_results = {
@@ -1075,7 +1075,7 @@ if st.button(run_button_text):
                     for model_name, response_text in model_results.items():
                         if not response_text.startswith("Error"):
                             extracted_terms = extract_vocabulary_terms_from_text(response_text, vocabulary_terms)
-                            metrics = calculate_metrics(extracted_terms, existing_qlit_terms)
+                            metrics = calculate_metrics(extracted_terms, all_terms)
 
                             metrics_data.append({
                                 "Model": model_name,
