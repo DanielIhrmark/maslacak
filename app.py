@@ -288,60 +288,78 @@ def load_queerlit_vocabulary(ttl_directory="QLITTTLS"):
 
 # Helper function to parse MARC and extract QLIT terms
 def parse_file_content(file_content):
-    """Separates MARC metadata from full text and extracts existing QLIT terms"""
-    lines = file_content.split('\n')
+    """Separates MARC metadata from full text and extracts existing QLIT terms (650/590)."""
+    lines = file_content.splitlines()
 
-    separator_indices = [i for i, line in enumerate(lines) if '---' in line and len(line) > 50]
+    # Heuristic: MARC-like lines start with LDR/LEADER or 3-digit tags (001..999)
+    def is_marc_like(s: str) -> bool:
+        return bool(re.match(r'^\s*(?:LDR|LEADER|\d{3})(?:\s|$)', s))
 
-    if separator_indices:
-        marc_section = '\n'.join(lines[:separator_indices[0]])
-        full_text = '\n'.join(lines[separator_indices[0]:])
-    else:
-        marc_end = 0
-        for i, line in enumerate(lines):
-            if any(keyword in line.lower() for keyword in ['title:', 'author:', 'stockholm', 'förlag']):
-                marc_end = i + 10
+    marc_like_flags = [is_marc_like(ln) for ln in lines]
+
+    # Find a split point: after we've seen enough MARC-like lines, if we hit
+    # a run of N consecutive non-MARC lines, we consider that the start of full text.
+    MIN_MARC_HEAD = 10     # require at least this many MARC-like lines first
+    NON_MARC_RUN  = 8      # number of consecutive non-MARC lines to trigger split
+
+    split_idx = None
+    marc_count = 0
+    run = 0
+    for i, flag in enumerate(marc_like_flags):
+        if flag:
+            marc_count += 1
+            run = 0
+        else:
+            run += 1
+            if marc_count >= MIN_MARC_HEAD and run >= NON_MARC_RUN:
+                split_idx = i - run + 1
                 break
 
-        marc_section = '\n'.join(lines[:marc_end])
-        full_text = '\n'.join(lines[marc_end:])
+    if split_idx is None:
+        # Fallbacks: use a dashed divider if present, otherwise guess ~first 200 lines as MARC if they look like MARC
+        divider_idx = next((i for i, ln in enumerate(lines) if re.match(r'^\s*-{5,}\s*$', ln)), None)
+        if divider_idx is not None:
+            split_idx = divider_idx + 1
+        else:
+            # If the head of the file looks MARC-y, take a modest head; else assume no MARC section
+            head_marc = sum(marc_like_flags[:200]) > 20
+            split_idx = 200 if head_marc and len(lines) > 200 else 0
 
+    marc_section = "\n".join(lines[:split_idx]) if split_idx else ""
+    full_text = "\n".join(lines[split_idx:]) if split_idx is not None else file_content
+
+    # --- Extract 650/590 terms (keep your existing simple logic for now) ---
     existing_qlit_terms = []
     peripheral_terms = []
 
     for line in marc_section.split('\n'):
-        # Extract main QLIT terms from 650 fields
+        # Main QLIT terms from 650 fields referencing queerlit
         if '650' in line and 'qlit' in line.lower():
             if 'https://queerlit.dh.gu.se/qlit/v1/' in line:
                 parts = line.split('a ')
                 if len(parts) > 1:
                     term = parts[1].split('0 ')[0].strip()
-                    if term:  # Removed the requirement for parentheses
+                    if term:
                         existing_qlit_terms.append(term)
 
-        # Extract peripheral terms from 590 fields
+        # Peripheral terms from 590 $a (your current approach)
         elif '590' in line and 'a ' in line:
-            # Handle various possible formats
-            if '\ta ' in line:  # Tab separator
+            if '\ta ' in line:
                 parts = line.split('\ta ')
             else:
                 parts = line.split('a ')
-
             if len(parts) > 1:
-                # Extract the term, handling potential 'qlit' suffix
                 term_part = parts[1].strip()
                 if ' qlit' in term_part:
                     term = term_part.split(' qlit')[0].strip()
                 else:
                     term = term_part.strip()
-
                 if term:
                     peripheral_terms.append(term)
 
-    # Combine all terms for evaluation purposes
     all_terms = existing_qlit_terms + peripheral_terms
-
     return marc_section, full_text, existing_qlit_terms, peripheral_terms, all_terms
+
 
 
 
