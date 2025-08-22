@@ -1144,8 +1144,8 @@ if st.button(run_button_text):
 
                 st.markdown("---")
 
-                # Extract vocabulary terms and calculate metrics if possible
-                if vocabulary_terms and all_terms:
+                # Extract vocabulary terms and calculate metrics (metrics optional)
+                if vocabulary_terms:
                     st.subheader("📊 Automatic Term Extraction & Metrics")
 
                     model_results = {
@@ -1155,52 +1155,80 @@ if st.button(run_button_text):
                         "Gemini": gem_result
                     }
 
-                    metrics_data = []
+                    has_gt = bool(all_terms)  # ground truth from MARC (650+590)
+
+                    summary_data = []
+                    metrics_data = []  # keep for the JSON download (may include None metrics)
 
                     for model_name, response_text in model_results.items():
-                        if not response_text.startswith("Error"):
-                            extracted_terms = extract_vocabulary_terms_from_text(response_text, vocabulary_terms)
-                            metrics = calculate_metrics(extracted_terms, all_terms)
-
-                            metrics_data.append({
-                                "Model": model_name,
-                                "Extracted_Terms": extracted_terms,
-                                "Matched_Terms": metrics["matched_terms"],
-                                "Precision": metrics["precision"],
-                                "Recall": metrics["recall"],
-                                "F1": metrics["f1"],
-                                "TP": metrics["tp"],
-                                "FP": metrics["fp"],
-                                "FN": metrics["fn"]
-                            })
-
-                    # Display metrics table
-                    if metrics_data:
-                        summary_data = []
-                        for data in metrics_data:
-                            model_name = data["Model"]
-                            # New columns:
-                            extracted_terms_str = _join_terms(data["Extracted_Terms"])
-                            main_terms_str = _join_terms(existing_qlit_terms)          # 650s
-                            peripheral_terms_str = _join_terms(peripheral_terms)       # 590s
-
+                        if isinstance(response_text, str) and response_text.startswith("Error"):
+                            # still include a row with blanks
                             summary_data.append({
                                 "Model": model_name,
-                                "Precision": f"{data['Precision']:.3f}",
-                                "Recall": f"{data['Recall']:.3f}",
-                                "F1 Score": f"{data['F1']:.3f}",
-                                "Terms Found": len(data["Extracted_Terms"]),
-                                "Correct": data["TP"],
-                                # New columns in CSV:
-                                "Main Terms (650)": main_terms_str,
-                                "Peripheral Terms (590)": peripheral_terms_str,
-                                "Extracted Terms (API)": extracted_terms_str,
+                                "Precision": "" if has_gt else "",
+                                "Recall": "" if has_gt else "",
+                                "F1 Score": "" if has_gt else "",
+                                "Terms Found": 0,
+                                "Correct": "" if has_gt else "",
+                                "Main Terms (650)": _join_terms(existing_qlit_terms),
+                                "Peripheral Terms (590)": _join_terms(peripheral_terms),
+                                "Extracted Terms (API)": "",
                             })
+                            metrics_data.append({
+                                "Model": model_name,
+                                "Extracted_Terms": [],
+                                "Matched_Terms": [],
+                                "precision": 0, "recall": 0, "f1": 0, "tp": 0, "fp": 0, "fn": 0
+                            })
+                            continue
 
+                        # Normal path
+                        extracted_terms = extract_vocabulary_terms_from_text(response_text, vocabulary_terms)
+                        if has_gt:
+                            m = calculate_metrics(extracted_terms, all_terms)
+                            precision_str = f"{m['precision']:.3f}"
+                            recall_str = f"{m['recall']:.3f}"
+                            f1_str = f"{m['f1']:.3f}"
+                            correct_val = m["tp"]
+                            matched_terms = m["matched_terms"]
+                        else:
+                            m = None
+                            precision_str = recall_str = f1_str = ""
+                            correct_val = ""
+                            matched_terms = []
+
+                        # Row for the summary table/CSV
+                        summary_data.append({
+                            "Model": model_name,
+                            "Precision": precision_str,
+                            "Recall": recall_str,
+                            "F1 Score": f1_str,
+                            "Terms Found": len(extracted_terms),
+                            "Correct": correct_val,
+                            "Main Terms (650)": _join_terms(existing_qlit_terms),
+                            "Peripheral Terms (590)": _join_terms(peripheral_terms),
+                            "Extracted Terms (API)": _join_terms(extracted_terms),
+                        })
+
+                        # Keep per-model metrics payload (useful for JSON download)
+                        metrics_data.append({
+                            "Model": model_name,
+                            "Extracted_Terms": extracted_terms,
+                            "Matched_Terms": matched_terms,
+                            "precision": m["precision"] if m else 0,
+                            "recall": m["recall"] if m else 0,
+                            "f1": m["f1"] if m else 0,
+                            "tp": m["tp"] if m else 0,
+                            "fp": m["fp"] if m else 0,
+                            "fn": m["fn"] if m else 0,
+                        })
+
+                    # Build & show the dataframe even if metrics are blank
+                    if summary_data:
                         df_summary = pd.DataFrame(summary_data)
                         st.dataframe(df_summary, use_container_width=True)
 
-                        # --- Downloads: summary CSV ---
+                        # CSV download (always available when vocab is loaded)
                         csv_bytes = df_summary.to_csv(index=False).encode("utf-8")
                         st.download_button(
                             "Download summary CSV",
@@ -1209,10 +1237,10 @@ if st.button(run_button_text):
                             mime="text/csv"
                         )
 
-                        # --- Downloads: full metrics JSON (per-model details + reference terms) ---
+                        # JSON download (still useful when GT is empty)
                         full_metrics_payload = {
-                            "metrics": metrics_data,  # includes extracted, matched, TP/FP/FN, etc.
-                            "reference_terms": all_terms
+                            "metrics": metrics_data,
+                            "reference_terms": all_terms  # may be []
                         }
                         json_bytes = json.dumps(full_metrics_payload, ensure_ascii=False, indent=2).encode("utf-8")
                         st.download_button(
@@ -1222,11 +1250,15 @@ if st.button(run_button_text):
                             mime="application/json"
                         )
 
-                        # Best model
-                        best_model = max(metrics_data, key=lambda x: x["F1"])
-                        st.success(f"🏅 **Best F1 Score:** {best_model['Model']} with {best_model['F1']:.3f}")
+                        # Only announce best model if we have GT (F1 is meaningful)
+                        if has_gt:
+                            best_model = max(metrics_data, key=lambda x: x["f1"])
+                            st.success(f"🏅 **Best F1 Score:** {best_model['Model']} with {best_model['f1']:.3f}")
+                else:
+                    st.info(
+                        "💡 Load QueerLit vocabulary (TTL files) to enable term extraction (metrics optional if no MARC GT).")
 
-                        # Detailed breakdown for each model
+                    # Detailed breakdown for each model
                         with st.expander("🔍 Detailed Metrics Breakdown", expanded=False):
                             for data in metrics_data:
                                 st.markdown(f"**{data['Model']} Analysis:**")
