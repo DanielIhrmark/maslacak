@@ -53,7 +53,7 @@ def create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_m
     # Token limits - leave room for response
     model_limits = {
         "gpt-4": 7192,
-        "claude": 200000,
+        "claude": 400000,
         "gemini": 1048576,
         "deepseek": 24000
     }
@@ -391,7 +391,7 @@ def call_claude(prompt, api_key, temperature=0.7, max_tokens=1000):
             return "Error calling Claude: No API key provided"
         client = anthropic.Anthropic(api_key=api_key)
         response = client.messages.create(
-            model="claude-3-5-sonnet-20241022",
+            model="claude-4-sonnet",
             max_tokens=int(max_tokens),
             temperature=float(temperature),
             messages=[{"role": "user", "content": prompt}]
@@ -646,10 +646,10 @@ else:
 with st.expander("ℹ️ Model Information", expanded=False):
     st.markdown("""
     **Models being compared:**
-    - **Claude**: claude-3-5-sonnet-20241022 (Anthropic) - 200K tokens
-    - **ChatGPT**: gpt-4 (OpenAI) - 8K tokens
-    - **DeepSeek**: deepseek-chat (DeepSeek) - 32K tokens
-    - **Gemini**: gemini-1.5-flash (Google) - 1M tokens
+    - **Claude**: claude-4-sonnet (Anthropic)
+    - **ChatGPT**: gpt-4 (OpenAI)
+    - **DeepSeek**: deepseek-chat (DeepSeek)
+    - **Gemini**: gemini-1.5-flash (Google)
 
     All models use temperature=0.7 as default for consistent comparison.
     """)
