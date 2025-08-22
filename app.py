@@ -1259,28 +1259,28 @@ if st.button(run_button_text):
                         "💡 Load QueerLit vocabulary (TTL files) to enable term extraction (metrics optional if no MARC GT).")
 
                     # Detailed breakdown for each model
-                        with st.expander("🔍 Detailed Metrics Breakdown", expanded=False):
-                            for data in metrics_data:
-                                st.markdown(f"**{data['Model']} Analysis:**")
-                                col1, col2 = st.columns(2)
+                    with st.expander("🔍 Detailed Metrics Breakdown", expanded=False):
+                        for data in metrics_data:
+                            st.markdown(f"**{data['Model']} Analysis:**")
+                            col1, col2 = st.columns(2)
 
-                                with col1:
-                                    st.write(f"• Precision: {data['Precision']:.3f}")
-                                    st.write(f"• Recall: {data['Recall']:.3f}")
-                                    st.write(f"• F1 Score: {data['F1']:.3f}")
+                            with col1:
+                                st.write(f"• Precision: {data['Precision']:.3f}")
+                                st.write(f"• Recall: {data['Recall']:.3f}")
+                                st.write(f"• F1 Score: {data['F1']:.3f}")
 
-                                with col2:
-                                    st.write(f"• True Positives: {data['TP']}")
-                                    st.write(f"• False Positives: {data['FP']}")
-                                    st.write(f"• False Negatives: {data['FN']}")
+                            with col2:
+                                st.write(f"• True Positives: {data['TP']}")
+                                st.write(f"• False Positives: {data['FP']}")
+                                st.write(f"• False Negatives: {data['FN']}")
 
-                                if data["Matched_Terms"]:
-                                    st.success(f"✅ Correctly identified: {', '.join(data['Matched_Terms'])}")
+                            if data["Matched_Terms"]:
+                                st.success(f"✅ Correctly identified: {', '.join(data['Matched_Terms'])}")
 
-                                if data["Extracted_Terms"]:
-                                    st.info(f"🔍 All extracted terms: {', '.join(data['Extracted_Terms'])}")
+                            if data["Extracted_Terms"]:
+                                st.info(f"🔍 All extracted terms: {', '.join(data['Extracted_Terms'])}")
 
-                                st.markdown("---")
+                            st.markdown("---")
 
                 elif not vocabulary_terms:
                     st.info(
