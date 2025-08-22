@@ -1282,13 +1282,6 @@ if st.button(run_button_text):
 
                             st.markdown("---")
 
-                elif not vocabulary_terms:
-                    st.info(
-                        "💡 Load QueerLit vocabulary (TTL files) to enable automatic term extraction and metrics calculation")
-
-                elif not existing_qlit_terms:
-                    st.info("💡 This file has no existing QLIT terms for comparison")
-
                 st.markdown("---")
 
                 # Display each model's results
