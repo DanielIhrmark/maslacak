@@ -391,7 +391,7 @@ def call_claude(prompt, api_key, temperature=0.7, max_tokens=1000):
             return "Error calling Claude: No API key provided"
         client = anthropic.Anthropic(api_key=api_key)
         response = client.messages.create(
-            model="claude-4-sonnet",
+            model="anthropic/claude-4-sonnet",
             max_tokens=int(max_tokens),
             temperature=float(temperature),
             messages=[{"role": "user", "content": prompt}]
