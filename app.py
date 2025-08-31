@@ -53,7 +53,7 @@ def create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_m
     # Token limits - leave room for response
     model_limits = {
         "gpt-4": 7192,
-        "claude": 400000,
+        "claude": 150000,
         "gemini": 1048576,
         "deepseek": 24000
     }
@@ -94,10 +94,21 @@ Please analyze ONLY the text provided and:
 
 Base your analysis solely on the provided text, not on external knowledge about the author or work."""
     # Optional wording tweak for MARC-only mode
+    # Mode-aware wording
     if include_mode == "MARC only":
         base_instruction = base_instruction.replace(
             "Please analyze ONLY the text provided",
             "Please analyze ONLY the MARC metadata provided"
+        )
+    elif include_mode == "Both MARC + full text":
+        base_instruction = base_instruction.replace(
+            "Please analyze ONLY the text provided",
+            "Please analyze BOTH the MARC metadata and the literary text provided"
+        )
+    else:  # Full text only
+        base_instruction = base_instruction.replace(
+            "Please analyze ONLY the text provided",
+            "Please analyze ONLY the literary text provided"
         )
 
     # Create vocabulary information (SAME for all models - this is important for fair comparison)
@@ -646,8 +657,8 @@ else:
 with st.expander("ℹ️ Model Information", expanded=False):
     st.markdown("""
     **Models being compared:**
-    - **Claude**: claude-4-sonnet (Anthropic)
-    - **ChatGPT**: gpt-4 (OpenAI)
+    - **Claude**: claude-sonnet-4 (Anthropic)
+    - **ChatGPT**: gpt-40 (OpenAI)
     - **DeepSeek**: deepseek-chat (DeepSeek)
     - **Gemini**: gemini-1.5-flash (Google)
 
@@ -720,25 +731,15 @@ elif test_mode == "QueerLit Subject Indexing Task":
             help="Choose how much vocabulary information to include in the prompt"
         )
 
-        default_prompt = f"""You are a subject indexer specializing in LGBTQI+ literature analysis. Your task is to analyze the provided literary work and suggest relevant subject terms from the QueerLit controlled vocabulary.
+        default_prompt = """You are a subject indexer specializing in LGBTQI+ literature analysis. Your task is to analyze the provided material and suggest relevant subject terms from the QueerLit controlled vocabulary.
 
-Please analyze ONLY the literary text provided (ignore any metadata) and:
-1. Identify specific LGBTQI+ themes, characters, relationships, or content in the text
-2. Suggest appropriate QueerLit vocabulary terms that would apply (use exact terms from the vocabulary when possible)
-3. Provide brief justification for each suggested term based on textual evidence
-4. If no exact vocabulary match exists, suggest the closest appropriate terms or describe what terms might be needed
+        Please:
+        1. Identify specific LGBTQI+ themes, characters, relationships, or content
+        2. Suggest appropriate QueerLit vocabulary terms that would apply (use exact terms from the vocabulary when possible)
+        3. Provide brief justification for each suggested term based on textual evidence
+        4. If no exact vocabulary match exists, suggest the closest appropriate terms or describe what terms might be needed
 
-Base your analysis solely on the literary content, not on external knowledge about the author or work."""
-    else:
-        default_prompt = """You are a subject indexer specializing in LGBTQI+ literature analysis. Your task is to analyze the provided literary work and suggest relevant subject terms from controlled vocabularies used for LGBTQI+ literature.
-
-Please analyze ONLY the literary text provided (ignore any metadata) and:
-1. Identify specific LGBTQI+ themes, characters, relationships, or content
-2. Suggest appropriate controlled vocabulary terms that would apply
-3. Provide brief justification for each suggested term based on textual evidence
-4. Focus on terms that accurately reflect explicit or implicit LGBTQI+ content
-
-Base your analysis solely on the literary content, not on external knowledge about the author or work."""
+        Base your analysis solely on the supplied material."""
 
     # Make prompt editable
     with st.expander("✏️ Edit QueerLit Analysis Prompt", expanded=False):
@@ -940,27 +941,39 @@ if st.button(run_button_text):
                         temperature=temperature, max_tokens_out=max_tokens_out, include_mode=include_mode
                     )
 
-                    # --- Compute per-model extracted terms & metrics for this file ---
+                    # If this file failed to process, record the error and skip metrics
+                    if "error" in file_results:
+                        st.error(file_results["error"])
+                        batch_records.append({
+                            "filename": file_results.get("filename", file.name),
+                            "existing_qlit_terms": [],
+                            "peripheral_terms": [],
+                            "all_terms": [],
+                            "results": {},  # no results
+                            "extracted": {},  # no extracted terms
+                            "metrics": {}  # no metrics
+                        })
+                        continue
+
+                    # --- Otherwise, safe to compute metrics ---
                     per_file_extracted = {}
                     per_file_metrics = {}
 
-                    if vocabulary_terms and file_results.get("all_terms"):
-                        for model_name, response_text in file_results["results"].items():
-                            if isinstance(response_text, str) and response_text.startswith("Error"):
-                                continue
-                            # Extract terms mentioned by the model
-                            extracted_terms = extract_vocabulary_terms_from_text(response_text, vocabulary_terms)
-                            per_file_extracted[model_name] = extracted_terms
+                    gt_terms = file_results.get("existing_qlit_terms", []) + file_results.get("peripheral_terms", [])
 
-                            # Calculate metrics vs. existing MARC terms (650 + 590 combined if present)
-                            gt_terms = file_results.get("existing_qlit_terms", []) + file_results.get("peripheral_terms", [])
-                            metrics = calculate_metrics(extracted_terms, gt_terms)
-                            per_file_metrics[model_name] = metrics
-                    else:
-                        # Still record keys to keep structure uniform
-                        for model_name in file_results["results"].keys():
-                            per_file_extracted[model_name] = []
-                            per_file_metrics[model_name] = None
+                    for model_name, response_text in file_results["results"].items():
+                        # Extract terms if we have a vocabulary; else keep empty
+                        if vocabulary_terms and isinstance(response_text, str) and not response_text.startswith(
+                                "Error"):
+                            extracted_terms = extract_vocabulary_terms_from_text(response_text, vocabulary_terms)
+                        else:
+                            extracted_terms = []
+
+                        per_file_extracted[model_name] = extracted_terms
+
+                        # Always compute metrics; calculate_metrics() returns zeros if GT is empty
+                        metrics = calculate_metrics(extracted_terms, gt_terms)
+                        per_file_metrics[model_name] = metrics
 
                     # --- Store a compact record for batch downloads ---
                     batch_records.append({
@@ -1106,26 +1119,51 @@ if st.button(run_button_text):
                 gc.collect()
 
 
+
             else:
+
                 # Single file processing
+
                 with st.spinner("Running analysis with all models..."):
-                    # Use retry logic for each model
-                    claude_result = call_model_with_retry(
-                        call_claude, claude_prompt, api_keys.get("anthropic", ""), "Claude",
-                        temperature=temperature, max_tokens=max_tokens_out
+
+                    # Reuse the safe, centralized processor (it already seeks to 0)
+
+                    file_results = process_single_file(
+
+                        selected_file, base_prompt, vocabulary_terms, vocab_access_method, api_keys,
+
+                        temperature=temperature, max_tokens_out=max_tokens_out, include_mode=include_mode
+
                     )
-                    gpt_result = call_model_with_retry(
-                        call_chatgpt, gpt_prompt, api_keys.get("openai", ""), "ChatGPT",
-                        temperature=temperature, max_tokens=max_tokens_out
-                    )
-                    ds_result = call_model_with_retry(
-                        call_deepseek, deepseek_prompt, api_keys.get("deepseek", ""), "DeepSeek",
-                        temperature=temperature, max_tokens=max_tokens_out
-                    )
-                    gem_result = call_model_with_retry(
-                        call_gemini, gemini_prompt, api_keys.get("gemini", ""), "Gemini",
-                        temperature=temperature, max_tokens=max_tokens_out
-                    )
+
+                # If this file failed to process, show error and stop cleanly
+
+                if "error" in file_results:
+                    st.error(file_results["error"])
+
+                    st.stop()
+
+                # Unpack for the rest of the UI (keeps your existing layout below)
+
+                claude_result = file_results["results"].get("claude", "Error: no result")
+
+                gpt_result = file_results["results"].get("chatgpt", "Error: no result")
+
+                ds_result = file_results["results"].get("deepseek", "Error: no result")
+
+                gem_result = file_results["results"].get("gemini", "Error: no result")
+
+                # Prefer values parsed inside process_single_file (avoid re-parsing)
+
+                marc_section = file_results.get("marc_section", "")
+
+                full_text = file_results.get("full_text", "")
+
+                existing_qlit_terms = file_results.get("existing_qlit_terms", [])
+
+                peripheral_terms = file_results.get("peripheral_terms", [])
+
+                all_terms = file_results.get("all_existing_terms", existing_qlit_terms + peripheral_terms)
 
                 # Results with comparison to existing QLIT terms
                 st.subheader("🏷️ Subject Indexing Results")
@@ -1256,31 +1294,9 @@ if st.button(run_button_text):
                             st.success(f"🏅 **Best F1 Score:** {best_model['Model']} with {best_model['f1']:.3f}")
                 else:
                     st.info(
-                        "💡 Load QueerLit vocabulary (TTL files) to enable term extraction (metrics optional if no MARC GT).")
-
-                    # Detailed breakdown for each model
-                    with st.expander("🔍 Detailed Metrics Breakdown", expanded=False):
-                        for data in metrics_data:
-                            st.markdown(f"**{data['Model']} Analysis:**")
-                            col1, col2 = st.columns(2)
-
-                            with col1:
-                                st.write(f"• Precision: {data['Precision']:.3f}")
-                                st.write(f"• Recall: {data['Recall']:.3f}")
-                                st.write(f"• F1 Score: {data['F1']:.3f}")
-
-                            with col2:
-                                st.write(f"• True Positives: {data['TP']}")
-                                st.write(f"• False Positives: {data['FP']}")
-                                st.write(f"• False Negatives: {data['FN']}")
-
-                            if data["Matched_Terms"]:
-                                st.success(f"✅ Correctly identified: {', '.join(data['Matched_Terms'])}")
-
-                            if data["Extracted_Terms"]:
-                                st.info(f"🔍 All extracted terms: {', '.join(data['Extracted_Terms'])}")
-
-                            st.markdown("---")
+                        "💡 Load QueerLit vocabulary (TTL files) to enable term extraction and metrics. "
+                        "You can still review the raw model responses in the tabs below."
+                    )
 
                 st.markdown("---")
 
