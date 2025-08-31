@@ -517,7 +517,11 @@ def call_gemini(prompt, api_key, temperature=0.7, max_tokens=1000):
 
 # Process single file function for better memory management
 def process_single_file(file, base_prompt, vocabulary_terms, vocab_access_method, api_keys,
-                        temperature=0.7, max_tokens_out=1000, include_mode="Full text only"):
+                        temperature=0.7, max_tokens_out=1000, include_mode="Full text only",
+                        selected_models=None):
+    if selected_models is None:
+        selected_models = ["claude", "chatgpt", "deepseek", "gemini"]
+
     """Process a single file and return results"""
     try:
         file.seek(0)
@@ -525,39 +529,54 @@ def process_single_file(file, base_prompt, vocabulary_terms, vocab_access_method
 
         marc_section, full_text, existing_qlit_terms, peripheral_terms, all_terms = parse_file_content(file_content)
 
-        prompts = {
-        "claude":   create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, "claude",
-                                    marc_section=marc_section, include_mode=include_mode),
-        "chatgpt":  create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, "chatgpt",
-                                    marc_section=marc_section, include_mode=include_mode),
-        "deepseek": create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, "deepseek",
-                                    marc_section=marc_section, include_mode=include_mode),
-        "gemini":   create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method, "gemini",
-                                    marc_section=marc_section, include_mode=include_mode),
-    }
-        
+        prompts = {}
+        if "claude" in selected_models:
+            prompts["claude"] = create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method,
+                                                    "claude",
+                                                    marc_section=marc_section, include_mode=include_mode)
+        if "chatgpt" in selected_models:
+            prompts["chatgpt"] = create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method,
+                                                     "chatgpt",
+                                                     marc_section=marc_section, include_mode=include_mode)
+        if "deepseek" in selected_models:
+            prompts["deepseek"] = create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method,
+                                                      "deepseek",
+                                                      marc_section=marc_section, include_mode=include_mode)
+        if "gemini" in selected_models:
+            prompts["gemini"] = create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_method,
+                                                    "gemini",
+                                                    marc_section=marc_section, include_mode=include_mode)
+
         with st.expander("🔍 Preview final prompts (per model)"):
             for k, v in prompts.items():
-                st.text_area(f"{k} prompt:", v, height=220)
+                st.text_area(
+                    f"{k} prompt:",
+                    v,
+                    height=220,
+                    key=f"prompt_{file.name}_{k}"
+                )
 
-        results = {
-            "claude": call_model_with_retry(
+        results = {}
+        if "claude" in selected_models:
+            results["claude"] = call_model_with_retry(
                 call_claude, prompts["claude"], api_keys.get("anthropic", ""), "Claude",
                 temperature=temperature, max_tokens=max_tokens_out
-            ),
-            "chatgpt": call_model_with_retry(
+            )
+        if "chatgpt" in selected_models:
+            results["chatgpt"] = call_model_with_retry(
                 call_chatgpt, prompts["chatgpt"], api_keys.get("openai", ""), "ChatGPT",
                 temperature=temperature, max_tokens=max_tokens_out
-            ),
-            "deepseek": call_model_with_retry(
+            )
+        if "deepseek" in selected_models:
+            results["deepseek"] = call_model_with_retry(
                 call_deepseek, prompts["deepseek"], api_keys.get("deepseek", ""), "DeepSeek",
                 temperature=temperature, max_tokens=max_tokens_out
-            ),
-            "gemini": call_model_with_retry(
+            )
+        if "gemini" in selected_models:
+            results["gemini"] = call_model_with_retry(
                 call_gemini, prompts["gemini"], api_keys.get("gemini", ""), "Gemini",
                 temperature=temperature, max_tokens=max_tokens_out
-            ),
-        }
+            )
 
         return {
             "filename": file.name,
@@ -664,6 +683,25 @@ with st.expander("ℹ️ Model Information", expanded=False):
 
     All models use temperature=0.7 as default for consistent comparison.
     """)
+
+# --- Model selector ---
+MODEL_OPTIONS = {
+    "🤖 Claude":  "claude",
+    "🔥 ChatGPT (gpt-4o)": "chatgpt",
+    "🌊 DeepSeek": "deepseek",
+    "💎 Gemini":  "gemini",
+}
+selected_labels = st.multiselect(
+    "Pick models to run",
+    options=list(MODEL_OPTIONS.keys()),
+    default=list(MODEL_OPTIONS.keys()),
+    help="Run one or more models for comparison."
+)
+selected_models = [MODEL_OPTIONS[lbl] for lbl in selected_labels]
+if not selected_models:
+    st.warning("Select at least one model to run.")
+    st.stop()
+
 
 # Test Mode Selection
 test_mode = st.radio(
@@ -879,39 +917,39 @@ if st.button(run_button_text):
         if test_mode == "Custom Prompt Testing":
             # Simple custom prompt testing
             with st.spinner("Running models..."):
-                claude_result = call_model_with_retry(
-                    call_claude, user_prompt, api_keys.get("anthropic", ""), "Claude",
-                    temperature=temperature, max_tokens=max_tokens_out
-                )
-                gpt_result = call_model_with_retry(
-                    call_chatgpt, user_prompt, api_keys.get("openai", ""), "ChatGPT",
-                    temperature=temperature, max_tokens=max_tokens_out
-                )
-                ds_result = call_model_with_retry(
-                    call_deepseek, user_prompt, api_keys.get("deepseek", ""), "DeepSeek",
-                    temperature=temperature, max_tokens=max_tokens_out
-                )
-                gem_result = call_model_with_retry(
-                    call_gemini, user_prompt, api_keys.get("gemini", ""), "Gemini",
-                    temperature=temperature, max_tokens=max_tokens_out
-                )
+                results = {}
+                if "claude" in selected_models:
+                    results["claude"] = call_model_with_retry(
+                        call_claude, user_prompt, api_keys.get("anthropic", ""), "Claude",
+                        temperature=temperature, max_tokens=max_tokens_out
+                    )
+                if "chatgpt" in selected_models:
+                    results["chatgpt"] = call_model_with_retry(
+                        call_chatgpt, user_prompt, api_keys.get("openai", ""), "ChatGPT",
+                        temperature=temperature, max_tokens=max_tokens_out
+                    )
+                if "deepseek" in selected_models:
+                    results["deepseek"] = call_model_with_retry(
+                        call_deepseek, user_prompt, api_keys.get("deepseek", ""), "DeepSeek",
+                        temperature=temperature, max_tokens=max_tokens_out
+                    )
+                if "gemini" in selected_models:
+                    results["gemini"] = call_model_with_retry(
+                        call_gemini, user_prompt, api_keys.get("gemini", ""), "Gemini",
+                        temperature=temperature, max_tokens=max_tokens_out
+                    )
 
-            # Display results
-            col1, col2 = st.columns(2)
+            for key in results:
+                if key == "claude":
+                    st.markdown("### 🤖 Claude")
+                elif key == "chatgpt":
+                    st.markdown("### 🔥 ChatGPT")
+                elif key == "deepseek":
+                    st.markdown("### 🌊 DeepSeek")
+                elif key == "gemini":
+                    st.markdown("### 💎 Gemini")
+                st.markdown(safe_render_response(results[key]), unsafe_allow_html=True)
 
-            with col1:
-                st.markdown("### 🤖 Claude")
-                st.markdown(safe_render_response(claude_result), unsafe_allow_html=True)
-
-                st.markdown("### 🌊 DeepSeek")
-                st.markdown(safe_render_response(ds_result), unsafe_allow_html=True)
-
-            with col2:
-                st.markdown("### 🔥 ChatGPT")
-                st.markdown(safe_render_response(gpt_result), unsafe_allow_html=True)
-
-                st.markdown("### 💎 Gemini")
-                st.markdown(safe_render_response(gem_result), unsafe_allow_html=True)
 
         else:
             # QueerLit Subject Indexing Task
@@ -938,7 +976,8 @@ if st.button(run_button_text):
                     # Process single file
                     file_results = process_single_file(
                         file, base_prompt, vocabulary_terms, vocab_access_method, api_keys,
-                        temperature=temperature, max_tokens_out=max_tokens_out, include_mode=include_mode
+                        temperature=temperature, max_tokens_out=max_tokens_out, include_mode=include_mode,
+                        selected_models=selected_models
                     )
 
                     # If this file failed to process, record the error and skip metrics
@@ -1299,32 +1338,36 @@ if st.button(run_button_text):
                     )
 
                 st.markdown("---")
-
-                # Display each model's results
                 st.markdown("### 🤖 Model Responses")
 
-                # Create tabs for better organization
-                tab1, tab2, tab3, tab4 = st.tabs(["🤖 Claude", "🔥 ChatGPT", "🌊 DeepSeek", "💎 Gemini"])
+                # Use the results dict returned from process_single_file
+                model_results = file_results["results"]
 
-                with tab1:
-                    st.markdown(
-                        f'<div style="border: 2px solid #1f77b4; border-radius: 10px; padding: 20px; margin: 10px 0; background-color: #f0f8ff;">{safe_render_response(claude_result)}</div>',
-                        unsafe_allow_html=True)
+                # Map keys to pretty labels
+                label_map = {
+                    "claude": "🤖 Claude",
+                    "chatgpt": "🔥 ChatGPT",
+                    "deepseek": "🌊 DeepSeek",
+                    "gemini": "💎 Gemini",
+                }
 
-                with tab2:
-                    st.markdown(
-                        f'<div style="border: 2px solid #ff7f0e; border-radius: 10px; padding: 20px; margin: 10px 0; background-color: #fff8f0;">{safe_render_response(gpt_result)}</div>',
-                        unsafe_allow_html=True)
+                # Keep the order the user selected them in
+                ordered_keys = [MODEL_OPTIONS[lbl] for lbl in selected_labels if MODEL_OPTIONS[lbl] in model_results]
 
-                with tab3:
-                    st.markdown(
-                        f'<div style="border: 2px solid #2ca02c; border-radius: 10px; padding: 20px; margin: 10px 0; background-color: #f0fff0;">{safe_render_response(ds_result)}</div>',
-                        unsafe_allow_html=True)
+                # Build tabs only for selected models
+                tab_labels = [label_map[k] for k in ordered_keys]
+                tabs = st.tabs(tab_labels)
 
-                with tab4:
-                    st.markdown(
-                        f'<div style="border: 2px solid #d62728; border-radius: 10px; padding: 20px; margin: 10px 0; background-color: #fff0f0;">{safe_render_response(gem_result)}</div>',
-                        unsafe_allow_html=True)
+                # Render each selected model's output in its tab
+                for tab, k in zip(tabs, ordered_keys):
+                    with tab:
+                        st.markdown(
+                            f'<div style="border: 2px solid #e5e7eb; border-radius: 10px; padding: 20px; margin: 10px 0; background-color: #fff;">'
+                            f'{safe_render_response(model_results[k])}'
+                            f'</div>',
+                            unsafe_allow_html=True
+                        )
+
 
     else:
         st.warning("Please configure your inputs before running the analysis.")
