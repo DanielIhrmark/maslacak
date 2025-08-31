@@ -32,9 +32,11 @@ api_keys = get_api_keys()
 
 
 # Helper function to estimate tokens (rough approximation)
-def estimate_tokens(text):
-    """Rough token estimation: ~4 characters per token for most languages"""
-    return len(text) // 4
+def estimate_tokens(text: str, chars_per_token: float = 3.0) -> int:
+    """Conservative token estimate. Using ~3 chars/token to err on the safe side."""
+    if not text:
+        return 0
+    return int((len(text) + chars_per_token - 1) // chars_per_token)
 
 
 def _join_terms(lst):
@@ -52,10 +54,10 @@ def create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_m
 
     # Token limits - leave room for response
     model_limits = {
-        "gpt-4": 7192,
-        "claude": 150000,
-        "gemini": 1048576,
-        "deepseek": 24000
+        "gpt-4": 128000,
+        "claude": 200000,
+        "gemini": 1000000,
+        "deepseek": 64000
     }
 
     # Response token reservations
@@ -67,21 +69,28 @@ def create_model_prompt(base_prompt, full_text, vocabulary_terms, vocab_access_m
     }
 
     # Determine model type and limits
-    if "gpt" in model_name.lower() or model_name == "chatgpt":
+    lname = model_name.lower()
+    if "gpt" in lname or model_name == "chatgpt":
         limit = model_limits["gpt-4"]
         response_reserve = response_reserves["gpt-4"]
-    elif "claude" in model_name.lower():
+    elif "claude" in lname:
         limit = model_limits["claude"]
         response_reserve = response_reserves["claude"]
-    elif "gemini" in model_name.lower():
+    elif "gemini" in lname:
         limit = model_limits["gemini"]
         response_reserve = response_reserves["gemini"]
-    elif "deepseek" in model_name.lower():
+    elif "deepseek" in lname:
         limit = model_limits["deepseek"]
         response_reserve = response_reserves["deepseek"]
     else:
-        limit = 8192
-        response_reserve = 2000
+        limit = 64000
+        response_reserve = 1500
+
+    # Use only a fraction of the limit for the prompt itself (safety margin)
+    SAFETY_PROMPT_FRACTION = 0.80  # 80% of the context for prompt+system; rest is headroom
+    prompt_budget_tokens = int(limit * SAFETY_PROMPT_FRACTION) - int(response_reserve)
+    if prompt_budget_tokens < 0:
+        prompt_budget_tokens = int(limit * 0.7)  # fallback
 
     # Base instruction (same for all models)
     base_instruction = """You are a subject indexer specializing in LGBTQI+ literature analysis. Your task is to analyze the provided literary work and suggest relevant subject terms from the QueerLit controlled vocabulary.
@@ -111,29 +120,34 @@ Base your analysis solely on the provided text, not on external knowledge about 
             "Please analyze ONLY the literary text provided"
         )
 
-    # Create vocabulary information (SAME for all models - this is important for fair comparison)
+    # Cap raw vocabulary text contribution to avoid runaway prompts
+    MAX_VOCAB_CHARS = 20000  # ~6–7k tokens by our estimator
+
+    def _cap(s: str) -> str:
+        return (s[:MAX_VOCAB_CHARS] + " … [vocabulary truncated]") if len(s) > MAX_VOCAB_CHARS else s
+
     if not vocabulary_terms:
         vocab_info = "Focus on standard LGBTQI+ terminology."
     elif vocab_access_method == "Sample Terms (Fast)":
-        vocab_sample = vocabulary_terms[:30]  # Same sample size for all
+        vocab_sample = vocabulary_terms[:30]
         vocab_text = ", ".join(vocab_sample)
-        vocab_info = f"Some QueerLit vocabulary terms: {vocab_text}..."
+        vocab_info = _cap(f"Some QueerLit vocabulary terms: {vocab_text}...")
     elif vocab_access_method == "Full List (Comprehensive)":
         vocab_text = ", ".join(vocabulary_terms)
-        vocab_info = f"QueerLit vocabulary includes: {vocab_text}"
+        vocab_info = _cap(f"QueerLit vocabulary includes: {vocab_text}")
     elif vocab_access_method == "Categorized (Organized)":
         identity_terms = [t for t in vocabulary_terms[:50] if
-                          any(keyword in t.lower() for keyword in ['person', 'identitet', 'sexual', 'gender'])][:10]
+                          any(k in t.lower() for k in ['person', 'identitet', 'sexual', 'gender'])][:10]
         relationship_terms = [t for t in vocabulary_terms[:50] if
-                              any(keyword in t.lower() for keyword in ['kärlek', 'relation', 'familj'])][:10]
-        theme_terms = [t for t in vocabulary_terms[:50] if
-                       any(keyword in t.lower() for keyword in ['tema', 'ämne', 'område'])][:10]
-
-        vocab_info = f"""QueerLit vocabulary includes:
-Identity/Gender: {', '.join(identity_terms)}
-Relationships: {', '.join(relationship_terms)}
-Themes: {', '.join(theme_terms)}
-(Full vocabulary contains {len(vocabulary_terms)} terms total)"""
+                              any(k in t.lower() for k in ['kärlek', 'relation', 'familj'])][:10]
+        theme_terms = [t for t in vocabulary_terms[:50] if any(k in t.lower() for k in ['tema', 'ämne', 'område'])][:10]
+        vocab_info = _cap(
+            f"QueerLit vocabulary includes:\n"
+            f"Identity/Gender: {', '.join(identity_terms)}\n"
+            f"Relationships: {', '.join(relationship_terms)}\n"
+            f"Themes: {', '.join(theme_terms)}\n"
+            f"(Full vocabulary contains {len(vocabulary_terms)} terms total)"
+        )
 
     # --- Choose content based on include_mode ---
     sections = []
@@ -154,53 +168,45 @@ Themes: {', '.join(theme_terms)}
     # Fixed content BEFORE truncation
     fixed_content = f"{base_instruction}\n\n{vocab_info}\n\n"
 
-    # Calculate tokens for fixed parts (instruction + vocabulary)
-    fixed_tokens = estimate_tokens(fixed_content)
+    # Estimate fixed part (instruction + vocab) with an extra safety factor
+    SAFETY_FACTOR_FIXED = 1.3
+    fixed_tokens_est = int(estimate_tokens(fixed_content) * SAFETY_FACTOR_FIXED)
 
-    # Calculate available tokens for the text
-    available_for_prompt = limit - response_reserve
-    available_for_text = available_for_prompt - fixed_tokens - 100  # 100 token safety buffer
+    # Tokens available for the combined input sections
+    available_text_tokens = max(prompt_budget_tokens - fixed_tokens_est - 100, 0)
+    # Convert to max chars for slicing
+    CHARS_PER_TOKEN = 3.0
+    max_text_chars = int(available_text_tokens * CHARS_PER_TOKEN)
 
-    # Convert available tokens to characters (roughly 4 chars per token)
-    max_text_chars = max(available_for_text * 4, 500)  # At least 500 chars
-
-    # Truncate the *combined* input if needed
+    combined_input = "\n\n".join(sections) if sections else ""
     text_to_analyze = combined_input
-    if len(text_to_analyze) > max_text_chars:
-        truncated_text = text_to_analyze[:max_text_chars]
 
-        # Try to truncate at a sentence boundary
-        last_sentence = max(
-            truncated_text.rfind('.'),
-            truncated_text.rfind('!'),
-            truncated_text.rfind('?')
-        )
-        if last_sentence > max_text_chars * 0.8:  # If we found a sentence ending in the last 20%
-            truncated_text = truncated_text[:last_sentence + 1]
+    # Primary truncation on character count
+    if len(text_to_analyze) > max_text_chars > 0:
+        truncated = text_to_analyze[:max_text_chars]
+        last_sentence = max(truncated.rfind('.'), truncated.rfind('!'), truncated.rfind('?'))
+        if last_sentence > int(max_text_chars * 0.8):
+            truncated = truncated[:last_sentence + 1]
+        truncated += "\n\n[TEXT TRUNCATED DUE TO MODEL TOKEN LIMITS]"
+        text_to_analyze = truncated
 
-        truncated_text += "\n\n[TEXT TRUNCATED DUE TO MODEL TOKEN LIMITS - Showing first ~{:,} of {:,} characters]".format(
-            len(truncated_text), len(text_to_analyze)
-        )
-
-        # Show info about truncation
-        percentage_shown = (len(truncated_text) / len(text_to_analyze)) * 100
-        st.info(
-            f"ℹ️ {model_name}: Showing {percentage_shown:.1f}% of input to fit token limits while preserving full vocabulary"
-        )
-
-        text_to_analyze = truncated_text
-
-    # Assemble final prompt (now include the combined/truncated input)
     final_prompt = f"{fixed_content}{text_to_analyze}"
 
-    # Final safety check
-    final_tokens = estimate_tokens(final_prompt)
-    if final_tokens > available_for_prompt:
-        # Emergency truncation - remove more text
-        excess_tokens = final_tokens - available_for_prompt
-        chars_to_remove = excess_tokens * 4 + 200  # Extra safety margin
-        if len(text_to_analyze) > chars_to_remove:
-            text_to_analyze = text_to_analyze[:-chars_to_remove] + "\n[TRUNCATED]"
+    # Final hard guard: shrink until under budget
+    SAFETY_FACTOR_FINAL = 1.1  # over-estimate the final prompt length a bit
+    while int(estimate_tokens(final_prompt) * SAFETY_FACTOR_FINAL) > prompt_budget_tokens and len(
+            text_to_analyze) > 1000:
+        # Remove the last 5% of text_to_analyze and try again
+        cut = max(int(len(text_to_analyze) * 0.95), 1000)
+        text_to_analyze = text_to_analyze[:cut] + "\n[TRUNCATED]"
+        final_prompt = f"{fixed_content}{text_to_analyze}"
+
+    # Extra Claude guard: keep prompt comfortably below its input cap
+    if "claude" in lname:
+        CLAUDE_MAX_INPUT = 190000  # slightly under 200k as added headroom
+        while estimate_tokens(final_prompt) > CLAUDE_MAX_INPUT and len(text_to_analyze) > 1000:
+            cut = max( int(len(text_to_analyze) * 0.95), 1000 )
+            text_to_analyze = text_to_analyze[:cut] + "\n[TRUNCATED]"
             final_prompt = f"{fixed_content}{text_to_analyze}"
 
     return final_prompt
